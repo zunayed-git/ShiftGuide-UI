@@ -108,11 +108,44 @@
     font-style: italic;
 }
 
+.sgapp-text-header 
+{
+    color: #374550;
+    font-weight: 700;
+}
+
+#sgapp-sign-in-card-right-panel
+{
+    height: 30em;
+    display: flex;
+    align-items: center;
+}
+
 body
 {
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-style: normal;
+}
+
+#sgapp-signin-card
+{
+    border-radius: 0.5em;
+}
+
+#sgapp-signin-card-banner
+{
+    background: url("../img/app-banner.png");
+    min-height: 10em;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#sgapp-direct-sign-in-panel
+{
+    border-bottom: 1px solid lightgrey;
+    padding-bottom: 2em;
 }
 
 .sgapp-center
@@ -204,8 +237,26 @@ a.sidebar-link:hover
     display: none;
 }
 
-@media only screen and (max-width: 768px)
+.sgapp-button-icon
 {
+    width: 1em;
+    height: auto;
+    display: inline-block;
+    margin-right: 0.3em;
+}
+
+@media only screen and (max-width: 768px)
+{    
+    body
+    {
+        overflow-x: hidden;
+    }
+    
+    #sgapp-signin-card-banner
+    {
+        height: 128px;
+    }
+    
     #sgapp-page-header
     {
         left: 3.5em;
@@ -219,6 +270,21 @@ a.sidebar-link:hover
     #main-search
     {
         display: none;
+    }
+    
+    .sgapp-center 
+    {
+        /*text-align: center !important;*/
+    }
+    
+    #sgapp-sign-in-card-right-panel
+    {
+        height: auto;
+    }
+
+    #sgapp-sign-in-card-right-panel > div
+    {
+        margin-top: 1em;
     }
 }
 

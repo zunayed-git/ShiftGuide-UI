@@ -1,5 +1,5 @@
 <?php
-$pageTitle = "Shift Guide App";
+$pageTitle = "Sign Up: Shift Guide";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -37,7 +37,7 @@ $pageTitle = "Shift Guide App";
                                                 <section class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
                                                     <header class="row">
                                                         <h1 class="col-12 sgapp-center sgapp-text-header">
-                                                            Sign In
+                                                            Sign Up
                                                         </h1>
                                                         
                                                         <p class="col-12 sgapp-center">
@@ -62,6 +62,10 @@ $pageTitle = "Shift Guide App";
                                                     
                                                     <form class="mt-4">
                                                         <div class="mb-3">
+                                                            <label class="form-label">Full Name</label>
+                                                            <input class="form-control form-control-lg" type="text" name="fullname" placeholder="Enter your full name" />
+                                                        </div>
+                                                        <div class="mb-3">
                                                             <label class="form-label">Email</label>
                                                             <input class="form-control form-control-lg" type="email" name="email" placeholder="Enter your email" />
                                                         </div>
@@ -84,10 +88,10 @@ $pageTitle = "Shift Guide App";
                                                             </div>
                                                         </div>
                                                         <div class="d-grid gap-2 mt-3">
-                                                            <a href="./dashboard-1.php" class="btn btn-lg btn-info">Sign in</a>
+                                                            <a href="#!" class="btn btn-lg btn-info">Sign Up</a>
                                                         </div>
                                                         <div class="text-center mt-3">
-                                                            Don't have account yet? <a href="./sign-up.php" class="text-info">Sign Up</a>
+                                                            Already have an account? <a href="./index.php" class="text-info">Sign In</a>
                                                         </div>
                                                     </form>
                                                 </section>
