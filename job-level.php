@@ -1,5 +1,5 @@
 <?php
-$pageTitle = "Shift Guide App";
+$pageTitle = "Job Level: Shift Guide";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -47,20 +47,20 @@ $pageTitle = "Shift Guide App";
                             </a>
                         </li>
                         
-                        <li class="sidebar-item active">
+                        <li class="sidebar-item">
                             <a class="sidebar-link" href="./dashboard-3.php">
                                 <i class="align-middle" data-feather="users"></i> <span class="align-middle">Staffs</span>
                             </a>
                         </li>
                         
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="#!">
+                            <a class="sidebar-link" href="./schedules.php">
                                 <i class="align-middle" data-feather="calendar"></i> <span class="align-middle">Schedules</span>
                             </a>
                         </li>
                         
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="#!">
+                            <a class="sidebar-link" href="./availability.php">
                                 <i class="align-middle" data-feather="user-check"></i> <span class="align-middle">Availability</span>
                             </a>
                         </li>
@@ -72,7 +72,7 @@ $pageTitle = "Shift Guide App";
                         </li>
                         
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="#!">
+                            <a class="sidebar-link" href="./leave-requests.php">
                                 <i class="align-middle" data-feather="user-x"></i> <span class="align-middle">Leave Requests</span>
                             </a>
                         </li>
@@ -83,14 +83,14 @@ $pageTitle = "Shift Guide App";
                             </a>
                         </li>
                         
-                        <li class="sidebar-item">
-                            <a class="sidebar-link" href="#!">
+                        <li class="sidebar-item active">
+                            <a class="sidebar-link" href="./job-level">
                                 <i class="align-middle" data-feather="layers"></i> <span class="align-middle">Job Level</span>
                             </a>
                         </li>
                         
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="#!">
+                            <a class="sidebar-link" href="./job-positions.php">
                                 <i class="align-middle" data-feather="bar-chart"></i> <span class="align-middle">Job Positions</span>
                             </a>
                         </li>
@@ -130,7 +130,7 @@ $pageTitle = "Shift Guide App";
                     <div id="sgapp-page-header">
                         <header>
                             <h1 class="poppins-medium">
-                                Staff List
+                                Job Level
                             </h1>
                         </header>
                         <div>
@@ -248,11 +248,11 @@ $pageTitle = "Shift Guide App";
                         <!--<h1 class="h3 mb-3"></h1>-->
 
                         <div>
-                            <div id="sgapp-calendar-toolbar-large" class="card">
+                            <div class="card">
                                 <div class="card-body">
 
                                     <div class="row">
-                                        <div class="col-sm-12 col-md-3">
+                                        <div class="col-sm-12 col-md-10 mt-2 mb-2">
                                             
                                             <div class="input-group">
                                                 <span class="input-group-text">
@@ -262,86 +262,15 @@ $pageTitle = "Shift Guide App";
                                             </div>
                                             
                                         </div>
-                                        <div class="col-sm-12 col-md-9 text-end">
-                                            
-                                            <button class="btn btn-light">
-                                                <i class="align-middle" data-feather="sliders"></i>
-                                                Filters
-                                            </button>
-                                            
-                                            <button class="btn btn-light">
-                                                <i class="align-middle" data-feather="calendar"></i>
-                                                April 11 - April 24
-                                            </button>
-                                            
-                                            <button class="btn btn-light">
-                                                <i class="align-middle" data-feather="download"></i>
-                                                Download
-                                            </button>
-                                            
-                                            <button class="btn btn-info">
-                                                <i class="align-middle" data-feather="plus"></i>
-                                                Add New
-                                            </button>
-                                            
-                                        </div>
+                                        
+                                        <button class="btn btn-info col-sm-12 col-md-2 mt-2 mb-2">
+                                            <i class="align-middle" data-feather="plus"></i> Add
+                                        </button>
                                     </div>
                                     
                                 </div>
                             </div>
                         </div>
-                        
-                        <div>
-                            <div id="sgapp-calendar-toolbar-small" class="card">
-                                <div class="card-body">
-
-                                    <div class="row">
-                                        <div class="col-6">
-                                            
-                                            <input type="search" class="form-control" placeholder="Search">
-                                            
-                                        </div>
-                                        <div class="col-6 text-end">
-                                            
-                                            <div class="btn-group">
-                                                <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                                                    Action
-                                                </button>
-                                                <ul class="dropdown-menu">
-                                                    <li>
-                                                        <a class="dropdown-item" href="#">
-                                                            <i class="align-middle" data-feather="sliders"></i>
-                                                            Filters
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a class="dropdown-item" href="#">
-                                                            <i class="align-middle" data-feather="calendar"></i>
-                                                            April 11 - April 24
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a class="dropdown-item" href="#">
-                                                            <i class="align-middle" data-feather="download"></i>
-                                                            Download
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a class="dropdown-item" href="#">
-                                                            <i class="align-middle" data-feather="plus"></i>
-                                                            Add New
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            
-                                        </div>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                        
 
                         <div class="row">
                             <div class="col-12">
@@ -352,81 +281,25 @@ $pageTitle = "Shift Guide App";
                                     </div> -->
                                     <div class="card-body">
 
-                                        <table class="table table-striped table-hover table-responsive-sm">
-                                            <thead>
-                                                <tr>
-                                                    <th scope="col">
-                                                        <div class="mt-0">
-                                                            <input type="checkbox" />
-                                                        </div>
-                                                    </th>
-                                                    <th scope="col">Names</th>
-                                                    <th scope="col">Email</th>
-                                                    <th scope="col">Position</th>
-                                                    <th scope="col"></th>
-                                                    <th scope="col"></th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <?php
-                                                
-                                                for ($i = 1; $i <= 10; $i++)
-                                                {
-                                                    ?>
-                                                    <tr>
-                                                        <th scope="row">
-                                                            <div class="mt-2">
-                                                                <input type="checkbox" />
-                                                            </div>
-                                                        </th>
-                                                        <td>
-                                                            <div class="container-fluid">
-                                                                <div class="row">
-                                                                    <div class="col-sm-12 col-md-3">
-                                                                        
-                                                                        <img src="img/avatars/avatar-5.jpg" class="rounded-circle" style="width: 3em;" alt="Avatar" />
-                                                                        
-                                                                    </div>
-                                                                    <div class="col-sm-12 col-md-9">
-                                                                        <div class="row">
-                                                                            <div class="col-12">
-                                                                                <h5 class="poppins-bold">
-                                                                                    Jane Cooper
-                                                                                </h5>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="row">
-                                                                            <div class="col-12">
-                                                                                <span class="text-small">
-                                                                                    @jane
-                                                                                </span>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td>jessica.hanson@example.com</td>
-                                                        <td>
-                                                            Receptionist
-                                                        </td>
-                                                        <td class="text-center">
-                                                            <button class="btn btn-light">
-                                                                <i class="align-middle" data-feather="info"></i>
-                                                            </button>
-                                                        </td>
-                                                        <td class="text-center">
-                                                            <button class="btn btn-light">
-                                                                <i class="align-middle" data-feather="trash"></i>
-                                                            </button>
-                                                        </td>
-                                                    </tr>
-                                                    <?php
-                                                }
-                                                
-                                                ?>
-                                            </tbody>
-                                        </table>
+                                        <?php
+                                        
+                                        for ($i = 1; $i <= 5; $i++)
+                                        {
+                                            ?>
+                                            <div class="row mt-3 mb-3 p-2 border border-light bg-light rounded">
+                                                <div class="col-10">
+                                                    Level <?= $i ?>
+                                                </div>
+                                                <div class="col-2 sgapp-right">
+                                                    <button class="btn btn-light">
+                                                        <i class="align-middle text-danger" data-feather="x"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <?php
+                                        }
+                                        
+                                        ?>
                                         
                                     </div>
                                 </div>

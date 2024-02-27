@@ -1,5 +1,5 @@
 <?php
-$pageTitle = "Shift Guide App";
+$pageTitle = "Swap Requests: Shift Guide";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -47,32 +47,32 @@ $pageTitle = "Shift Guide App";
                             </a>
                         </li>
                         
-                        <li class="sidebar-item active">
+                        <li class="sidebar-item">
                             <a class="sidebar-link" href="./dashboard-3.php">
                                 <i class="align-middle" data-feather="users"></i> <span class="align-middle">Staffs</span>
                             </a>
                         </li>
                         
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="#!">
+                            <a class="sidebar-link" href="./schedules.php">
                                 <i class="align-middle" data-feather="calendar"></i> <span class="align-middle">Schedules</span>
                             </a>
                         </li>
                         
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="#!">
+                            <a class="sidebar-link" href="./availability.php">
                                 <i class="align-middle" data-feather="user-check"></i> <span class="align-middle">Availability</span>
                             </a>
                         </li>
                         
-                        <li class="sidebar-item">
-                            <a class="sidebar-link" href="#!">
+                        <li class="sidebar-item active">
+                            <a class="sidebar-link" href="./swap-requests.php">
                                 <i class="align-middle" data-feather="refresh-ccw"></i> <span class="align-middle">Swap Requests</span>
                             </a>
                         </li>
                         
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="#!">
+                            <a class="sidebar-link" href="./leave-requests.php">
                                 <i class="align-middle" data-feather="user-x"></i> <span class="align-middle">Leave Requests</span>
                             </a>
                         </li>
@@ -130,7 +130,7 @@ $pageTitle = "Shift Guide App";
                     <div id="sgapp-page-header">
                         <header>
                             <h1 class="poppins-medium">
-                                Staff List
+                                Swap Requests
                             </h1>
                         </header>
                         <div>
@@ -248,11 +248,11 @@ $pageTitle = "Shift Guide App";
                         <!--<h1 class="h3 mb-3"></h1>-->
 
                         <div>
-                            <div id="sgapp-calendar-toolbar-large" class="card">
+                            <div class="card">
                                 <div class="card-body">
 
                                     <div class="row">
-                                        <div class="col-sm-12 col-md-3">
+                                        <div class="col-sm-12 col-md-4 col-xl-4">
                                             
                                             <div class="input-group">
                                                 <span class="input-group-text">
@@ -262,86 +262,12 @@ $pageTitle = "Shift Guide App";
                                             </div>
                                             
                                         </div>
-                                        <div class="col-sm-12 col-md-9 text-end">
-                                            
-                                            <button class="btn btn-light">
-                                                <i class="align-middle" data-feather="sliders"></i>
-                                                Filters
-                                            </button>
-                                            
-                                            <button class="btn btn-light">
-                                                <i class="align-middle" data-feather="calendar"></i>
-                                                April 11 - April 24
-                                            </button>
-                                            
-                                            <button class="btn btn-light">
-                                                <i class="align-middle" data-feather="download"></i>
-                                                Download
-                                            </button>
-                                            
-                                            <button class="btn btn-info">
-                                                <i class="align-middle" data-feather="plus"></i>
-                                                Add New
-                                            </button>
-                                            
-                                        </div>
+                                       
                                     </div>
                                     
                                 </div>
                             </div>
                         </div>
-                        
-                        <div>
-                            <div id="sgapp-calendar-toolbar-small" class="card">
-                                <div class="card-body">
-
-                                    <div class="row">
-                                        <div class="col-6">
-                                            
-                                            <input type="search" class="form-control" placeholder="Search">
-                                            
-                                        </div>
-                                        <div class="col-6 text-end">
-                                            
-                                            <div class="btn-group">
-                                                <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                                                    Action
-                                                </button>
-                                                <ul class="dropdown-menu">
-                                                    <li>
-                                                        <a class="dropdown-item" href="#">
-                                                            <i class="align-middle" data-feather="sliders"></i>
-                                                            Filters
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a class="dropdown-item" href="#">
-                                                            <i class="align-middle" data-feather="calendar"></i>
-                                                            April 11 - April 24
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a class="dropdown-item" href="#">
-                                                            <i class="align-middle" data-feather="download"></i>
-                                                            Download
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a class="dropdown-item" href="#">
-                                                            <i class="align-middle" data-feather="plus"></i>
-                                                            Add New
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            
-                                        </div>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                        
 
                         <div class="row">
                             <div class="col-12">
@@ -352,19 +278,18 @@ $pageTitle = "Shift Guide App";
                                     </div> -->
                                     <div class="card-body">
 
-                                        <table class="table table-striped table-hover table-responsive-sm">
+                                        <table class="table table-striped table-hover table-bordered">
                                             <thead>
                                                 <tr>
                                                     <th scope="col">
-                                                        <div class="mt-0">
-                                                            <input type="checkbox" />
-                                                        </div>
+                                                        <a href="#!" class="text-info">
+                                                            First Name (A - Z)
+                                                        </a>
                                                     </th>
-                                                    <th scope="col">Names</th>
-                                                    <th scope="col">Email</th>
-                                                    <th scope="col">Position</th>
-                                                    <th scope="col"></th>
-                                                    <th scope="col"></th>
+                                                    <th scope="col">Current Shift</th>
+                                                    <th scope="col">Alternative Shift</th>
+                                                    <th scope="col">Reason</th>
+                                                    <th scope="col">Action</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -375,11 +300,6 @@ $pageTitle = "Shift Guide App";
                                                     ?>
                                                     <tr>
                                                         <th scope="row">
-                                                            <div class="mt-2">
-                                                                <input type="checkbox" />
-                                                            </div>
-                                                        </th>
-                                                        <td>
                                                             <div class="container-fluid">
                                                                 <div class="row">
                                                                     <div class="col-sm-12 col-md-3">
@@ -390,7 +310,7 @@ $pageTitle = "Shift Guide App";
                                                                     <div class="col-sm-12 col-md-9">
                                                                         <div class="row">
                                                                             <div class="col-12">
-                                                                                <h5 class="poppins-bold">
+                                                                                <h5 class="poppins-bold text-info">
                                                                                     Jane Cooper
                                                                                 </h5>
                                                                             </div>
@@ -405,19 +325,40 @@ $pageTitle = "Shift Guide App";
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                        </td>
-                                                        <td>jessica.hanson@example.com</td>
+                                                        </th>
+                                                        
                                                         <td>
-                                                            Receptionist
+                                                            <div>
+                                                                <strong class="text-secondary">
+                                                                    Feb 6 - Feb 8, 2024
+                                                                </strong>
+                                                            </div>
+                                                            <div>
+                                                                All day
+                                                            </div>
                                                         </td>
-                                                        <td class="text-center">
-                                                            <button class="btn btn-light">
-                                                                <i class="align-middle" data-feather="info"></i>
+                                                        <td>
+                                                            <div>
+                                                                <strong class="text-secondary">
+                                                                    Feb 7 - Feb 9, 2024
+                                                                </strong>
+                                                            </div>
+                                                            <div>
+                                                                All day
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            Neque porro quisquam est qui dolorem ipsum...
+                                                        </td>
+                                                        <td>
+                                                            <button class="btn btn-lighy">
+                                                                <i class="align-middle" data-feather="check"></i>
                                                             </button>
-                                                        </td>
-                                                        <td class="text-center">
                                                             <button class="btn btn-light">
-                                                                <i class="align-middle" data-feather="trash"></i>
+                                                                <i class="align-middle" data-feather="x"></i>
+                                                            </button>
+                                                            <button class="btn btn-light">
+                                                                <i class="align-middle" data-feather="eye"></i>
                                                             </button>
                                                         </td>
                                                     </tr>

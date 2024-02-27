@@ -108,6 +108,17 @@
     font-style: italic;
 }
 
+.sgapp-job-label 
+{
+    display: inline-block;
+    min-width: 1.5em;
+    min-height: 1.5em;
+    background: #1abc9c;
+    content: "";
+    padding: 0.5em;
+    border-radius: 1em;
+}
+
 .sgapp-text-header 
 {
     color: #374550;
@@ -151,6 +162,11 @@ body
 .sgapp-center
 {
     text-align: center;
+}
+
+.sgapp-right
+{
+    text-align: end;
 }
 
 ul.sidebar-nav,
