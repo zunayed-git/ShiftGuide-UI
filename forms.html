@@ -6,18 +6,15 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="Job Level: Shift Guide">
+        <meta name="description" content="Shift Guide App">
 
         <link rel="preconnect" href="https://fonts.gstatic.com">
 
-        <title>Job Level: Shift Guide</title>
+        <title>Shift Guide App</title>
 
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link href="css/app.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-        <link href="https://cdn.datatables.net/buttons/3.0.0/css/buttons.dataTables.css" rel="stylesheet"  />
-        <link href="https://cdn.datatables.net/2.0.1/css/dataTables.bootstrap5.css" rel="stylesheet"  />
-        
         <link href="./css/dashboard.css" rel="stylesheet" />
     </head>
 
@@ -78,7 +75,7 @@
                             </a>
                         </li>
 
-                        <li class="sidebar-item active">
+                        <li class="sidebar-item">
                             <a class="sidebar-link" href="./job-level.html">
                                 <i class="align-middle" data-feather="layers"></i> <span class="align-middle">Job Level</span>
                             </a>
@@ -90,7 +87,7 @@
                             </a>
                         </li>
 
-                        <li class="sidebar-item">
+                        <li class="sidebar-item active">
                             <a class="sidebar-link" href="./holiday.html">
                                 <i class="align-middle" data-feather="coffee"></i> <span class="align-middle">Holiday</span>
                             </a>
@@ -125,7 +122,7 @@
                     <div id="sgapp-page-header">
                         <header>
                             <h1 class="poppins-medium">
-                                Job Level
+                                Forms
                             </h1>
                         </header>
                         <div>
@@ -238,116 +235,178 @@
                 </nav>
 
                 <main id="sgapp-main" class="content">
-                    <div class="container-fluid p-0">
+				<div class="container-fluid p-0">
 
-                        <!--<h1 class="h3 mb-3"></h1>-->
+					<div class="row">
+						<div class="col-12 col-lg-6">
+							<div class="card">
+								<div class="card-header">
+									<h5 class="card-title mb-0">Input</h5>
+								</div>
+								<div class="card-body">
+									<input type="text" class="form-control" placeholder="Input">
+								</div>
+							</div>
 
-                        <div class="card">
-                            <div class="card-body">
+							<div class="card">
+								<div class="card-header">
+									<h5 class="card-title mb-0">Textarea</h5>
+								</div>
+								<div class="card-body">
+									<textarea class="form-control" rows="2" placeholder="Textarea"></textarea>
+								</div>
+							</div>
 
-                                <div class="row">
-                                    <div class="col-12">
-                                        <button class="btn btn-info">
-                                            <i class="align-middle" data-feather="plus"></i> Add
-                                        </button>
-                                    </div>
-                                </div>
+							<div class="card">
+								<div class="card-header">
+									<h5 class="card-title mb-0">Checkboxes</h5>
+								</div>
+								<div class="card-body">
+									<div>
+										<label class="form-check">
+            <input class="form-check-input" type="checkbox" value="">
+            <span class="form-check-label">
+              Option one is this and that&mdash;be sure to include why it's great
+            </span>
+          </label>
+										<label class="form-check">
+            <input class="form-check-input" type="checkbox" value="" disabled>
+            <span class="form-check-label">
+              Option two is disabled
+            </span>
+          </label>
+									</div>
+									<div>
+										<label class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" value="option1">
+            <span class="form-check-label">
+              1
+            </span>
+          </label>
+										<label class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" value="option2">
+            <span class="form-check-label">
+              2
+            </span>
+          </label>
+										<label class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" value="option3" disabled>
+            <span class="form-check-label">
+              3
+            </span>
+          </label>
+									</div>
+								</div>
+							</div>
 
-                            </div>
-                        </div>
+							<div class="card">
+								<div class="card-header">
+									<h5 class="card-title mb-0">Read only</h5>
+								</div>
+								<div class="card-body">
+									<input class="form-control" type="text" placeholder="Readonly input" readonly>
+								</div>
+							</div>
+						</div>
 
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="card">
-                                    <!--
-                                    <div class="card-header">
-                                        <h5 class="card-title mb-0"></h5>
-                                    </div> -->
-                                    <div class="card-body">
+						<div class="col-12 col-lg-6">
+							<div class="card">
+								<div class="card-header">
+									<h5 class="card-title mb-0">Radios</h5>
+								</div>
+								<div class="card-body">
+									<div>
+										<label class="form-check">
+            <input class="form-check-input" type="radio" value="option1" name="radios-example" checked>
+            <span class="form-check-label">
+              Option one is this and that&mdash;be sure to include why it's great
+            </span>
+          </label>
+										<label class="form-check">
+            <input class="form-check-input" type="radio" value="option2" name="radios-example">
+            <span class="form-check-label">
+              Option two can be something else and selecting it will deselect option one
+            </span>
+          </label>
+										<label class="form-check">
+            <input class="form-check-input" type="radio" value="option3" name="radios-example" disabled>
+            <span class="form-check-label">
+              Option three is disabled
+            </span>
+          </label>
+									</div>
+									<div>
+										<label class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inline-radios-example" value="option1">
+            <span class="form-check-label">
+              1
+            </span>
+          </label>
+										<label class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inline-radios-example" value="option2">
+            <span class="form-check-label">
+              2
+            </span>
+          </label>
+										<label class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inline-radios-example" value="option3" disabled>
+            <span class="form-check-label">
+              3
+            </span>
+          </label>
+									</div>
+								</div>
+							</div>
 
-                                        <table id="my-table" class="table table-striped table-hover table-bordered">
-                                            <thead>
-                                                <tr>
-                                                    <th scope="col">
-                                                        <a href="#!" class="text-info">
-                                                            Serial
-                                                        </a>
-                                                    </th>
-                                                    <th scope="col">Job Level</th>
-                                                    <th scope="col">Action</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <th scope="row">
-                                                        1
-                                                    </th>
+							<div class="card">
+								<div class="card-header">
+									<h5 class="card-title mb-0">Selects</h5>
+								</div>
+								<div class="card-body">
+									<select class="form-select mb-3">
+          <option selected>Open this select menu</option>
+          <option>One</option>
+          <option>Two</option>
+          <option>Three</option>
+        </select>
 
-                                                    <td>
-                                                        My Job Level Name
-                                                    </td>
-                                                    <td>
-                                                        <button class="btn btn-light">
-                                                            <i class="align-middle" data-feather="eye"></i>
-                                                        </button>
-                                                        <button class="btn btn-lighy">
-                                                            <i class="align-middle" data-feather="edit"></i>
-                                                        </button>
-                                                        <button class="btn btn-light">
-                                                            <i class="align-middle" data-feather="x"></i>
-                                                        </button>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">
-                                                        2
-                                                    </th>
+									<select multiple class="form-control">
+          <option>One</option>
+          <option>Two</option>
+          <option>Three</option>
+          <option>Four</option>
+        </select>
+								</div>
+							</div>
 
-                                                    <td>
-                                                        My Job Level Name
-                                                    </td>
-                                                    <td>
-                                                        <button class="btn btn-light">
-                                                            <i class="align-middle" data-feather="eye"></i>
-                                                        </button>
-                                                        <button class="btn btn-lighy">
-                                                            <i class="align-middle" data-feather="edit"></i>
-                                                        </button>
-                                                        <button class="btn btn-light">
-                                                            <i class="align-middle" data-feather="x"></i>
-                                                        </button>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">
-                                                        3
-                                                    </th>
+							<div class="card">
+								<div class="card-header">
+									<h5 class="card-title mb-0">Disabled</h5>
+								</div>
+								<div class="card-body">
+									<div class="mb-3">
+										<label class="form-label">Disabled input</label>
+										<input type="text" class="form-control" placeholder="Disabled input" disabled>
+									</div>
+									<div class="mb-3">
+										<label class="form-label">Disabled select menu</label>
+										<select class="form-control" disabled>
+            <option>Disabled select</option>
+          </select>
+									</div>
+									<label class="form-check">
+          <input class="form-check-input" type="checkbox" value="" disabled>
+          <span class="form-check-label">
+            Can't check this
+          </span>
+        </label>
+								</div>
+							</div>
+						</div>
+					</div>
 
-                                                    <td>
-                                                        My Job Level Name
-                                                    </td>
-                                                    <td>
-                                                        <button class="btn btn-light">
-                                                            <i class="align-middle" data-feather="eye"></i>
-                                                        </button>
-                                                        <button class="btn btn-lighy">
-                                                            <i class="align-middle" data-feather="edit"></i>
-                                                        </button>
-                                                        <button class="btn btn-light">
-                                                            <i class="align-middle" data-feather="x"></i>
-                                                        </button>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </main>
+				</div>
+			</main>
 
                 <footer class="footer">
                     <div class="container-fluid">
@@ -380,42 +439,6 @@
         </div>
 
         <script src="js/app.js"></script>
-        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-        <script type="text/javascript" src="https://cdn.datatables.net/2.0.1/js/dataTables.js"></script>
-        
-        <script type="text/javascript" src="https://cdn.datatables.net/buttons/3.0.0/js/dataTables.buttons.js"></script>
-        <script type="text/javascript" src="https://cdn.datatables.net/buttons/3.0.0/js/buttons.dataTables.js"></script>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
-        <script type="text/javascript" src="https://cdn.datatables.net/buttons/3.0.0/js/buttons.html5.min.js"></script>
-        
-        <script type="text/javascript" src="https://cdn.datatables.net/2.0.1/js/dataTables.bootstrap5.js"></script>
-        <script type="text/javascript" src="js/app.js"></script>
-        
-        <script type="text/javascript">
-            // Data table
-            $(document).ready( function () {
-                const table = new DataTable('#my-table', {
-                    layout: {
-                        topStart: {
-                            buttons: ['pageLength', 'copyHtml5', 'excelHtml5', 'csvHtml5', 'pdfHtml5']
-                        }
-                    },
-                    responsive: true
-                });
- 
-                table.on('click', 'tbody tr', function (e) {
-                    e.currentTarget.classList.toggle('selected');
-                });
-                
-                // To get selected rows
-                /*
-                document.querySelector('#button').addEventListener('click', function () {
-                    alert(table.rows('.selected').data().length + ' row(s) selected');
-                });*/
-            });
-        </script>
 
     </body>
 

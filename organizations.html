@@ -6,11 +6,11 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="Swap Requests: Shift Guide">
+        <meta name="description" content="Shift Guide App">
 
         <link rel="preconnect" href="https://fonts.gstatic.com">
 
-        <title>Swap Requests: Shift Guide</title>
+        <title>Shift Guide App</title>
 
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link href="css/app.css" rel="stylesheet">
@@ -42,7 +42,7 @@
                             </a>
                         </li>
 
-                        <li class="sidebar-item">
+                        <li class="sidebar-item active">
                             <a class="sidebar-link" href="./organizations.html">
                                 <i class="align-middle" data-feather="briefcase"></i> <span class="align-middle">Organizations</span>
                             </a>
@@ -66,7 +66,7 @@
                             </a>
                         </li>
 
-                        <li class="sidebar-item active">
+                        <li class="sidebar-item">
                             <a class="sidebar-link" href="./swap-requests.html">
                                 <i class="align-middle" data-feather="refresh-ccw"></i> <span class="align-middle">Swap Requests</span>
                             </a>
@@ -90,7 +90,7 @@
                             </a>
                         </li>
 
-                        <li class="sidebar-item">
+                        <li class="sidebar-item active">
                             <a class="sidebar-link" href="./holiday.html">
                                 <i class="align-middle" data-feather="coffee"></i> <span class="align-middle">Holiday</span>
                             </a>
@@ -125,7 +125,7 @@
                     <div id="sgapp-page-header">
                         <header>
                             <h1 class="poppins-medium">
-                                Swap Requests
+                                Organization List
                             </h1>
                         </header>
                         <div>
@@ -241,7 +241,6 @@
                     <div class="container-fluid p-0">
 
                         <!--<h1 class="h3 mb-3"></h1>-->
-
                         <div class="row">
                             <div class="col-12">
                                 <div class="card">
@@ -251,23 +250,19 @@
                                     </div> -->
                                     <div class="card-body">
 
-                                        <table id="my-table" class="table table-striped table-hover table-bordered">
+                                        <table id="my-table" class="table table-striped table-hover table-responsive-sm">
                                             <thead>
                                                 <tr>
-                                                    <th scope="col">
-                                                        <a href="#!" class="text-info">
-                                                            First Name (A - Z)
-                                                        </a>
-                                                    </th>
-                                                    <th scope="col">Current Shift</th>
-                                                    <th scope="col">Alternative Shift</th>
-                                                    <th scope="col">Reason</th>
-                                                    <th scope="col">Action</th>
+                                                    <th scope="col">Names</th>
+                                                    <th scope="col">Address</th>
+                                                    <th scope="col">Color</th>
+                                                    <th scope="col"></th>
+                                                    <th scope="col"></th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <th scope="row">
+                                                    <td>
                                                         <div class="container-fluid">
                                                             <div class="row">
                                                                 <div class="col-sm-12 col-md-3">
@@ -278,7 +273,7 @@
                                                                 <div class="col-sm-12 col-md-9">
                                                                     <div class="row">
                                                                         <div class="col-12">
-                                                                            <h5 class="poppins-bold text-info">
+                                                                            <h5 class="poppins-bold">
                                                                                     Jane Cooper
                                                                             </h5>
                                                                         </div>
@@ -293,45 +288,24 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </th>
-
-                                                    <td>
-                                                        <div>
-                                                            <strong class="text-secondary">
-                                                                    Feb 6 - Feb 8, 2024
-                                                            </strong>
-                                                        </div>
-                                                        <div>
-                                                                All day
-                                                        </div>
                                                     </td>
+                                                    <td>Cecilia Chapman 711-2880 Nula St. Mankato</td>
                                                     <td>
-                                                        <div>
-                                                            <strong class="text-secondary">
-                                                                    Feb 7 - Feb 9, 2024
-                                                            </strong>
-                                                        </div>
-                                                        <div>
-                                                                All day
-                                                        </div>
+                                                        <input type="color" class="btn btn-light" value="#f39c12" />
                                                     </td>
-                                                    <td>
-                                                            Neque porro quisquam est qui dolorem ipsum...
-                                                    </td>
-                                                    <td>
-                                                        <button class="btn btn-lighy">
-                                                            <i class="align-middle" data-feather="check"></i>
-                                                        </button>
+                                                    <td class="text-center">
                                                         <button class="btn btn-light">
-                                                            <i class="align-middle" data-feather="x"></i>
+                                                            <i class="align-middle" data-feather="info"></i>
                                                         </button>
+                                                    </td>
+                                                    <td class="text-center">
                                                         <button class="btn btn-light">
-                                                            <i class="align-middle" data-feather="eye"></i>
+                                                            <i class="align-middle" data-feather="trash"></i>
                                                         </button>
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <th scope="row">
+                                                    <td>
                                                         <div class="container-fluid">
                                                             <div class="row">
                                                                 <div class="col-sm-12 col-md-3">
@@ -342,7 +316,7 @@
                                                                 <div class="col-sm-12 col-md-9">
                                                                     <div class="row">
                                                                         <div class="col-12">
-                                                                            <h5 class="poppins-bold text-info">
+                                                                            <h5 class="poppins-bold">
                                                                                     Jane Cooper
                                                                             </h5>
                                                                         </div>
@@ -357,45 +331,24 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </th>
-
-                                                    <td>
-                                                        <div>
-                                                            <strong class="text-secondary">
-                                                                    Feb 6 - Feb 8, 2024
-                                                            </strong>
-                                                        </div>
-                                                        <div>
-                                                                All day
-                                                        </div>
                                                     </td>
+                                                    <td>Cecilia Chapman 711-2880 Nula St. Mankato</td>
                                                     <td>
-                                                        <div>
-                                                            <strong class="text-secondary">
-                                                                    Feb 7 - Feb 9, 2024
-                                                            </strong>
-                                                        </div>
-                                                        <div>
-                                                                All day
-                                                        </div>
+                                                        <input type="color" class="btn btn-light" value="#f39c12" />
                                                     </td>
-                                                    <td>
-                                                            Neque porro quisquam est qui dolorem ipsum...
-                                                    </td>
-                                                    <td>
-                                                        <button class="btn btn-lighy">
-                                                            <i class="align-middle" data-feather="check"></i>
-                                                        </button>
+                                                    <td class="text-center">
                                                         <button class="btn btn-light">
-                                                            <i class="align-middle" data-feather="x"></i>
+                                                            <i class="align-middle" data-feather="info"></i>
                                                         </button>
+                                                    </td>
+                                                    <td class="text-center">
                                                         <button class="btn btn-light">
-                                                            <i class="align-middle" data-feather="eye"></i>
+                                                            <i class="align-middle" data-feather="trash"></i>
                                                         </button>
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <th scope="row">
+                                                    <td>
                                                         <div class="container-fluid">
                                                             <div class="row">
                                                                 <div class="col-sm-12 col-md-3">
@@ -406,7 +359,7 @@
                                                                 <div class="col-sm-12 col-md-9">
                                                                     <div class="row">
                                                                         <div class="col-12">
-                                                                            <h5 class="poppins-bold text-info">
+                                                                            <h5 class="poppins-bold">
                                                                                     Jane Cooper
                                                                             </h5>
                                                                         </div>
@@ -421,45 +374,24 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </th>
-
-                                                    <td>
-                                                        <div>
-                                                            <strong class="text-secondary">
-                                                                    Feb 6 - Feb 8, 2024
-                                                            </strong>
-                                                        </div>
-                                                        <div>
-                                                                All day
-                                                        </div>
                                                     </td>
+                                                    <td>Cecilia Chapman 711-2880 Nula St. Mankato</td>
                                                     <td>
-                                                        <div>
-                                                            <strong class="text-secondary">
-                                                                    Feb 7 - Feb 9, 2024
-                                                            </strong>
-                                                        </div>
-                                                        <div>
-                                                                All day
-                                                        </div>
+                                                        <input type="color" class="btn btn-light" value="#f39c12" />
                                                     </td>
-                                                    <td>
-                                                            Neque porro quisquam est qui dolorem ipsum...
-                                                    </td>
-                                                    <td>
-                                                        <button class="btn btn-lighy">
-                                                            <i class="align-middle" data-feather="check"></i>
-                                                        </button>
+                                                    <td class="text-center">
                                                         <button class="btn btn-light">
-                                                            <i class="align-middle" data-feather="x"></i>
+                                                            <i class="align-middle" data-feather="info"></i>
                                                         </button>
+                                                    </td>
+                                                    <td class="text-center">
                                                         <button class="btn btn-light">
-                                                            <i class="align-middle" data-feather="eye"></i>
+                                                            <i class="align-middle" data-feather="trash"></i>
                                                         </button>
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <th scope="row">
+                                                    <td>
                                                         <div class="container-fluid">
                                                             <div class="row">
                                                                 <div class="col-sm-12 col-md-3">
@@ -470,7 +402,7 @@
                                                                 <div class="col-sm-12 col-md-9">
                                                                     <div class="row">
                                                                         <div class="col-12">
-                                                                            <h5 class="poppins-bold text-info">
+                                                                            <h5 class="poppins-bold">
                                                                                     Jane Cooper
                                                                             </h5>
                                                                         </div>
@@ -485,45 +417,24 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </th>
-
-                                                    <td>
-                                                        <div>
-                                                            <strong class="text-secondary">
-                                                                    Feb 6 - Feb 8, 2024
-                                                            </strong>
-                                                        </div>
-                                                        <div>
-                                                                All day
-                                                        </div>
                                                     </td>
+                                                    <td>Cecilia Chapman 711-2880 Nula St. Mankato</td>
                                                     <td>
-                                                        <div>
-                                                            <strong class="text-secondary">
-                                                                    Feb 7 - Feb 9, 2024
-                                                            </strong>
-                                                        </div>
-                                                        <div>
-                                                                All day
-                                                        </div>
+                                                        <input type="color" class="btn btn-light" value="#f39c12" />
                                                     </td>
-                                                    <td>
-                                                            Neque porro quisquam est qui dolorem ipsum...
-                                                    </td>
-                                                    <td>
-                                                        <button class="btn btn-lighy">
-                                                            <i class="align-middle" data-feather="check"></i>
-                                                        </button>
+                                                    <td class="text-center">
                                                         <button class="btn btn-light">
-                                                            <i class="align-middle" data-feather="x"></i>
+                                                            <i class="align-middle" data-feather="info"></i>
                                                         </button>
+                                                    </td>
+                                                    <td class="text-center">
                                                         <button class="btn btn-light">
-                                                            <i class="align-middle" data-feather="eye"></i>
+                                                            <i class="align-middle" data-feather="trash"></i>
                                                         </button>
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <th scope="row">
+                                                    <td>
                                                         <div class="container-fluid">
                                                             <div class="row">
                                                                 <div class="col-sm-12 col-md-3">
@@ -534,7 +445,7 @@
                                                                 <div class="col-sm-12 col-md-9">
                                                                     <div class="row">
                                                                         <div class="col-12">
-                                                                            <h5 class="poppins-bold text-info">
+                                                                            <h5 class="poppins-bold">
                                                                                     Jane Cooper
                                                                             </h5>
                                                                         </div>
@@ -549,45 +460,24 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </th>
-
-                                                    <td>
-                                                        <div>
-                                                            <strong class="text-secondary">
-                                                                    Feb 6 - Feb 8, 2024
-                                                            </strong>
-                                                        </div>
-                                                        <div>
-                                                                All day
-                                                        </div>
                                                     </td>
+                                                    <td>Cecilia Chapman 711-2880 Nula St. Mankato</td>
                                                     <td>
-                                                        <div>
-                                                            <strong class="text-secondary">
-                                                                    Feb 7 - Feb 9, 2024
-                                                            </strong>
-                                                        </div>
-                                                        <div>
-                                                                All day
-                                                        </div>
+                                                        <input type="color" class="btn btn-light" value="#f39c12" />
                                                     </td>
-                                                    <td>
-                                                            Neque porro quisquam est qui dolorem ipsum...
-                                                    </td>
-                                                    <td>
-                                                        <button class="btn btn-lighy">
-                                                            <i class="align-middle" data-feather="check"></i>
-                                                        </button>
+                                                    <td class="text-center">
                                                         <button class="btn btn-light">
-                                                            <i class="align-middle" data-feather="x"></i>
+                                                            <i class="align-middle" data-feather="info"></i>
                                                         </button>
+                                                    </td>
+                                                    <td class="text-center">
                                                         <button class="btn btn-light">
-                                                            <i class="align-middle" data-feather="eye"></i>
+                                                            <i class="align-middle" data-feather="trash"></i>
                                                         </button>
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <th scope="row">
+                                                    <td>
                                                         <div class="container-fluid">
                                                             <div class="row">
                                                                 <div class="col-sm-12 col-md-3">
@@ -598,7 +488,7 @@
                                                                 <div class="col-sm-12 col-md-9">
                                                                     <div class="row">
                                                                         <div class="col-12">
-                                                                            <h5 class="poppins-bold text-info">
+                                                                            <h5 class="poppins-bold">
                                                                                     Jane Cooper
                                                                             </h5>
                                                                         </div>
@@ -613,45 +503,24 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </th>
-
-                                                    <td>
-                                                        <div>
-                                                            <strong class="text-secondary">
-                                                                    Feb 6 - Feb 8, 2024
-                                                            </strong>
-                                                        </div>
-                                                        <div>
-                                                                All day
-                                                        </div>
                                                     </td>
+                                                    <td>Cecilia Chapman 711-2880 Nula St. Mankato</td>
                                                     <td>
-                                                        <div>
-                                                            <strong class="text-secondary">
-                                                                    Feb 7 - Feb 9, 2024
-                                                            </strong>
-                                                        </div>
-                                                        <div>
-                                                                All day
-                                                        </div>
+                                                        <input type="color" class="btn btn-light" value="#f39c12" />
                                                     </td>
-                                                    <td>
-                                                            Neque porro quisquam est qui dolorem ipsum...
-                                                    </td>
-                                                    <td>
-                                                        <button class="btn btn-lighy">
-                                                            <i class="align-middle" data-feather="check"></i>
-                                                        </button>
+                                                    <td class="text-center">
                                                         <button class="btn btn-light">
-                                                            <i class="align-middle" data-feather="x"></i>
+                                                            <i class="align-middle" data-feather="info"></i>
                                                         </button>
+                                                    </td>
+                                                    <td class="text-center">
                                                         <button class="btn btn-light">
-                                                            <i class="align-middle" data-feather="eye"></i>
+                                                            <i class="align-middle" data-feather="trash"></i>
                                                         </button>
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <th scope="row">
+                                                    <td>
                                                         <div class="container-fluid">
                                                             <div class="row">
                                                                 <div class="col-sm-12 col-md-3">
@@ -662,7 +531,7 @@
                                                                 <div class="col-sm-12 col-md-9">
                                                                     <div class="row">
                                                                         <div class="col-12">
-                                                                            <h5 class="poppins-bold text-info">
+                                                                            <h5 class="poppins-bold">
                                                                                     Jane Cooper
                                                                             </h5>
                                                                         </div>
@@ -677,45 +546,24 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </th>
-
-                                                    <td>
-                                                        <div>
-                                                            <strong class="text-secondary">
-                                                                    Feb 6 - Feb 8, 2024
-                                                            </strong>
-                                                        </div>
-                                                        <div>
-                                                                All day
-                                                        </div>
                                                     </td>
+                                                    <td>Cecilia Chapman 711-2880 Nula St. Mankato</td>
                                                     <td>
-                                                        <div>
-                                                            <strong class="text-secondary">
-                                                                    Feb 7 - Feb 9, 2024
-                                                            </strong>
-                                                        </div>
-                                                        <div>
-                                                                All day
-                                                        </div>
+                                                        <input type="color" class="btn btn-light" value="#f39c12" />
                                                     </td>
-                                                    <td>
-                                                            Neque porro quisquam est qui dolorem ipsum...
-                                                    </td>
-                                                    <td>
-                                                        <button class="btn btn-lighy">
-                                                            <i class="align-middle" data-feather="check"></i>
-                                                        </button>
+                                                    <td class="text-center">
                                                         <button class="btn btn-light">
-                                                            <i class="align-middle" data-feather="x"></i>
+                                                            <i class="align-middle" data-feather="info"></i>
                                                         </button>
+                                                    </td>
+                                                    <td class="text-center">
                                                         <button class="btn btn-light">
-                                                            <i class="align-middle" data-feather="eye"></i>
+                                                            <i class="align-middle" data-feather="trash"></i>
                                                         </button>
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <th scope="row">
+                                                    <td>
                                                         <div class="container-fluid">
                                                             <div class="row">
                                                                 <div class="col-sm-12 col-md-3">
@@ -726,7 +574,7 @@
                                                                 <div class="col-sm-12 col-md-9">
                                                                     <div class="row">
                                                                         <div class="col-12">
-                                                                            <h5 class="poppins-bold text-info">
+                                                                            <h5 class="poppins-bold">
                                                                                     Jane Cooper
                                                                             </h5>
                                                                         </div>
@@ -741,45 +589,24 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </th>
-
-                                                    <td>
-                                                        <div>
-                                                            <strong class="text-secondary">
-                                                                    Feb 6 - Feb 8, 2024
-                                                            </strong>
-                                                        </div>
-                                                        <div>
-                                                                All day
-                                                        </div>
                                                     </td>
+                                                    <td>Cecilia Chapman 711-2880 Nula St. Mankato</td>
                                                     <td>
-                                                        <div>
-                                                            <strong class="text-secondary">
-                                                                    Feb 7 - Feb 9, 2024
-                                                            </strong>
-                                                        </div>
-                                                        <div>
-                                                                All day
-                                                        </div>
+                                                        <input type="color" class="btn btn-light" value="#f39c12" />
                                                     </td>
-                                                    <td>
-                                                            Neque porro quisquam est qui dolorem ipsum...
-                                                    </td>
-                                                    <td>
-                                                        <button class="btn btn-lighy">
-                                                            <i class="align-middle" data-feather="check"></i>
-                                                        </button>
+                                                    <td class="text-center">
                                                         <button class="btn btn-light">
-                                                            <i class="align-middle" data-feather="x"></i>
+                                                            <i class="align-middle" data-feather="info"></i>
                                                         </button>
+                                                    </td>
+                                                    <td class="text-center">
                                                         <button class="btn btn-light">
-                                                            <i class="align-middle" data-feather="eye"></i>
+                                                            <i class="align-middle" data-feather="trash"></i>
                                                         </button>
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <th scope="row">
+                                                    <td>
                                                         <div class="container-fluid">
                                                             <div class="row">
                                                                 <div class="col-sm-12 col-md-3">
@@ -790,7 +617,7 @@
                                                                 <div class="col-sm-12 col-md-9">
                                                                     <div class="row">
                                                                         <div class="col-12">
-                                                                            <h5 class="poppins-bold text-info">
+                                                                            <h5 class="poppins-bold">
                                                                                     Jane Cooper
                                                                             </h5>
                                                                         </div>
@@ -805,45 +632,24 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </th>
-
-                                                    <td>
-                                                        <div>
-                                                            <strong class="text-secondary">
-                                                                    Feb 6 - Feb 8, 2024
-                                                            </strong>
-                                                        </div>
-                                                        <div>
-                                                                All day
-                                                        </div>
                                                     </td>
+                                                    <td>Cecilia Chapman 711-2880 Nula St. Mankato</td>
                                                     <td>
-                                                        <div>
-                                                            <strong class="text-secondary">
-                                                                    Feb 7 - Feb 9, 2024
-                                                            </strong>
-                                                        </div>
-                                                        <div>
-                                                                All day
-                                                        </div>
+                                                        <input type="color" class="btn btn-light" value="#f39c12" />
                                                     </td>
-                                                    <td>
-                                                            Neque porro quisquam est qui dolorem ipsum...
-                                                    </td>
-                                                    <td>
-                                                        <button class="btn btn-lighy">
-                                                            <i class="align-middle" data-feather="check"></i>
-                                                        </button>
+                                                    <td class="text-center">
                                                         <button class="btn btn-light">
-                                                            <i class="align-middle" data-feather="x"></i>
+                                                            <i class="align-middle" data-feather="info"></i>
                                                         </button>
+                                                    </td>
+                                                    <td class="text-center">
                                                         <button class="btn btn-light">
-                                                            <i class="align-middle" data-feather="eye"></i>
+                                                            <i class="align-middle" data-feather="trash"></i>
                                                         </button>
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <th scope="row">
+                                                    <td>
                                                         <div class="container-fluid">
                                                             <div class="row">
                                                                 <div class="col-sm-12 col-md-3">
@@ -854,7 +660,7 @@
                                                                 <div class="col-sm-12 col-md-9">
                                                                     <div class="row">
                                                                         <div class="col-12">
-                                                                            <h5 class="poppins-bold text-info">
+                                                                            <h5 class="poppins-bold">
                                                                                     Jane Cooper
                                                                             </h5>
                                                                         </div>
@@ -869,40 +675,62 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </th>
+                                                    </td>
+                                                    <td>Cecilia Chapman 711-2880 Nula St. Mankato</td>
+                                                    <td>
+                                                        <input type="color" class="btn btn-light" value="#f39c12" />
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <button class="btn btn-light">
+                                                            <i class="align-middle" data-feather="info"></i>
+                                                        </button>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <button class="btn btn-light">
+                                                            <i class="align-middle" data-feather="trash"></i>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="container-fluid">
+                                                            <div class="row">
+                                                                <div class="col-sm-12 col-md-3">
 
-                                                    <td>
-                                                        <div>
-                                                            <strong class="text-secondary">
-                                                                    Feb 6 - Feb 8, 2024
-                                                            </strong>
-                                                        </div>
-                                                        <div>
-                                                                All day
+                                                                    <img src="img/avatars/avatar-5.jpg" class="rounded-circle" style="width: 3em;" alt="Avatar" />
+
+                                                                </div>
+                                                                <div class="col-sm-12 col-md-9">
+                                                                    <div class="row">
+                                                                        <div class="col-12">
+                                                                            <h5 class="poppins-bold">
+                                                                                    Jane Cooper
+                                                                            </h5>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-12">
+                                                                            <span class="text-small">
+                                                                                    @jane
+                                                                            </span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </td>
+                                                    <td>Cecilia Chapman 711-2880 Nula St. Mankato</td>
                                                     <td>
-                                                        <div>
-                                                            <strong class="text-secondary">
-                                                                    Feb 7 - Feb 9, 2024
-                                                            </strong>
-                                                        </div>
-                                                        <div>
-                                                                All day
-                                                        </div>
+                                                        <input type="color" class="btn btn-light" value="#f39c12" />
                                                     </td>
-                                                    <td>
-                                                            Neque porro quisquam est qui dolorem ipsum...
-                                                    </td>
-                                                    <td>
-                                                        <button class="btn btn-lighy">
-                                                            <i class="align-middle" data-feather="check"></i>
-                                                        </button>
+                                                    <td class="text-center">
                                                         <button class="btn btn-light">
-                                                            <i class="align-middle" data-feather="x"></i>
+                                                            <i class="align-middle" data-feather="info"></i>
                                                         </button>
+                                                    </td>
+                                                    <td class="text-center">
                                                         <button class="btn btn-light">
-                                                            <i class="align-middle" data-feather="eye"></i>
+                                                            <i class="align-middle" data-feather="trash"></i>
                                                         </button>
                                                     </td>
                                                 </tr>
@@ -947,7 +775,6 @@
             </div>
         </div>
 
-        <script src="js/app.js"></script>
         <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
         <script type="text/javascript" src="https://cdn.datatables.net/2.0.1/js/dataTables.js"></script>
         
