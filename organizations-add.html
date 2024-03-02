@@ -263,7 +263,7 @@
                                                     <div class="mb-3">
                                                         <label for="positionSelect" class="form-label">Available Position</label>
                                                         
-                                                        <select id="positionSelect" class="single2Selects form-select" name="state" style="width: 100%;">
+                                                        <select id="positionSelect" class="sgapp-select2 form-select sgapp-select2-full" name="state">
                                                             <option value="AL">Alabama</option>
                                                             <option value="WY">Wyoming</option>
                                                         </select>
@@ -422,7 +422,7 @@
         <script type="text/javascript">
             // In your Javascript (external .js resource or <script> tag)
             $(document).ready(function() {
-                $('.single2Selects').select2({
+                $('.sgapp-select2').select2({
                     theme: 'bootstrap-5'
                 });
             });

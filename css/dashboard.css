@@ -300,6 +300,11 @@ a.sidebar-link:hover
     border-color: #dfe4ea !important;
 }
 
+.sgapp-select2-full
+{
+    width: 100%;
+}
+
 @media only screen and (max-width: 768px)
 {    
     body
