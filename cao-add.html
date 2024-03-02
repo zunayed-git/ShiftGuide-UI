@@ -124,7 +124,7 @@
                     <div id="sgapp-page-header">
                         <header>
                             <h1 class="poppins-medium">
-                                Edit CAO
+                                Add New
                             </h1>
                         </header>
                         <div>
@@ -240,11 +240,207 @@
                     <div class="container-fluid p-0">
 
                         <!--<h1 class="h3 mb-3"></h1>-->
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5 class="card-title mb-0">
+                                            CAO Basic Information
+                                        </h5>
+                                    </div>
+                                    <div class="card-body">
+
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-sm-12 col-md-4">    
+                                                    <div class="mb-3">
+                                                        <label for="titleInput" class="form-label">CAO Title</label>
+                                                        <input type="text" class="form-control" id="titleInput">
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="col-sm-12 col-md-4">    
+                                                    <div class="mb-3">
+                                                        <label for="hourlyRateInput" class="form-label">Hourly Rate (As €)</label>
+                                                        <input type="number" min="0" class="form-control" id="hourlyRateInput">
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="col-sm-12 col-md-4">    
+                                                    <div class="mb-3">
+                                                        <label for="regularDutyTimeInput" class="form-label">Regular Duty Time</label>
+                                                        <input type="number" min="0" class="form-control" id="regularDutyTimeInput">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="row">
+                                                <div class="col-sm-12 col-md-4">    
+                                                    <div class="mb-3">
+                                                        <label for="overtimeSurchargeRateAsPercentInput" class="form-label">Overtime Surcharge Rate (As % Percent)</label>
+                                                        <input type="number" min="0" class="form-control" id="overtimeSurchargeRateAsPercentInput">
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="col-sm-12 col-md-4">    
+                                                    <div class="mb-3">
+                                                        <label for="maxOvertimeHourWeeklyInput" class="form-label">Maximum Overtime Hour (Weekly)</label>
+                                                        <input type="number" min="0" class="form-control" id="maxOvertimeHourWeeklyInput">
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="col-sm-12 col-md-4">    
+                                                    <div class="mb-3">
+                                                        <label for="maxOvertimeDayWeeklyInput" class="form-label">Maximum Overtime Day (Weekly)</label>
+                                                        <input type="number" min="0" class="form-control" id="maxOvertimeDayWeeklyInput">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="row">
+                                                <div class="col-sm-12 col-md-4">    
+                                                    <div class="mb-3">
+                                                        <label for="jobPositionSelect" class="form-label">Job Position</label>
+                                                        <select id="jobPositionSelect" class="sgapp-select2 form-select sgapp-select2-full" name="state">
+                                                            <option value="AL">Alabama</option>
+                                                            <option value="WY">Wyoming</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="col-sm-12 col-md-4">    
+                                                    <div class="mb-3">
+                                                        <label for="holidaySelect" class="form-label">Holiday</label>
+                                                        <select id="holidaySelect" class="sgapp-select2 form-select sgapp-select2-full" name="state">
+                                                            <option value="AL">Alabama</option>
+                                                            <option value="WY">Wyoming</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="col-sm-12 col-md-4">    
+                                                    <div class="mb-3">
+                                                        <label for="holidayRateInput" class="form-label">Holiday Rate (as % Percent)</label>
+                                                        <input type="number" min="0" class="form-control" id="holidayRateInput">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5 class="card-title mb-0">
+                                            CAO Surcharges Information
+                                        </h5>
+                                    </div>
+                                    <div class="card-body">
+
+                                        <div class="container-fluid">
+                                            <div class="row mb-3">
+                                                <div class="col-12">
+                                                    
+                                                    <button class="btn btn-success">
+                                                        <i class="align-middle" data-feather="plus"></i>
+                                                        Add
+                                                    </button>
+                                                    
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="row">
+                                                <div class="col-sm-12 col-md-2">    
+                                                    <div class="mb-3">
+                                                        <label for="caoSurchargeInfoTitleInput" class="form-label">Title</label>
+                                                        <input type="text" class="form-control" id="caoSurchargeInfoTitleInput">
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="col-sm-12 col-md-2">    
+                                                    <div class="mb-3">
+                                                        <label for="caoSurchargeInfoStartSelect" class="form-label">Start Time</label>
+                                                        <select id="caoSurchargeInfoStartSelect" class="sgapp-select2 form-select sgapp-select2-full" name="state">
+                                                            <option value="10">10:00:00</option>
+                                                            <option value="11">11:00:00</option>
+                                                            <option value="12">12:00:00</option>
+                                                            <option value="13">13:00:00</option>
+                                                            <option value="14">14:00:00</option>
+                                                            <option value="15">15:00:00</option>
+                                                            <option value="16">16:00:00</option>
+                                                            <option value="17">17:00:00</option>
+                                                            <option value="18">18:00:00</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="col-sm-12 col-md-2">    
+                                                    <div class="mb-3">
+                                                        <label for="caoSurchargeInfoEndSelect" class="form-label">End Time</label>
+                                                        <select id="caoSurchargeInfoEndSelect" class="sgapp-select2 form-select sgapp-select2-full" name="state">
+                                                            <option value="10">10:00:00</option>
+                                                            <option value="11">11:00:00</option>
+                                                            <option value="12">12:00:00</option>
+                                                            <option value="13">13:00:00</option>
+                                                            <option value="14">14:00:00</option>
+                                                            <option value="15">15:00:00</option>
+                                                            <option value="16">16:00:00</option>
+                                                            <option value="17">17:00:00</option>
+                                                            <option value="18">18:00:00</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="col-sm-12 col-md-2">    
+                                                    <div class="mb-3">
+                                                        <label for="caoSurchargeInfoHourlyRateInput" class="form-label">Hourly Rate (As €)</label>
+                                                        <input type="number" min="0" class="form-control" id="caoSurchargeInfoHourlyRateInput">
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="col-sm-12 col-md-2">    
+                                                    <div class="mb-3">
+                                                        <label for="caoSurchargeInfoWeekdaySelect" class="form-label">Weekday</label>
+                                                        <select id="caoSurchargeInfoWeekdaySelect" class="sgapp-select2 form-select sgapp-select2-full" name="state">
+                                                            <option value="-1" selected="">Select One...</option>
+                                                            <option value="sat">Saturday</option>
+                                                            <option value="sun">Sunday</option>
+                                                            <option value="mon">Monday</option>
+                                                            <option value="tue">Tuesday</option>
+                                                            <option value="wed">Wednesday</option>
+                                                            <option value="thr">Thursday</option>
+                                                            <option value="fri">Friday</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="col-sm-12 col-md-2">
+                                                    <div class="mb-3">
+                                                        <label class="form-label"></label>
+                                                        <button class="btn btn-danger sgapp-full-width">
+                                                            <i class="align-middle" data-feather="x"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
                         <div class="card">
                             <div class="card-body">
 
                                 <div class="row">
-                                    <div class="col-12">
+                                    <div class="col-12 sgapp-center">
                                         <button class="btn btn-info">
                                             <i class="align-middle" data-feather="save"></i>
                                             Save
@@ -259,74 +455,6 @@
 
                             </div>
                         </div>
-
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="card">
-<!--                                    <div class="card-header">
-                                        <h5 class="card-title mb-0"></h5>
-                                    </div>-->
-                                    <div class="card-body">
-
-                                        <div class="container-fluid">
-                                            <div class="row">
-                                                <div class="col-sm-12 col-md-6">    
-                                                    <div class="mb-3">
-                                                        <label for="titleInput" class="form-label">CAO Title</label>
-                                                        <input type="text" class="form-control" id="titleInput">
-                                                    </div>
-                                                </div>
-                                                
-                                                <div class="col-sm-12 col-md-6">    
-                                                    <div class="mb-3">
-                                                        <label for="typeSelect" class="form-label">Type</label>
-                                                        <select id="typeSelect" class="sgapp-select2 form-select sgapp-select2-full" name="typeSelect">
-                                                            <option value="AL" selected="">Select One...</option>
-                                                            <option value="AL">Alabama</option>
-                                                            <option value="WY">Wyoming</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            
-                                            <div class="row">
-                                                <div class="col-sm-12 col-md-6">    
-                                                    <div class="mb-3">
-                                                        <label for="mandatoryRateInput" class="form-label">Mandatory Rate</label>
-                                                        <input type="number" min="0" class="form-control" id="mandatoryRateInput">
-                                                    </div>
-                                                </div>
-                                                
-                                                <div class="col-sm-12 col-md-6">    
-                                                    <div class="mb-3">
-                                                        <label for="surchargeRateInput" class="form-label">Surcharge Rate</label>
-                                                        <input type="number" min="0" class="form-control" id="surchargeRateInput">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            
-                                            <div class="row">
-                                                <div class="col-sm-12 col-md-6">    
-                                                    <div class="mb-3">
-                                                        <label for="holidayRateInput" class="form-label">Holiday Rate</label>
-                                                        <input type="number" min="0" class="form-control" id="holidayRateInput">
-                                                    </div>
-                                                </div>
-                                                
-                                                <div class="col-sm-12 col-md-6">    
-                                                    <div class="mb-3">
-                                                        <label for="nightRateInput" class="form-label">Night Rate</label>
-                                                        <input type="number" min="0" class="form-control" id="nightRateInput">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
                     </div>
                 </main>
 
