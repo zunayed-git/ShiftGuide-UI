@@ -54,7 +54,7 @@
                             </a>
                         </li>
                         
-                        <li class="sidebar-item">
+                        <li class="sidebar-item active">
                             <a class="sidebar-link" href="./attendance.html">
                                 <i class="align-middle" data-feather="check-circle"></i> <span class="align-middle">Attendance</span>
                             </a>
@@ -102,7 +102,7 @@
                             </a>
                         </li>
 
-                        <li class="sidebar-item active">
+                        <li class="sidebar-item">
                             <a class="sidebar-link" href="./cao.html">
                                 <i class="align-middle" data-feather="sliders"></i> <span class="align-middle">CAO</span>
                             </a>
@@ -131,7 +131,7 @@
                     <div id="sgapp-page-header">
                         <header>
                             <h1 class="poppins-medium">
-                                CAO
+                                Staff List
                             </h1>
                         </header>
                         <div>
@@ -247,19 +247,6 @@
                     <div class="container-fluid p-0">
 
                         <!--<h1 class="h3 mb-3"></h1>-->
-                        <div class="card">
-                            <div class="card-body">
-
-                                <div class="row">
-                                    <div class="col-12">
-                                        <a class="btn btn-info" href="./cao-add.html">
-                                            <i class="align-middle" data-feather="plus"></i> Add
-                                        </a>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
                         
                         <div class="row">
                             <div class="col-12">
@@ -270,61 +257,264 @@
                                     </div> -->
                                     <div class="card-body">
 
-                                        <table id="my-table" class="table table-striped table-hover table-responsive-sm">
+                                        <table id="my-table" class="table table-hover table-striped">
                                             <thead>
                                                 <tr>
-                                                    <th scope="col">
-                                                        Serial
-                                                    </th>
-                                                    <th scope="col">Title</th>
-                                                    <th scope="col">Min Duty Time</th>
-                                                    <th scope="col">Hourly Rate</th>
-                                                    <th scope="col">OT Surge Rate</th>
-                                                    <th scope="col">Max Overtime Hour</th>
-                                                    <th scope="col">Max Overtime Day</th>
-                                                    <th scope="col">Total OT Hour</th>
-                                                    <th scope="col">Action</th>
+                                                    <th>Staff</th>
+                                                    <th>Shift & Status</th>
+                                                    <th>Clock In</th>
+                                                    <th>Clock Out</th>
+                                                    <th>Required Time</th>
+                                                    <th>Actual Time</th>
+                                                    <th>Action</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
+                                                
                                                 <tr>
-                                                    <th scope="row">
-                                                        1
-                                                    </th>
                                                     <td>
-                                                        Recusandae Sequi qu
+                                                        <div class="container-fluid">
+                                                            <div class="row">
+                                                                <div class="col-sm-12 col-md-3">
+                                                                    <img src="img/avatars/avatar-5.jpg" class="border border-info border-1 avatar rounded-circle me-1" style="width: 3em;" alt="Avatar" />
+                                                                </div>
+                                                                <div class="col-sm-12 col-md-9">
+                                                                    <h4 class="text-info poppins-medium">
+                                                                        Jane Cooper
+                                                                    </h4>
+                                                                    
+                                                                    <div>
+                                                                        <span class="badge rounded-pill bg-primary">My Organization Name</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                     </td>
                                                     <td>
-                                                        55
+                                                        <div class="row border border-light border-1 p-2 rounded-3">
+                                                            <div class="col-12 text-center">
+                                                                <h5 class="poppins-medium sgapp-small">
+                                                                    Shift Duration
+                                                                </h5>
+                                                                
+                                                                <p class="text-secondary sgapp-small">
+                                                                    9:00 AM - 6:00 PM
+                                                                </p>
+                                                                
+                                                                <span class="badge bg-success p-2">On Time</span>
+                                                            </div>
+                                                        </div>
                                                     </td>
                                                     <td>
-                                                        €81.00
+                                                        <i class="align-middle" data-feather="clock"></i> <span class="align-middle">9:55 AM</span>
                                                     </td>
                                                     <td>
-                                                        €99.00
+                                                        <i class="align-middle" data-feather="clock"></i> <span class="align-middle">9:55 AM</span>
                                                     </td>
                                                     <td>
-                                                        89.00
+                                                        9 Hours
                                                     </td>
                                                     <td>
-                                                        8
+                                                        9 Hours 24 Minutes
                                                     </td>
                                                     <td>
-                                                        712
-                                                    </td>
+                                                        <a class="btn btn-light" href="#!">
+                                                            <i class="align-middle text-primary" data-feather="info"></i>
+                                                        </a>
                                                         
-                                                    <td class="text-center">
-                                                        <a class="btn btn-light" href="./cao-details.html">
-                                                            <i class="align-middle text-primary" data-feather="eye"></i>
+                                                        <a class="btn btn-light" href="#!">
+                                                            <i class="align-middle text-warning" data-feather="edit"></i>
                                                         </a>
-                                                        <a class="btn btn-light" href="./cao-edit.html">
-                                                            <i class="align-middle text-success" data-feather="edit"></i>
-                                                        </a>
+                                                        
                                                         <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#deleteModal">
                                                             <i class="align-middle text-danger" data-feather="x"></i>
                                                         </button>
                                                     </td>
                                                 </tr>
+                                                
+                                                <tr>
+                                                    <td>
+                                                        <div class="container-fluid">
+                                                            <div class="row">
+                                                                <div class="col-sm-12 col-md-3">
+                                                                    <img src="img/avatars/avatar-5.jpg" class="border border-info border-1 avatar rounded-circle me-1" style="width: 3em;" alt="Avatar" />
+                                                                </div>
+                                                                <div class="col-sm-12 col-md-9">
+                                                                    <h4 class="text-info poppins-medium">
+                                                                        Jane Cooper
+                                                                    </h4>
+                                                                    
+                                                                    <div>
+                                                                        <span class="badge rounded-pill bg-primary">My Organization Name</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="row border border-light border-1 p-2 rounded-3">
+                                                            <div class="col-12 text-center">
+                                                                <h5 class="poppins-medium sgapp-small">
+                                                                    Shift Duration
+                                                                </h5>
+                                                                
+                                                                <p class="text-secondary sgapp-small">
+                                                                    9:00 AM - 6:00 PM
+                                                                </p>
+                                                                
+                                                                <span class="badge bg-success p-2">On Time</span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <i class="align-middle" data-feather="clock"></i> <span class="align-middle">9:55 AM</span>
+                                                    </td>
+                                                    <td>
+                                                        <i class="align-middle" data-feather="clock"></i> <span class="align-middle">9:55 AM</span>
+                                                    </td>
+                                                    <td>
+                                                        9 Hours
+                                                    </td>
+                                                    <td>
+                                                        9 Hours 24 Minutes
+                                                    </td>
+                                                    <td>
+                                                        <a class="btn btn-light" href="#!">
+                                                            <i class="align-middle text-primary" data-feather="info"></i>
+                                                        </a>
+                                                        
+                                                        <a class="btn btn-light" href="#!">
+                                                            <i class="align-middle text-warning" data-feather="edit"></i>
+                                                        </a>
+                                                        
+                                                        <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                                                            <i class="align-middle text-danger" data-feather="x"></i>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                    <td>
+                                                        <div class="container-fluid">
+                                                            <div class="row">
+                                                                <div class="col-sm-12 col-md-3">
+                                                                    <img src="img/avatars/avatar-5.jpg" class="border border-info border-1 avatar rounded-circle me-1" style="width: 3em;" alt="Avatar" />
+                                                                </div>
+                                                                <div class="col-sm-12 col-md-9">
+                                                                    <h4 class="text-info poppins-medium">
+                                                                        Jane Cooper
+                                                                    </h4>
+                                                                    
+                                                                    <div>
+                                                                        <span class="badge rounded-pill bg-primary">My Organization Name</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="row border border-light border-1 p-2 rounded-3">
+                                                            <div class="col-12 text-center">
+                                                                <h5 class="poppins-medium sgapp-small">
+                                                                    Shift Duration
+                                                                </h5>
+                                                                
+                                                                <p class="text-secondary sgapp-small">
+                                                                    9:00 AM - 6:00 PM
+                                                                </p>
+                                                                
+                                                                <span class="badge bg-danger p-2">Absense</span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <i class="align-middle" data-feather="clock"></i> <span class="align-middle">9:55 AM</span>
+                                                    </td>
+                                                    <td>
+                                                        <i class="align-middle" data-feather="clock"></i> <span class="align-middle">9:55 AM</span>
+                                                    </td>
+                                                    <td>
+                                                        9 Hours
+                                                    </td>
+                                                    <td>
+                                                        9 Hours 24 Minutes
+                                                    </td>
+                                                    <td>
+                                                        <a class="btn btn-light" href="#!">
+                                                            <i class="align-middle text-primary" data-feather="info"></i>
+                                                        </a>
+                                                        
+                                                        <a class="btn btn-light" href="#!">
+                                                            <i class="align-middle text-warning" data-feather="edit"></i>
+                                                        </a>
+                                                        
+                                                        <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                                                            <i class="align-middle text-danger" data-feather="x"></i>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                    <td>
+                                                        <div class="container-fluid">
+                                                            <div class="row">
+                                                                <div class="col-sm-12 col-md-3">
+                                                                    <img src="img/avatars/avatar-5.jpg" class="border border-info border-1 avatar rounded-circle me-1" style="width: 3em;" alt="Avatar" />
+                                                                </div>
+                                                                <div class="col-sm-12 col-md-9">
+                                                                    <h4 class="text-info poppins-medium">
+                                                                        Jane Cooper
+                                                                    </h4>
+                                                                    
+                                                                    <div>
+                                                                        <span class="badge rounded-pill bg-primary">My Organization Name</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="row border border-light border-1 p-2 rounded-3">
+                                                            <div class="col-12 text-center">
+                                                                <h5 class="poppins-medium sgapp-small">
+                                                                    Shift Duration
+                                                                </h5>
+                                                                
+                                                                <p class="text-secondary sgapp-small">
+                                                                    9:00 AM - 6:00 PM
+                                                                </p>
+                                                                
+                                                                <span class="badge bg-warning p-2">Late</span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <i class="align-middle" data-feather="clock"></i> <span class="align-middle">9:55 AM</span>
+                                                    </td>
+                                                    <td>
+                                                        <i class="align-middle" data-feather="clock"></i> <span class="align-middle">9:55 AM</span>
+                                                    </td>
+                                                    <td>
+                                                        9 Hours
+                                                    </td>
+                                                    <td>
+                                                        9 Hours 24 Minutes
+                                                    </td>
+                                                    <td>
+                                                        <a class="btn btn-light" href="#!">
+                                                            <i class="align-middle text-primary" data-feather="info"></i>
+                                                        </a>
+                                                        
+                                                        <a class="btn btn-light" href="#!">
+                                                            <i class="align-middle text-warning" data-feather="edit"></i>
+                                                        </a>
+                                                        
+                                                        <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                                                            <i class="align-middle text-danger" data-feather="x"></i>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                
                                             </tbody>
                                         </table>
 
@@ -387,7 +577,8 @@
             </div>
         </div>
 
-        <script src="js/app.js"></script>
+        
+        <script type="text/javascript" src="js/app.js"></script>
         <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
         <script type="text/javascript" src="https://cdn.datatables.net/2.0.1/js/dataTables.js"></script>
         
@@ -413,7 +604,7 @@
                 });
  
                 table.on('click', 'tbody tr', function (e) {
-                    e.currentTarget.classList.toggle('selected');
+                    //e.currentTarget.classList.toggle('selected');
                 });
                 
                 // To get selected rows

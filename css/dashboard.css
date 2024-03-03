@@ -310,6 +310,11 @@ a.sidebar-link:hover
     width: 3em;
 }
 
+.sgapp-small
+{
+    font-size: small;
+}
+
 @media only screen and (max-width: 768px)
 {    
     body
