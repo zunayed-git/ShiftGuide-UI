@@ -13,10 +13,12 @@
         <title>Shift Guide App</title>
 
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css' rel='stylesheet'>
         <link href="css/app.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2-bootstrap-5-theme@1.3.0/dist/select2-bootstrap-5-theme.min.css" />
+        
         <link href="./css/dashboard.css" rel="stylesheet" />
     </head>
 
@@ -353,7 +355,7 @@
                                             <div class="row mb-3">
                                                 <div class="col-12">
                                                     
-                                                    <button class="btn btn-success">
+                                                    <button id="add-surcharge-button" class="btn btn-success">
                                                         <i class="align-middle" data-feather="plus"></i>
                                                         Add
                                                     </button>
@@ -361,79 +363,69 @@
                                                 </div>
                                             </div>
                                             
-                                            <div class="row">
-                                                <div class="col-sm-12 col-md-2">    
-                                                    <div class="mb-3">
-                                                        <label for="caoSurchargeInfoTitleInput" class="form-label">Title</label>
-                                                        <input type="text" class="form-control" id="caoSurchargeInfoTitleInput">
+                                            <div id="surcharge-info-rows-content">
+                                                <!-- Template -->
+                                                <!--
+                                                <div id="sgapp-surcharge-info-row" class="row sgapp-surcharge-info-row">
+                                                    <div class="col-sm-12 col-md-2">    
+                                                        <div class="mb-3">
+                                                            <label for="caoSurchargeInfoTitleInput" class="form-label">Title</label>
+                                                            <input type="text" class="form-control" id="caoSurchargeInfoTitleInput">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-sm-12 col-md-2">    
+                                                        <div class="mb-3">
+                                                            <label for="caoSurchargeInfoStartInput" class="form-label">Start Time</label>
+                                                            <div class="sgapp-timepicker-input-wrapper">
+                                                                <input type="text" class="form-control timePicker" id="caoSurchargeInfoStartInput">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-sm-12 col-md-2">    
+                                                        <div class="mb-3">
+                                                            <label for="caoSurchargeInfoEndTimeInput" class="form-label">End Time</label>
+                                                            <div class="sgapp-timepicker-input-wrapper">
+                                                                <input type="text" class="form-control timePicker" id="caoSurchargeInfoEndTimeInput">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-sm-12 col-md-2">    
+                                                        <div class="mb-3">
+                                                            <label for="caoSurchargeInfoHourlyRateInput" class="form-label">Hourly Rate (As €)</label>
+                                                            <input type="number" min="0" class="form-control" id="caoSurchargeInfoHourlyRateInput">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-sm-12 col-md-2">    
+                                                        <div class="mb-3">
+                                                            <label for="caoSurchargeInfoWeekdaySelect" class="form-label">Weekday</label>
+                                                            <select id="caoSurchargeInfoWeekdaySelect" name="caoSurchargeInfoWeekdaySelect" class="sgapp-select2 form-select sgapp-select2-full">
+                                                                <option value="-1" selected="">Select One...</option>
+                                                                <option value="sat">Saturday</option>
+                                                                <option value="sun">Sunday</option>
+                                                                <option value="mon">Monday</option>
+                                                                <option value="tue">Tuesday</option>
+                                                                <option value="wed">Wednesday</option>
+                                                                <option value="thr">Thursday</option>
+                                                                <option value="fri">Friday</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-sm-12 col-md-2">
+                                                        <div class="mb-3">
+                                                            <label class="form-label"></label>
+                                                            <button id="surchargeDeleteRowButton" class="surchargeDeleteRowButton btn btn-danger sgapp-full-width" data-parent-row="sgapp-surcharge-info-row">
+                                                                <i class="bi bi-x-lg"></i>
+                                                            </button>
+                                                        </div>
                                                     </div>
                                                 </div>
+                                                -->
                                                 
-                                                <div class="col-sm-12 col-md-2">    
-                                                    <div class="mb-3">
-                                                        <label for="caoSurchargeInfoStartSelect" class="form-label">Start Time</label>
-                                                        <select id="caoSurchargeInfoStartSelect" class="sgapp-select2 form-select sgapp-select2-full" name="state">
-                                                            <option value="10">10:00:00</option>
-                                                            <option value="11">11:00:00</option>
-                                                            <option value="12">12:00:00</option>
-                                                            <option value="13">13:00:00</option>
-                                                            <option value="14">14:00:00</option>
-                                                            <option value="15">15:00:00</option>
-                                                            <option value="16">16:00:00</option>
-                                                            <option value="17">17:00:00</option>
-                                                            <option value="18">18:00:00</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                
-                                                <div class="col-sm-12 col-md-2">    
-                                                    <div class="mb-3">
-                                                        <label for="caoSurchargeInfoEndSelect" class="form-label">End Time</label>
-                                                        <select id="caoSurchargeInfoEndSelect" class="sgapp-select2 form-select sgapp-select2-full" name="state">
-                                                            <option value="10">10:00:00</option>
-                                                            <option value="11">11:00:00</option>
-                                                            <option value="12">12:00:00</option>
-                                                            <option value="13">13:00:00</option>
-                                                            <option value="14">14:00:00</option>
-                                                            <option value="15">15:00:00</option>
-                                                            <option value="16">16:00:00</option>
-                                                            <option value="17">17:00:00</option>
-                                                            <option value="18">18:00:00</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                
-                                                <div class="col-sm-12 col-md-2">    
-                                                    <div class="mb-3">
-                                                        <label for="caoSurchargeInfoHourlyRateInput" class="form-label">Hourly Rate (As €)</label>
-                                                        <input type="number" min="0" class="form-control" id="caoSurchargeInfoHourlyRateInput">
-                                                    </div>
-                                                </div>
-                                                
-                                                <div class="col-sm-12 col-md-2">    
-                                                    <div class="mb-3">
-                                                        <label for="caoSurchargeInfoWeekdaySelect" class="form-label">Weekday</label>
-                                                        <select id="caoSurchargeInfoWeekdaySelect" class="sgapp-select2 form-select sgapp-select2-full" name="state">
-                                                            <option value="-1" selected="">Select One...</option>
-                                                            <option value="sat">Saturday</option>
-                                                            <option value="sun">Sunday</option>
-                                                            <option value="mon">Monday</option>
-                                                            <option value="tue">Tuesday</option>
-                                                            <option value="wed">Wednesday</option>
-                                                            <option value="thr">Thursday</option>
-                                                            <option value="fri">Friday</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                
-                                                <div class="col-sm-12 col-md-2">
-                                                    <div class="mb-3">
-                                                        <label class="form-label"></label>
-                                                        <button class="btn btn-danger sgapp-full-width">
-                                                            <i class="align-middle" data-feather="x"></i>
-                                                        </button>
-                                                    </div>
-                                                </div>
                                             </div>
                                         </div>
 
@@ -497,6 +489,7 @@
         <script src="js/app.js"></script>
         <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+        <script src="./js/TimePick/time-pick.min.js"></script>
         
         <script type="text/javascript">
             // Select2
@@ -505,6 +498,176 @@
                     theme: 'bootstrap-5'
                 });
             });
+            
+            // Time Picker
+            function refreshTimePickers()
+            {
+                let timepickers = new TimePick('.timePicker');
+            
+                let listOfTimePickers = document.querySelectorAll(".timePicker");
+
+                if ((listOfTimePickers !== null) && (listOfTimePickers.length > 0))
+                {
+                    listOfTimePickers.forEach((timeInput) => {
+                        initializeTimePickerInputFilter(timeInput);
+                    });
+                }
+            }
+            
+            function initializeTimePickerInputFilter(timeInput)
+            {
+                timeInput.addEventListener("change", (event) => {
+                    let time = timeInput.value;
+
+                    let isValid = /^(?:[01][0-9]|2[0-3]):[0-5][0-9](?::[0-5][0-9])?$/.test(time);
+
+                    if (!isValid)
+                    {
+                        timeInput.value = "00:00:00";
+                    }
+
+                });
+            }
+            
+            function initializeSurchargeInfoRowsDeleteEvents()
+            {
+                const deleteButtons = document.querySelectorAll(".surchargeDeleteRowButton");
+                
+                if ((deleteButtons !== null) && (deleteButtons.length > 0))
+                {
+                    deleteButtons.forEach((deleteButton) => {
+                        initializeSurchargeInfoRowsDeleteEvent(deleteButton);
+                    });
+                }
+            }
+            
+            function initializeSurchargeInfoRowsDeleteEvent(deleteButton)
+            {
+                deleteButton.addEventListener("click", event => {
+                            
+                    const parentRowId = deleteButton.getAttribute("data-parent-row");
+
+                    let row = document.querySelector(`#${parentRowId}`);
+
+                    row.remove();
+
+                });
+            }
+            
+            // Surcharge Info
+            const addSurchargeInfoButton = document.querySelector("#add-surcharge-button");
+            const surchargeInfoRowsContent = document.querySelector("#surcharge-info-rows-content");
+            
+            function getSurchargeInfoRowTemplate(index)
+            {
+                let template = `
+                <div id="sgapp-surcharge-info-row${index}" class="row sgapp-surcharge-info-row">
+                    <div class="col-sm-12 col-md-2">    
+                        <div class="mb-3">
+                            <label for="caoSurchargeInfoTitleInput${index}" class="form-label">Title</label>
+                            <input type="text" class="form-control" id="caoSurchargeInfoTitleInput${index}">
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-md-2">    
+                        <div class="mb-3">
+                            <label for="caoSurchargeInfoStartInput${index}" class="form-label">Start Time</label>
+                            <div class="sgapp-timepicker-input-wrapper">
+                                <input type="text" class="form-control timePicker" id="caoSurchargeInfoStartInput${index}">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-md-2">    
+                        <div class="mb-3">
+                            <label for="caoSurchargeInfoEndTimeInput${index}" class="form-label">End Time</label>
+                            <div class="sgapp-timepicker-input-wrapper">
+                                <input type="text" class="form-control timePicker" id="caoSurchargeInfoEndTimeInput${index}">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-md-2">    
+                        <div class="mb-3">
+                            <label for="caoSurchargeInfoHourlyRateInput${index}" class="form-label">Hourly Rate (As €)</label>
+                            <input type="number" min="0" class="form-control" id="caoSurchargeInfoHourlyRateInput${index}">
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-md-2">    
+                        <div class="mb-3">
+                            <label for="caoSurchargeInfoWeekdaySelect${index}" class="form-label">Weekday</label>
+                            <select id="caoSurchargeInfoWeekdaySelect${index}" name="caoSurchargeInfoWeekdaySelect${index}" class="sgapp-select2 form-select sgapp-select2-full">
+                                <option value="-1" selected="">Select One...</option>
+                                <option value="sat">Saturday</option>
+                                <option value="sun">Sunday</option>
+                                <option value="mon">Monday</option>
+                                <option value="tue">Tuesday</option>
+                                <option value="wed">Wednesday</option>
+                                <option value="thr">Thursday</option>
+                                <option value="fri">Friday</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-md-2">
+                        <div class="mb-3">
+                            <label class="form-label"></label>
+                            <button id="surchargeDeleteRowButton${index}" class="surchargeDeleteRowButton btn btn-danger sgapp-full-width" data-parent-row="sgapp-surcharge-info-row${index}">
+                                <i class="bi bi-x-lg"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                `;
+        
+                return template;
+            }
+            
+            function htmlToElems(html)
+            {
+                let temp = document.createElement('template');
+                temp.innerHTML = html;
+                
+                return temp.content;
+             }
+            
+            addSurchargeInfoButton.addEventListener("click", event => {
+                
+                // Determine ID (Index)
+                let index = 0;
+                
+                let rows = document.querySelectorAll(".sgapp-surcharge-info-row");
+                
+                if (rows !== null)
+                {
+                    index = rows.length + 1;
+                }
+                
+                // Add a new row
+                let newRow = htmlToElems(getSurchargeInfoRowTemplate(index));
+                
+                surchargeInfoRowsContent.append(newRow);
+                
+                // Initialize Events
+                const startTimepicker = new TimePick(`#caoSurchargeInfoStartInput${index}`);
+                const endTimepicker = new TimePick(`#caoSurchargeInfoEndTimeInput${index}`);
+                
+                const startTimeInputPicker = document.querySelector(`#caoSurchargeInfoStartInput${index}`);
+                initializeTimePickerInputFilter(startTimeInputPicker);
+                
+                const endTimeInputPicker = document.querySelector(`#caoSurchargeInfoEndTimeInput${index}`);
+                initializeTimePickerInputFilter(endTimeInputPicker);
+                
+                const deleteRowButton = document.querySelector(`#surchargeDeleteRowButton${index}`);
+                initializeSurchargeInfoRowsDeleteEvent(deleteRowButton);
+                
+            });
+            
+            refreshTimePickers();
+            initializeSurchargeInfoRowsDeleteEvents();
+             
+            
         </script>
 
     </body>

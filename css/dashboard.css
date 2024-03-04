@@ -315,6 +315,18 @@ a.sidebar-link:hover
     font-size: small;
 }
 
+.sgapp-timepicker-input-wrapper
+{
+    position: relative;
+}
+
+.sgapp-timepicker-input-wrapper .TimePick_BTN
+{
+    position: absolute;
+    right: 0;
+    top: -0.2em;
+}
+
 @media only screen and (max-width: 768px)
 {    
     body
