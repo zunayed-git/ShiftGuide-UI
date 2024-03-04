@@ -421,3 +421,27 @@ a.sidebar-link:hover
     }
 }
 
+@media print {
+    body {
+        visibility: hidden;
+    }
+    
+    #sgapp-print {
+        visibility: visible;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    
+    #sgapp-print tfoot {
+        border-top: 2px solid #000;
+    }
+    
+    .dt-button,
+    .dt-search,
+    .dt-info,
+    .dt-paging-button,
+    .dt-column-order {
+        visibility: hidden;
+    }
+}
