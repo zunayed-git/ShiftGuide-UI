@@ -13,12 +13,11 @@
         <title>Shift Guide App</title>
 
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <link href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css' rel='stylesheet'>
         <link href="css/app.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-        <link href="./css/dashboard.css" rel="stylesheet" />
+        <link href="./js/image-magnifier-on-hover/style.css" rel="stylesheet">
         
-        <script src='./js/fullcalendar/index.global.min.js'></script>
+        <link href="./css/dashboard.css" rel="stylesheet" />
     </head>
 
     <body>
@@ -36,7 +35,7 @@
                             Menu
                         </li>
 
-                        <li class="sidebar-item active">
+                        <li class="sidebar-item">
                             <a class="sidebar-link" href="./home.html">
                                 <i class="align-middle" data-feather="home"></i> <span class="align-middle">Home</span>
                             </a>
@@ -54,7 +53,7 @@
                             </a>
                         </li>
                         
-                        <li class="sidebar-item">
+                        <li class="sidebar-item active">
                             <a class="sidebar-link" href="./attendance.html">
                                 <i class="align-middle" data-feather="check-circle"></i> <span class="align-middle">Attendance</span>
                             </a>
@@ -131,7 +130,7 @@
                     <div id="sgapp-page-header">
                         <header>
                             <h1 class="poppins-medium">
-                                Calendar
+                                Attendance Report
                             </h1>
                         </header>
                         <div>
@@ -246,16 +245,115 @@
                 <main id="sgapp-main" class="content">
                     <div class="container-fluid p-0">
 
+                        <h1 class="h3 mb-3">
+                            <strong>
+                                Shift Duration:
+                            </strong>
+                            9:00 AM - 6:00 PM
+                        </h1>
+                        
                         <div class="row">
-                            <div class="col-12">
+                            <div class="col-sm-12 col-md-4">
                                 <div class="card">
-<!--                                    <div class="card-header">
-                                        <h5 class="card-title mb-0"></h5>
-                                    </div>-->
+                                    <div class="card-header">
+                                        <h5 class="card-title mb-0">
+                                            Summary
+                                        </h5>
+                                    </div>
                                     <div class="card-body">
-
-                                        <div id='calendar'></div>
-
+                                        
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <img src="img/avatars/avatar-5.jpg" class="border border-info border-2 shadow-sm rounded-circle img-fluid mx-auto d-block" alt="Avatar">
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="row">
+                                            <div class="col-12 text-center mt-3">
+                                                <h4 class="poppins-medium text-info">Jane Cooper</h4>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="row">
+                                            <div class="col-12 text-center">
+                                                <p>
+                                                    <strong>Staff ID: SS511943</strong> 
+                                                </p>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <table class="table">
+                                                    <tbody>
+                                                        <tr>
+                                                            <th>Organization</th>
+                                                            <td>
+                                                                <span class="badge rounded-pill bg-primary">My Organization Name</span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Status</th>
+                                                            <td>
+                                                                <span class="badge bg-success p-2">On Time</span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Clock In</th>
+                                                            <td>
+                                                                <i class="align-middle" data-feather="clock"></i> <span class="align-middle">9:55 AM</span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Clock Out</th>
+                                                            <td>
+                                                                <i class="align-middle" data-feather="clock"></i> <span class="align-middle">9:55 AM</span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Required Time</th>
+                                                            <td>
+                                                                9 Hours
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Actual Time</th>
+                                                            <td>
+                                                                9 Hours 24 Minutes
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-sm-12 col-md-8">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5 class="card-title mb-0">
+                                            Image
+                                        </h5>
+                                    </div>
+                                    <div class="card-body">
+                                        
+                                        <div class="magnify">
+                                            <div
+                                                class="magnifier"
+                                                style="
+                                                  background-image: url(https://www.jqueryscript.net/dummy/4.jpg);
+                                                "
+                                            ></div>
+                                            <div class="magnified">
+                                                <img
+                                                    src="https://www.jqueryscript.net/dummy/4.jpg"
+                                                />
+                                            </div>
+                                        </div>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -294,145 +392,13 @@
             </div>
         </div>
 
-        <!-- Add modal -->
-        <div class="modal fade edit-form" id="add-event-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header border-bottom-0">
-                        <h5 class="modal-title" id="modal-title">Add Event</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <form id="add-event-form">
-                        <div class="modal-body">
-                            <div class="alert alert-danger " role="alert" id="danger-alert" style="display: none;">
-                                End date should be greater than start date.
-                            </div>
-                            <div class="form-group m-2">
-                                <label for="event-title">Event name <span class="text-danger">*</span></label>
-                                <input type="text" class="form-control" id="event-title" placeholder="Enter event name" required>
-                            </div>
-                            <div class="form-group m-2">
-                                <label for="start-date">Start date <span class="text-danger">*</span></label>
-                                <input type="date" class="form-control" id="start-date" placeholder="start-date" required>
-                            </div> 
-                            <div class="form-group m-2">
-                                <label for="end-date">End date - <small class="text-muted">Optional</small></label>
-                                <input type="date" class="form-control" id="end-date" placeholder="end-date">
-                            </div>
-                            <div class="form-group m-2">
-                                <label for="event-color">Color</label>
-                                <input type="color" class="form-control" id="event-color" value="#3788d8">
-                            </div>
-                        </div>
-                        <div class="modal-footer border-top-0 d-flex justify-content-center">
-                            <button type="submit" class="btn btn-info" id="add-event-save-button">Save</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-
-        <!-- Delete Modal -->
-        <!--
-        <div class="modal fade" id="delete-modal" tabindex="-1" role="dialog" aria-labelledby="delete-modal-title" aria-hidden="true">
-            <div class="modal-dialog modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="delete-modal-title">Confirm Deletion</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body text-center" id="delete-modal-body">
-                        Are you sure you want to delete the event?
-                    </div>
-                    <div class="modal-footer border-0">
-                        <button type="button" class="btn btn-secondary rounded-sm" data-dismiss="modal" id="cancel-button">Cancel</button>
-                        <button type="button" class="btn btn-danger rounded-lg" id="delete-button">Delete</button>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
-        <!-- Script JS -->
-
-        <script src="js/app.js"></script>
         
-        <script src='https://cdn.jsdelivr.net/npm/@fullcalendar/bootstrap5@6.1.11/index.global.min.js'></script>
+        <script type="text/javascript" src="js/app.js"></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="./js/image-magnifier-on-hover/script.js"></script>
         
         <script type="text/javascript">
-            const addCalendarEventModal = bootstrap.Modal.getOrCreateInstance(document.getElementById('add-event-modal'));
-            const addEventSaveButton    = document.querySelector("#add-event-save-button");
-            const eventTitleInput       = document.querySelector("#event-title");
-            const startDateInput        = document.querySelector("#start-date");
-            const endDateInput          = document.querySelector("#end-date");
-            const eventColorInput       = document.querySelector("#event-color");
-            
-            let   calendar              = null;
-            
-            function isDateValid(dateStr)
-            {
-                return !isNaN(new Date(dateStr));
-            }
-                
-            addEventSaveButton.addEventListener("click", event => {
-                
-                event.preventDefault();
-                
-                if ((eventTitleInput.value.trim().length > 0) && isDateValid(startDateInput.value))
-                {
-                    let isAllDayEvent = true;
-                    let startDate = new Date(startDateInput.value);
-                    let endDate = null;
-                    
-                    if (isDateValid(endDateInput.value))
-                    {
-                        isAllDayEvent = false;
-                        endDate = new Date(endDateInput.value);
-                    }
-                    
-                    calendar.addEvent({
-                        title:  eventTitleInput.value,
-                        start:  startDate,
-                        end:    endDate,
-                        allDay: isAllDayEvent,
-                        backgroundColor: eventColorInput.value
-                    });
 
-                    addCalendarEventModal.hide();
-                }
-            });
-
-            document.addEventListener('DOMContentLoaded', function() {
-                var calendarEl = document.getElementById('calendar');
-
-                calendar = new FullCalendar.Calendar(calendarEl, {
-                    headerToolbar: {
-                        left: 'title',
-                        center: 'dayGridMonth,dayGridWeek,dayGridDay',
-                        right: 'prevYear,prev,today,next,nextYear addEventButton'
-                    },
-                    themeSystem: 'bootstrap5',
-                    initialDate: '2024-02-12',
-                    navLinks: true, // can click day/week names to navigate views
-                    editable: true,
-                    dayMaxEvents: true, // allow "more" link when too many events
-                    events: [
-                        {
-                            title: 'All Day Event',
-                            start: '2024-02-12'
-                        }
-                    ],
-                    customButtons: {
-                        addEventButton: {
-                            text: 'Add',
-                            click: function() {
-                                addCalendarEventModal.show();
-                            }
-                        }
-                    }
-                });
-
-                calendar.render();
-            });
         </script>
 
     </body>

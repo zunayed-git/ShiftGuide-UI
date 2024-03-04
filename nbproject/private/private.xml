@@ -16,6 +16,11 @@
         </file>
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/Applications/XAMPP/htdocs/shiftguide-ui/css/dashboard.css</file>
+            <file>file:/Applications/XAMPP/htdocs/shiftguide-ui/home.html</file>
+            <file>file:/Applications/XAMPP/htdocs/shiftguide-ui/attendance-report.html</file>
+            <file>file:/Applications/XAMPP/htdocs/shiftguide-ui/cao-add.html</file>
+        </group>
     </open-files>
 </project-private>
