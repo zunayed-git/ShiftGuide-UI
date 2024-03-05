@@ -125,6 +125,11 @@
     font-weight: 700;
 }
 
+.sgapp-text-dark
+{
+    color: #374550;
+}
+
 #sgapp-sign-in-card-right-panel
 {
     height: 30em;
@@ -148,6 +153,41 @@ body
 {
     background: url("../img/app-banner.png");
     min-height: 10em;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+
+.sgapp-banner-404
+{
+    background: url("../img/404.svg");
+}
+
+.sgapp-banner-500
+{
+    background: url("../img/500.svg");
+}
+
+.sgapp-banner-429
+{
+    background: url("../img/429.svg");
+}
+
+.sgapp-banner-403
+{
+    background: url("../img/403.svg");
+}
+
+.sgapp-banner-500-2
+{
+    margin-top: 8em;
+}
+
+.sgapp-banner
+{
+    min-height: 30em;
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -339,6 +379,11 @@ a.sidebar-link:hover
         height: 128px;
     }
     
+    .sgapp-banner
+    {
+        min-height: 128px !important;
+    }
+    
     #sgapp-page-header
     {
         left: 3.5em;
@@ -384,6 +429,11 @@ a.sidebar-link:hover
     footer *
     {
         font-size: xx-small;
+    }
+    
+    .sgapp-banner-500-2
+    {
+        margin-top: 2em;
     }
 }
 
