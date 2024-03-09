@@ -247,159 +247,7 @@
                     <div class="container-fluid p-0">
 
                         <div class="row">
-                            <div class="col-12 col-md-4">
-                                <div class="card">
-                                    <div class="card-body">
-
-                                        <div class="row">
-                                            <div class="col-12">
-                                                <div class="input-group">
-                                                    <span class="input-group-text">
-                                                        <i class="align-middle" data-feather="search"></i>
-                                                    </span>
-                                                    <input type="search" class="form-control" placeholder="Search">
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="row mt-3">
-                                            <div class="col-4">
-                                                <ul class="list-unstyled text-center">
-                                                    <li>
-                                                        <button class="btn">
-                                                            Sat
-                                                        </button>
-                                                    </li>
-
-                                                    <li>
-                                                        <button class="btn">
-                                                            Sun
-                                                        </button>
-                                                    </li>
-
-                                                    <li>
-                                                        <button class="btn">
-                                                            Mon
-                                                        </button>
-                                                    </li>
-
-                                                    <li>
-                                                        <button class="btn btn-info">
-                                                            Tue
-                                                        </button>
-                                                    </li>
-
-                                                    <li>
-                                                        <button class="btn">
-                                                            Wed
-                                                        </button>
-                                                    </li>
-
-                                                    <li>
-                                                        <button class="btn">
-                                                            Thr
-                                                        </button>
-                                                    </li>
-
-                                                    <li>
-                                                        <button class="btn">
-                                                            Fri
-                                                        </button>
-                                                    </li>
-
-                                                </ul>
-                                            </div>
-
-                                            <div class="col-8">
-
-                                                <header>
-                                                    <h2 class="sgapp-event-details-header">Friday, 8th</h2>
-                                                </header>
-
-                                                <div class="sgapp-event-details mb-3">
-                                                    <h3 class="px-2">
-                                                        Push up
-                                                    </h3>
-
-                                                    <p>
-                                                        <i class="align-middle" data-feather="clock"></i> 12:00 - 14:00
-                                                    </p>
-                                                </div>
-
-                                                <div class="sgapp-event-details mb-3">
-                                                    <h3 class="px-2">
-                                                        Push up
-                                                    </h3>
-
-                                                    <p>
-                                                        <i class="align-middle" data-feather="clock"></i> 12:00 - 14:00
-                                                    </p>
-                                                </div>
-
-                                                <div class="sgapp-event-details mb-3">
-                                                    <h3 class="px-2">
-                                                        Push up
-                                                    </h3>
-
-                                                    <p>
-                                                        <i class="align-middle" data-feather="clock"></i> 12:00 - 14:00
-                                                    </p>
-                                                </div>
-
-
-                                            </div>
-                                        </div>
-
-                                        <div class="row">
-                                            <div class="col-12 text-center">
-
-                                                <button class="btn btn-info">
-                                                    Event
-                                                </button>
-
-                                                <button class="btn">
-                                                    Push up
-                                                </button>
-
-                                                <button class="btn">
-                                                    News
-                                                </button>
-
-                                                <button class="btn">
-                                                    Email
-                                                </button>
-
-                                            </div>
-                                        </div>
-
-                                        <div class="row mt-4">
-                                            <div class="col-12">
-
-                                                <form>
-                                                    <div class="mb-3">
-                                                        <label for="title-input" class="form-label">Title</label>
-                                                        <input type="text" class="form-control" id="title-input" placeholder="New opening">
-                                                    </div>
-                                                    <div class="mb-3">
-                                                        <label for="description-input" class="form-label">Description</label>
-                                                        <input type="text" class="form-control" id="description-input" placeholder="Write description">
-                                                    </div>
-                                                    <div class="mb-3">
-                                                        <label for="time-input" class="form-label">Set Time</label>
-                                                        <input type="datetime-local" class="form-control" id="time-input">
-                                                    </div>
-
-                                                    <button type="submit" class="btn btn-info sgapp-full-width">Save Event</button>
-                                                </form>
-
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-12 col-md-8">
+                            <div class="col-12">
                                 <div class="card">
 <!--                                    <div class="card-header">
                                         <h5 class="card-title mb-0"></h5>
@@ -412,22 +260,6 @@
                                 </div>
                             </div>
                         </div>
-
-                        <!-- 
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h5 class="card-title mb-0"></h5>
-                                    </div>
-                                    <div class="card-body">
-
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        -->
 
                     </div>
                 </main>
@@ -499,6 +331,20 @@
                 </div>
             </div>
         </div>
+        
+        <!--
+        <div id="sgapp-event-card" class="card" data-visible="true">
+            <div class="card-header">
+                <h5 class="card-title mb-0">
+                    Title
+                </h5>
+            </div>
+            <div class="card-body">
+
+                Example
+
+            </div>
+        </div>-->
 
         <!-- Delete Modal -->
         <!--
@@ -596,6 +442,25 @@
                                 addCalendarEventModal.show();
                             }
                         }
+                    },
+                    
+                    eventClick: function(info) {
+                        /*
+                        alert('Event: ' + info.event.title);
+                        alert('Coordinates: ' + info.jsEvent.pageX + ',' + info.jsEvent.pageY);
+                        alert('View: ' + info.view.type);
+
+                        // change the border color just for fun
+                        info.el.style.borderColor = 'red';
+                        */
+                    },
+                    
+                    eventMouseEnter: function(mouseEnterInfo) {
+                        console.log(mouseEnterInfo.jsEvent.pageX)
+                    },
+                    
+                    eventMouseLeave: function(mouseLeaveInfo) {
+                        
                     }
                 });
 

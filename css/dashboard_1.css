@@ -475,45 +475,6 @@ a.sidebar-link:hover
     {
         margin-top: 2em;
     }
-    
-    .fc-toolbar .fc-center,
-    .fc-toolbar .fc-right
-    {
-        display: block;
-        width: 100%;
-        float: none;
-        position: relative;
-    }
-    
-    .fc-toolbar .fc-center .fc-button-group,
-    .fc-toolbar .fc-right .fc-button-group
-    {
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%, 0);
-    }
-    
-    .fc-toolbar .fc-center .fc-button-group
-    {
-        width: 12em;
-        margin-top: 1em;
-    }
-    
-    .fc-toolbar .fc-right .fc-button-group
-    {
-        width: 16em;
-        margin-top: 6em;
-    }
-    
-    .fc-view-container
-    {
-        margin-top: 7em;
-    }
-    
-    #main-search 
-    {
-        display: none;
-    }
 }
 
 @media only screen and (max-width: 1266px)
@@ -526,23 +487,6 @@ a.sidebar-link:hover
     #sgapp-calendar-toolbar-small
     {
         display: block;
-    }
-    
-    .fc-toolbar .fc-left
-    {
-        display: block;
-        width: 100%;
-    }
-    
-    .fc-toolbar .fc-left h2
-    {
-        width: 100%;
-        text-align: center;
-    }
-    
-    .fc-toolbar .fc-center 
-    {
-        float: left;
     }
 }
 
