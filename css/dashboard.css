@@ -448,6 +448,21 @@ a.sidebar-link:hover span
     display: none;
 }
 
+.dt-button.buttons-html5,
+.dt-button.buttons-page-length
+{
+    background: #f1f2f6 !important;
+    border-color: #f1f2f6 !important;
+    transition: 0.3s;
+}
+
+.dt-button.buttons-html5:hover,
+.dt-button.buttons-page-length:hover
+{
+    background: #dfe4ea !important;
+    border-color: #dfe4ea !important;
+}
+
 @media only screen and (max-width: 768px)
 {    
     body
