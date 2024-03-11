@@ -423,6 +423,31 @@ a.sidebar-link:hover span
     border: none;
 }
 
+#sgapp-main-calendar .fc-header-toolbar,
+#sgapp-main-calendar .fc-view-container
+{
+    background: #fff;
+    border-radius: 0.5em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.01), 0 6px 20px 0 rgba(0, 0, 0, 0.02);
+}
+
+#sgapp-main-calendar .fc-header-toolbar 
+{
+    padding: 1em;
+    margin-bottom: 2em;
+}
+
+#sgapp-main-calendar .fc-view-container
+{
+    padding: 2em;
+    margin-top: 2em;
+}
+
+#sgapp-main-calendar .fc-month-view .fc-time
+{
+    display: none;
+}
+
 @media only screen and (max-width: 768px)
 {    
     body
@@ -518,7 +543,7 @@ a.sidebar-link:hover span
     .fc-toolbar .fc-right
     {
         width: 15em;
-        margin-top: 6em !important;
+        margin-top: 7.5em !important;
     }
     
     .fc-toolbar .fc-left select
