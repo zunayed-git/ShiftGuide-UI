@@ -430,7 +430,7 @@ a.sidebar-link:hover span
 {
     background: #fff;
     border-radius: 0.5em;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.01), 0 6px 20px 0 rgba(0, 0, 0, 0.02);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.01), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
 }
 
 #sgapp-main-calendar .fc-header-toolbar 
@@ -441,8 +441,9 @@ a.sidebar-link:hover span
 
 #sgapp-main-calendar .fc-view-container
 {
-    padding: 2em;
+    padding: 0em;
     margin-top: 2em;
+    border-radius: 0.5em !important;
 }
 
 #sgapp-main-calendar .fc-month-view .fc-time
@@ -586,6 +587,11 @@ a.sidebar-link:hover span
         margin-top: 10em !important;
     }
     
+    #sgapp-main-calendar .fc-view-container
+    {
+        margin-top: 2em !important;
+    }
+    
     #nav-calendar .fc-right .fc-button-group
     {
         margin-top: 2em;
@@ -594,6 +600,11 @@ a.sidebar-link:hover span
     #main-search 
     {
         display: none;
+    }
+    
+    #sgapp-main-calendar .fc-header-toolbar
+    {
+        height: 12em;
     }
 }
 
@@ -663,6 +674,67 @@ a.sidebar-link:hover span
     }
 }
 
+@media only screen and (min-width: 768px)
+{
+    .fc th,
+    .fc td
+    {
+        color: #374550;
+    }
+
+    .fc td
+    {
+        border-color: #f9fafc;
+    }
+
+    .fc th:nth-child(odd)
+    {
+        background: #f9fafc !important;
+    }
+
+    .fc-more,
+    .fc-more:hover
+    {
+        color: var(--primaryColor);
+    }
+
+    .fc-day-number
+    {
+        color: var(--sidePaneSelection);
+    }
+    
+    
+    
+    .fc table
+    {
+        border-radius: 1em !important;
+    }
+    
+    .fc-day-header
+    {
+        padding: 1em !important;
+    }
+
+    .fc th
+    {
+        padding: 1.5em 1em !important;
+        border-width: 0px;
+        font-size: 1.2em;
+        font-weight: 500;
+    }
+    
+    .fc td
+    {
+        border-width: 2px;
+    }
+
+    .fc-day-number
+    {
+        font-size: 1.5em;
+        display: inline-block;
+    }
+}
+
 
 /* Dark mode */
 body[data-theme="dark"] 
@@ -716,7 +788,8 @@ body[data-theme="dark"] input[type="tel"],
 body[data-theme="dark"] input[type="url"],
 body[data-theme="dark"] input[type="password"],
 body[data-theme="dark"] input[type="number"],
-body[data-theme="dark"] .dt-button-collection *
+body[data-theme="dark"] .dt-button-collection *,
+body[data-theme="dark"] select
 {
     color: var(--darkTextColor) !important;
 }
@@ -727,7 +800,8 @@ body[data-theme="dark"] input[type="email"]::placeholder,
 body[data-theme="dark"] input[type="tel"]::placeholder,
 body[data-theme="dark"] input[type="url"]::placeholder,
 body[data-theme="dark"] input[type="password"]::placeholder,
-body[data-theme="dark"] input[type="number"]::placeholder
+body[data-theme="dark"] input[type="number"]::placeholder,
+body[data-theme="dark"] select
 {
     color: var(--darkAccentColor);
 }
@@ -777,7 +851,8 @@ body[data-theme="dark"] input[type="number"],
 body[data-theme="dark"] .select2 .selection .select2-selection,
 body[data-theme="dark"] .input-group-text,
 body[data-theme="dark"] .dt-button-collection,
-body[data-theme="dark"] .dropify-wrapper
+body[data-theme="dark"] .dropify-wrapper,
+body[data-theme="dark"] select
 {
     background: var(--darkBackgroundColor) !important;
 }
@@ -822,6 +897,33 @@ body[data-theme="dark"] .dt-paging-button a:hover
 {
     background: var(--darkPrimaryColorAlt) !important;
     border-color: var(--darkPrimaryColorAlt) !important;
+}
+
+body[data-theme="dark"] .fc th,
+body[data-theme="dark"] .fc td
+{
+    color: var(--darkTextColor);
+}
+
+body[data-theme="dark"] .fc td
+{
+    border-color: var(--darkBackgroundColor);
+}
+
+body[data-theme="dark"] .fc th:nth-child(odd)
+{
+    background: var(--darkBackgroundColorAlt) !important;
+}
+
+body[data-theme="dark"] .fc-more,
+body[data-theme="dark"] .fc-more:hover
+{
+    color: var(--primaryColor);
+}
+
+body[data-theme="dark"] .fc-day-number
+{
+    color: #fff;
 }
 
 

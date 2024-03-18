@@ -374,7 +374,7 @@
                 let calendar = $('#calendar').fullCalendar({
                     editable:false,
                     header:{
-                        left: 'title',
+                        left: '',
                         center: 'month,agendaWeek,agendaDay',
                         right: 'prev,today,next addEventButton'
                     },
@@ -426,6 +426,27 @@
                 });
             });
             
+            //Add dropdown in the calendar
+            setTimeout(() => {
+                const dropdownWrapper = document.querySelector(".fc-left");
+                
+                dropdownWrapper.innerHTML = `
+                    <select id="sgapp-fc-month-select" class="form-select">
+                        <option value="March, 24" selected>March, 24</option>
+                        <option value="April, 24">April, 24</option>
+                        <option value="May, 24">May, 24</option>
+                    </select>
+                `;
+        
+                const calendarMonthSelect = document.querySelector("#sgapp-fc-month-select");
+                
+                calendarMonthSelect.addEventListener("change", event => {
+                    
+                    console.log(calendarMonthSelect.value);
+                    
+                });
+                
+            }, 500);
             
         </script>
 

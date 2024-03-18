@@ -72,6 +72,18 @@ function toggleTheme()
     }
 }
 
+function applyBrandLogoToDarkTheme()
+{
+    const brandLogoImg = document.querySelector("#sgapp-logo-img");
+    brandLogoImg.setAttribute("src", "./img/logo-dark.png");
+}
+
+function applyBrandLogoToLightTheme()
+{
+    const brandLogoImg = document.querySelector("#sgapp-logo-img");
+    brandLogoImg.setAttribute("src", "./img/logo.png");
+}
+
 function setTheme(theme)
 {
     body.setAttribute("data-theme", theme);
@@ -80,10 +92,12 @@ function setTheme(theme)
     if (isDarkMode())
     {
         applyAllTablesToDarkTheme();
+        applyBrandLogoToDarkTheme();
     }
     else
     {
         applyAllTablesToLightTheme();
+        applyBrandLogoToLightTheme();
     }
     
     if (themeModeButton !== null)
