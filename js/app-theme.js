@@ -75,13 +75,21 @@ function toggleTheme()
 function applyBrandLogoToDarkTheme()
 {
     const brandLogoImg = document.querySelector("#sgapp-logo-img");
-    brandLogoImg.setAttribute("src", "./img/logo-dark.png");
+    
+    if (brandLogoImg !== null)
+    {
+        brandLogoImg.setAttribute("src", "./img/logo-dark.png");
+    }
 }
 
 function applyBrandLogoToLightTheme()
 {
     const brandLogoImg = document.querySelector("#sgapp-logo-img");
-    brandLogoImg.setAttribute("src", "./img/logo.png");
+    
+    if (brandLogoImg !== null)
+    {
+        brandLogoImg.setAttribute("src", "./img/logo.png");
+    }
 }
 
 function setTheme(theme)

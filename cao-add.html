@@ -264,21 +264,21 @@
                                                 <div class="col-sm-12 col-md-4">    
                                                     <div class="mb-3">
                                                         <label for="titleInput" class="form-label">CAO Title</label>
-                                                        <input type="text" class="form-control" id="titleInput">
+                                                        <input type="text" class="form-control" id="titleInput" data-bs-toggle="tooltip" title="Write a description here">
                                                     </div>
                                                 </div>
                                                 
                                                 <div class="col-sm-12 col-md-4">    
                                                     <div class="mb-3">
                                                         <label for="hourlyRateInput" class="form-label">Hourly Rate (As €)</label>
-                                                        <input type="number" min="0" class="form-control" id="hourlyRateInput">
+                                                        <input type="number" min="0" class="form-control" id="hourlyRateInput" data-bs-toggle="tooltip" title="Write a description here">
                                                     </div>
                                                 </div>
                                                 
                                                 <div class="col-sm-12 col-md-4">    
                                                     <div class="mb-3">
                                                         <label for="regularDutyTimeInput" class="form-label">Regular Duty Time</label>
-                                                        <input type="number" min="0" class="form-control" id="regularDutyTimeInput">
+                                                        <input type="number" min="0" class="form-control" id="regularDutyTimeInput" data-bs-toggle="tooltip" title="Write a description here">
                                                     </div>
                                                 </div>
                                             </div>
@@ -287,21 +287,21 @@
                                                 <div class="col-sm-12 col-md-4">    
                                                     <div class="mb-3">
                                                         <label for="overtimeSurchargeRateAsPercentInput" class="form-label">Overtime Surcharge Rate (As % Percent)</label>
-                                                        <input type="number" min="0" class="form-control" id="overtimeSurchargeRateAsPercentInput">
+                                                        <input type="number" min="0" class="form-control" id="overtimeSurchargeRateAsPercentInput" data-bs-toggle="tooltip" title="Write a description here">
                                                     </div>
                                                 </div>
                                                 
                                                 <div class="col-sm-12 col-md-4">    
                                                     <div class="mb-3">
                                                         <label for="maxOvertimeHourWeeklyInput" class="form-label">Maximum Overtime Hour (Weekly)</label>
-                                                        <input type="number" min="0" class="form-control" id="maxOvertimeHourWeeklyInput">
+                                                        <input type="number" min="0" class="form-control" id="maxOvertimeHourWeeklyInput" data-bs-toggle="tooltip" title="Write a description here">
                                                     </div>
                                                 </div>
                                                 
                                                 <div class="col-sm-12 col-md-4">    
                                                     <div class="mb-3">
                                                         <label for="maxOvertimeDayWeeklyInput" class="form-label">Maximum Overtime Day (Weekly)</label>
-                                                        <input type="number" min="0" class="form-control" id="maxOvertimeDayWeeklyInput">
+                                                        <input type="number" min="0" class="form-control" id="maxOvertimeDayWeeklyInput" data-bs-toggle="tooltip" title="Write a description here">
                                                     </div>
                                                 </div>
                                             </div>
@@ -310,7 +310,7 @@
                                                 <div class="col-sm-12 col-md-4">    
                                                     <div class="mb-3">
                                                         <label for="jobPositionSelect" class="form-label">Job Position</label>
-                                                        <select id="jobPositionSelect" class="sgapp-select2 form-select sgapp-select2-full" name="state">
+                                                        <select id="jobPositionSelect" class="sgapp-select2 form-select sgapp-select2-full" name="state" data-bs-toggle="tooltip" title="Write a description here">
                                                             <option value="AL">Alabama</option>
                                                             <option value="WY">Wyoming</option>
                                                         </select>
@@ -320,7 +320,7 @@
                                                 <div class="col-sm-12 col-md-4">    
                                                     <div class="mb-3">
                                                         <label for="holidaySelect" class="form-label">Holiday</label>
-                                                        <select id="holidaySelect" class="sgapp-select2 form-select sgapp-select2-full" name="state">
+                                                        <select id="holidaySelect" class="sgapp-select2 form-select sgapp-select2-full" name="state" data-bs-toggle="tooltip" title="Write a description here">
                                                             <option value="AL">Alabama</option>
                                                             <option value="WY">Wyoming</option>
                                                         </select>
@@ -330,7 +330,7 @@
                                                 <div class="col-sm-12 col-md-4">    
                                                     <div class="mb-3">
                                                         <label for="holidayRateInput" class="form-label">Holiday Rate (as % Percent)</label>
-                                                        <input type="number" min="0" class="form-control" id="holidayRateInput">
+                                                        <input type="number" min="0" class="form-control" id="holidayRateInput" data-bs-toggle="tooltip" title="Write a description here">
                                                     </div>
                                                 </div>
                                             </div>
@@ -667,6 +667,13 @@
             
             refreshTimePickers();
             initializeSurchargeInfoRowsDeleteEvents();
+            
+            // Tooltip
+            let tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+            
+            let tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                return new bootstrap.Tooltip(tooltipTriggerEl)
+            });
              
             
         </script>

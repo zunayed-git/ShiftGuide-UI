@@ -279,14 +279,14 @@
                                                 <div class="col-sm-12 col-md-6">    
                                                     <div class="mb-3">
                                                         <label for="titleInput" class="form-label">CAO Title</label>
-                                                        <input type="text" class="form-control" id="titleInput">
+                                                        <input type="text" class="form-control" id="titleInput" data-bs-toggle="tooltip" title="Write a description here">
                                                     </div>
                                                 </div>
                                                 
                                                 <div class="col-sm-12 col-md-6">    
                                                     <div class="mb-3">
                                                         <label for="typeSelect" class="form-label">Type</label>
-                                                        <select id="typeSelect" class="sgapp-select2 form-select sgapp-select2-full" name="typeSelect">
+                                                        <select id="typeSelect" class="sgapp-select2 form-select sgapp-select2-full" name="typeSelect" data-bs-toggle="tooltip" title="Write a description here">
                                                             <option value="AL" selected="">Select One...</option>
                                                             <option value="AL">Alabama</option>
                                                             <option value="WY">Wyoming</option>
@@ -299,14 +299,14 @@
                                                 <div class="col-sm-12 col-md-6">    
                                                     <div class="mb-3">
                                                         <label for="mandatoryRateInput" class="form-label">Mandatory Rate</label>
-                                                        <input type="number" min="0" class="form-control" id="mandatoryRateInput">
+                                                        <input type="number" min="0" class="form-control" id="mandatoryRateInput" data-bs-toggle="tooltip" title="Write a description here">
                                                     </div>
                                                 </div>
                                                 
                                                 <div class="col-sm-12 col-md-6">    
                                                     <div class="mb-3">
                                                         <label for="surchargeRateInput" class="form-label">Surcharge Rate</label>
-                                                        <input type="number" min="0" class="form-control" id="surchargeRateInput">
+                                                        <input type="number" min="0" class="form-control" id="surchargeRateInput" data-bs-toggle="tooltip" title="Write a description here">
                                                     </div>
                                                 </div>
                                             </div>
@@ -315,14 +315,14 @@
                                                 <div class="col-sm-12 col-md-6">    
                                                     <div class="mb-3">
                                                         <label for="holidayRateInput" class="form-label">Holiday Rate</label>
-                                                        <input type="number" min="0" class="form-control" id="holidayRateInput">
+                                                        <input type="number" min="0" class="form-control" id="holidayRateInput" data-bs-toggle="tooltip" title="Write a description here">
                                                     </div>
                                                 </div>
                                                 
                                                 <div class="col-sm-12 col-md-6">    
                                                     <div class="mb-3">
                                                         <label for="nightRateInput" class="form-label">Night Rate</label>
-                                                        <input type="number" min="0" class="form-control" id="nightRateInput">
+                                                        <input type="number" min="0" class="form-control" id="nightRateInput" data-bs-toggle="tooltip" title="Write a description here">
                                                     </div>
                                                 </div>
                                             </div>
@@ -377,6 +377,13 @@
                 $('.sgapp-select2').select2({
                     theme: 'bootstrap-5'
                 });
+            });
+            
+            // Tooltip
+            let tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+            
+            let tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                return new bootstrap.Tooltip(tooltipTriggerEl)
             });
         </script>
 

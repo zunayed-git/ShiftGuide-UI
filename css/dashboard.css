@@ -7,7 +7,7 @@
   --primaryColorAlt: #bfe0e9;
   --sidePaneSelection: #374550;
   
-  --darkBackgroundColor: #27374D;
+  --darkBackgroundColor: #374550;
   --darkBackgroundColorAlt: #222831;
   --darkPrimaryColor: #526D82;
   --darkPrimaryColorAlt: #76ABAE;
@@ -472,6 +472,33 @@ a.sidebar-link:hover span
     width: auto;
 }
 
+a.sidebar-link
+{
+    transition: background-color 0.5s, border-color 0.5s, color 0.5s !important;
+}
+
+a.sidebar-link:hover
+{
+    background: linear-gradient(90deg,rgba(59,125,221,.1),rgba(59,125,221,.088) 50%,transparent);
+    border-left-color: var(--primaryColor);
+}
+
+a.sidebar-link:hover span,
+a.sidebar-link:hover svg
+{
+    color: var(--primaryColor) !important;
+    stroke: var(--primaryColor) !important;
+}
+
+:root {
+  --dt-row-selected: 37, 131, 167;
+}
+
+.fc-scroller::-webkit-scrollbar 
+{
+    display: none;
+}
+
 @media only screen and (max-width: 768px)
 {    
     body
@@ -676,18 +703,18 @@ a.sidebar-link:hover span
 
 @media only screen and (min-width: 768px)
 {
-    .fc th,
+    .fc .fc-month-view th,
     .fc td
     {
         color: #374550;
     }
 
-    .fc td
+    .fc .fc-month-view td
     {
         border-color: #f9fafc;
     }
 
-    .fc th:nth-child(odd)
+    .fc .fc-month-view th:nth-child(odd)
     {
         background: #f9fafc !important;
     }
@@ -698,24 +725,24 @@ a.sidebar-link:hover span
         color: var(--primaryColor);
     }
 
-    .fc-day-number
+    .fc-month-view .fc-day-number
     {
         color: var(--sidePaneSelection);
     }
     
     
     
-    .fc table
+    .fc .fc-month-view table
     {
         border-radius: 1em !important;
     }
     
-    .fc-day-header
+    .fc-month-view .fc-day-header
     {
         padding: 1em !important;
     }
 
-    .fc th
+    .fc .fc-month-view th
     {
         padding: 1.5em 1em !important;
         border-width: 0px;
@@ -723,12 +750,12 @@ a.sidebar-link:hover span
         font-weight: 500;
     }
     
-    .fc td
+    .fc .fc-month-view td
     {
         border-width: 2px;
     }
 
-    .fc-day-number
+    .fc-month-view .fc-day-number
     {
         font-size: 1.5em;
         display: inline-block;
@@ -924,6 +951,19 @@ body[data-theme="dark"] .fc-more:hover
 body[data-theme="dark"] .fc-day-number
 {
     color: #fff;
+}
+
+body[data-theme="dark"] a.sidebar-link:hover
+{
+    background: linear-gradient(90deg,rgba(59,125,221,.1),rgba(59,125,221,.088) 50%,transparent) !important;
+    border-left-color: var(--primaryColor);
+}
+
+body[data-theme="dark"] a.sidebar-link:hover span,
+body[data-theme="dark"] a.sidebar-link:hover svg
+{
+    color: var(--darkTextColor) !important;
+    stroke: var(--darkTextColor) !important;
 }
 
 
