@@ -529,6 +529,19 @@
                     events: datas,
                     firstDay: 1,
                     eventLimit: true,
+                    
+                    allDaySlot: false,
+                    slotLabelFormat:"HH:mm",
+                    
+                    views: {
+                        month: {
+                            editable: false
+                        },
+                        week: {
+                            columnFormat: 'ddd DD-MM' // set format for week here
+                        },
+                    },
+                    
                     eventRender: function(event, element) {
                         element.find('.fc-title').html('<i class="fa-solid fa-user"></i> '+event.title+'<br>'
                             +'<i class="fa-solid fa-user"></i> '+event.staff_number+'<br>'

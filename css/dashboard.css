@@ -396,6 +396,7 @@ a.sidebar-link:hover span
     position: absolute;
     right: 0;
     top: -0.2em;
+    border-left: 1px solid lightgray;
 }
 
 .btn-info,
@@ -413,15 +414,15 @@ a.sidebar-link:hover span
 
 .select2
 {
-    max-height: 2.5em;
-    overflow: hidden;
-    border: 1px solid lightgray;
-    border-radius: 0.25em;
+    /*max-height: 2.5em;*/
+    /*overflow: hidden;*/
+    /*border: 1px solid lightgray;*/
+    /*border-radius: 0.25em;*/
 }
 
 .select2-selection.select2-selection--single
 {
-    padding: 0.2em;
+    /*padding: 0.2em;*/
     border: none;
 }
 
@@ -497,6 +498,72 @@ a.sidebar-link:hover svg
 .fc-scroller::-webkit-scrollbar 
 {
     display: none;
+}
+
+#sgapp-fc-month-select
+{
+    border: 0px !important;
+    outline: 0px !important;
+    background-color: transparent !important;
+    /*background:none !important;*/
+    /*-webkit-appearance:none !important;*/
+    /*appearance:none !important;*/
+    box-shadow: none !important;
+}
+
+
+.fc-event-container
+{
+    background: transparent !important;
+    padding: 0.25em !important;
+}
+
+.fc-day-grid-event 
+{
+    background: transparent !important;
+    border: none;
+}
+
+.fc-day-grid-event .fc-title i
+{
+    display: none;
+}
+
+.fc-day-grid-event .fc-title
+{
+    display: block;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    overflow: hidden;
+    max-height: 5em;
+    width: 100%;
+    height: 4em;
+    line-height: 1.8em;
+    padding: 0.5em;
+    font-weight: 500;
+    
+    background: #f0fdf4;
+    color: #374550;
+    border: 1px solid rgba(216, 227, 219, 0.3);
+    border-radius: 0.5em;
+}
+
+.fc-day-grid-event .fc-title br
+{
+    display: none;
+}
+
+.fc-day-grid-event .fc-title img
+{
+    border-radius: 1em;
+    position: absolute;
+    left: 0.5em;
+    top: 2.5em;
+}
+
+.sgapp-inline-block
+{
+    display: inline-block;
 }
 
 @media only screen and (max-width: 768px)
@@ -966,6 +1033,11 @@ body[data-theme="dark"] a.sidebar-link:hover svg
     stroke: var(--darkTextColor) !important;
 }
 
+body[data-theme="dark"] .fc-day-grid-event .fc-title
+{
+    background: var(--darkPrimaryColor);
+    color: var(--darkTextColor);
+}
 
 @media print {
     body {
