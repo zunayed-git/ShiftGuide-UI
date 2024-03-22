@@ -95,7 +95,7 @@
                             </a>
                         </li>
 
-                        <li class="sidebar-item active">
+                        <li class="sidebar-item">
                             <a class="sidebar-link" href="./holiday.html">
                                 <i class="align-middle" data-feather="coffee"></i> <span class="align-middle">Holiday</span>
                             </a>
@@ -113,7 +113,7 @@
                         </li>
 
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="./index.html">
+                            <a class="sidebar-link" href="./index.php">
                                 <i class="align-middle" data-feather="log-out"></i> <span class="align-middle">Logout</span>
                             </a>
                         </li>
@@ -130,7 +130,7 @@
                     <div id="sgapp-page-header">
                         <header>
                             <h1 class="poppins-medium">
-                                Blank Page Template
+                                Settings
                             </h1>
                         </header>
                         <div>
@@ -265,146 +265,114 @@
                 <main id="sgapp-main" class="content">
                     <div class="container-fluid p-0">
 
-                        <!--<h1 class="h3 mb-3"></h1>-->
-
                         <div class="row">
                             <div class="col-12">
                                 <div class="card">
-                                    <!--
-                                    <div class="card-header">
-                                        <h5 class="card-title mb-0"></h5>
-                                    </div> -->
                                     <div class="card-body">
 
-                                        <div class="container-fluid">
-                                            <div class="row">
-                                                
-                                                <div class="col-sm-12 col-md-6 col-lg-3">
-                                                    <div class="mb-3">
-                                                        <label for="nameInput" class="form-label">Name</label>
-                                                        <input type="text" class="form-control" id="nameInput">
+                                        <nav>
+                                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                                <button class="nav-link active" id="nav-settings-1-tab" data-bs-toggle="tab" data-bs-target="#nav-settings-1" type="button" role="tab" aria-selected="true">
+                                                    Settings 1
+                                                </button>
+
+                                                <button class="nav-link" id="nav-settings-2-tab" data-bs-toggle="tab" data-bs-target="#nav-settings-2" type="button" role="tab" aria-selected="false">
+                                                    Settings 2
+                                                </button>
+
+                                                <button class="nav-link" id="nav-settings-3-tab" data-bs-toggle="tab" data-bs-target="#nav-settings-3" type="button" role="tab" aria-selected="false">
+                                                    Settings 3
+                                                </button>
+                                            </div>
+                                        </nav>
+                                        <div class="tab-content" id="nav-tabContent">
+                                            <!-- Settings 1 -->
+                                            <div class="tab-pane fade show active" id="nav-settings-1" role="tabpanel" aria-labelledby="nav-settings-1-tab">
+
+                                                <header>
+                                                    <h5 class="mb-3 mt-3 poppins-medium fs-2">
+                                                        Settings 1
+                                                    </h5>
+                                                </header>
+
+                                                <div class="row mt-3 mb-3">
+                                                    <div class="col-12">
+                                                        <form class="row g-3">
+                                                            <div class="col-auto">
+                                                                <button class="btn btn-info">
+                                                                    <i class="align-middle" data-feather="save"></i> Save
+                                                                </button>
+
+                                                                <button class="btn btn-light">
+                                                                    <i class="align-middle" data-feather="refresh-ccw"></i> Reset
+                                                                </button>
+                                                            </div>
+                                                        </form>
                                                     </div>
                                                 </div>
-                                                <div class="col-sm-12 col-md-6 col-lg-3">
-                                                    <div class="mb-3">
-                                                        <label for="positionSelect" class="form-label">Available Position</label>
-                                                        
-                                                        <select id="positionSelect" class="sgapp-select2 form-select sgapp-select2-full" name="state">
-                                                            <option value="AL">Alabama</option>
-                                                            <option value="WY">Wyoming</option>
-                                                        </select>
+
+                                                <div class="row">
+                                                    <div class="col-12">
+
+                                                        <div class="container-fluid">
+                                                            <div class="row">
+                                                                <div class="col-sm-12 col-md-6">    
+                                                                    <div class="mb-3">
+                                                                        <label for="titleInput" class="form-label">CAO Title</label>
+                                                                        <input type="text" class="form-control" id="titleInput" data-bs-toggle="tooltip" title="Write a description here">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            
+                                                            <div class="row">
+                                                                <div class="col-sm-12 col-md-6">    
+                                                                    <div class="mb-3">
+                                                                        <label for="mandatoryRateInput" class="form-label">Mandatory Rate</label>
+                                                                        <input type="number" min="0" class="form-control" id="mandatoryRateInput" data-bs-toggle="tooltip" title="Write a description here">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            
+                                                            <div class="row">
+                                                                <div class="col-sm-12 col-md-6">    
+                                                                    <div class="mb-3">
+                                                                        <label for="holidayRateInput" class="form-label">Holiday Rate</label>
+                                                                        <input type="number" min="0" class="form-control" id="holidayRateInput" data-bs-toggle="tooltip" title="Write a description here">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
                                                     </div>
                                                 </div>
-                                                <div class="col-sm-12 col-md-6 col-lg-3">    
-                                                    <div class="mb-3">
-                                                        <label for="addressInput" class="form-label">Address</label>
-                                                        <input type="text" class="form-control" id="addressInput">
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-12 col-md-6 col-lg-3">    
-                                                    <div class="mb-3">
-                                                        <label for="mapInput" class="form-label">Google Map (optional)</label>
-                                                        <input type="text" class="form-control" id="mapInput">
-                                                    </div>
-                                                </div>
+
+                                            </div>
+
+                                            <!-- Settings 2 -->
+                                            <div class="tab-pane fade" id="nav-settings-2" role="tabpanel" aria-labelledby="nav-settings-2-tab">
+                                                <header>
+                                                    <h5 class="mb-3 mt-3 poppins-medium fs-2">
+                                                        Settings 2
+                                                    </h5>
+                                                </header>
+
                                                 
                                             </div>
+
+                                            <!-- Settings 3 -->
+                                            <div class="tab-pane fade" id="nav-settings-3" role="tabpanel" aria-labelledby="nav-settings-3-tab">
+                                                <header>
+                                                    <h5 class="mb-3 mt-3 poppins-medium fs-2">
+                                                        Settings 3
+                                                    </h5>
+                                                </header>
+
                                                 
-                                            <div class="row">
-                                                <div class="col-sm-12 col-md-6 col-lg-3">
-                                                    <div class="mb-3">
-                                                        <label for="helplineInput" class="form-label">Helpline</label>
-                                                        <input type="tel" class="form-control" id="helplineInput">
-                                                    </div>
-                                                 </div>
-                                                <div class="col-sm-12 col-md-6 col-lg-3">   
-                                                    <div class="mb-3">
-                                                        <label for="telephoneInput" class="form-label">Telephone</label>
-                                                        <input type="tel" class="form-control" id="telephoneInput">
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-12 col-md-6 col-lg-3">    
-                                                    <div class="mb-3">
-                                                        <label for="faxInput" class="form-label">Fax Number</label>
-                                                        <input type="tel" class="form-control" id="faxInput">
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-12 col-md-6 col-lg-3">    
-                                                    <div class="mb-3">
-                                                        <label for="contactNumberInput" class="form-label">Contact Number</label>
-                                                        <input type="tel" class="form-control" id="contactNumberInput">
-                                                    </div>
-                                                </div>
-                                                
-                                            </div>
-                                            
-                                            <div class="row">
-                                                
-                                                <div class="col-sm-12 col-md-6 col-lg-3">
-                                                    <div class="mb-3">
-                                                        <label for="cityInput" class="form-label">City</label>
-                                                        <input type="text" class="form-control" id="cityInput">
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-12 col-md-6 col-lg-3">
-                                                    <div class="mb-3">
-                                                        <label for="zipCodeInput" class="form-label">Zip Code</label>
-                                                        <input type="text" class="form-control" id="zipCodeInput">
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-12 col-md-6 col-lg-3">    
-                                                    <div class="mb-3">
-                                                        <label for="provinceInput" class="form-label">Province</label>
-                                                        <input type="text" class="form-control" id="provinceInput">
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-12 col-md-6 col-lg-3">    
-                                                    <div class="mb-3">
-                                                        <label for="countrySelect" class="form-label">Country</label>
-                                                        <input type="text" class="form-control" id="countrySelect">
-                                                    </div>
-                                                </div>
-                                                
-                                            </div>
-                                            
-                                            <div class="row">
-                                                <div class="col-sm-12 col-md-6">    
-                                                    <div class="mb-3">
-                                                        <label for="kvkInput" class="form-label">KVK Number</label>
-                                                        <input type="text" class="form-control" id="kvkInput">
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-12 col-md-6">    
-                                                    <div class="mb-3">
-                                                        <label for="vatInput" class="form-label">VAT Number</label>
-                                                        <input type="text" class="form-control" id="vatInput">
-                                                    </div>
-                                                </div>
                                             </div>
                                         </div>
 
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        
-                        <div class="card">
-                            <div class="card-body">
-
-                                <div class="row">
-                                    <div class="col-12 sgapp-center">
-                                        <button class="btn btn-info">
-                                            <i class="align-middle" data-feather="save"></i>
-                                            Save
-                                        </button>
-                                        
-                                        <button class="btn btn-light">
-                                            <i class="align-middle" data-feather="refresh-ccw"></i>
-                                            Reset
-                                        </button>
-                                    </div>
-                                </div>
-
                             </div>
                         </div>
 
@@ -445,13 +413,18 @@
         <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
         <script type="text/javascript" src="./js/app-theme.js"></script>
-        
+
         <script type="text/javascript">
             // Select2
-            $(document).ready(function() {
-                $('.sgapp-select2').select2({
-                    theme: 'bootstrap-5'
-                });
+            $('.sgapp-select2').select2({
+                theme: 'bootstrap-5'
+            });
+
+            // Tooltip
+            let tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+            
+            let tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                return new bootstrap.Tooltip(tooltipTriggerEl)
             });
         </script>
 

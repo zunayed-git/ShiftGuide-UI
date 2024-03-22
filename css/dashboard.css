@@ -214,6 +214,11 @@ body
     margin-top: 8em;
 }
 
+.sgapp-banner-support
+{
+    background: url("../img/support.svg");
+}
+
 .sgapp-banner
 {
     min-height: 30em;
@@ -444,7 +449,7 @@ a.sidebar-link:hover span
 {
     padding: 0em;
     margin-top: 2em;
-    border-radius: 0.5em !important;
+    border-radius: 1em !important;
 }
 
 #sgapp-main-calendar .fc-month-view .fc-time
@@ -505,65 +510,96 @@ a.sidebar-link:hover svg
     border: 0px !important;
     outline: 0px !important;
     background-color: transparent !important;
-    /*background:none !important;*/
-    /*-webkit-appearance:none !important;*/
-    /*appearance:none !important;*/
     box-shadow: none !important;
 }
 
 
-.fc-event-container
+.fc-day-grid .fc-event-container
 {
-    background: transparent !important;
-    padding: 0.25em !important;
+    background-color: transparent !important;
 }
 
-.fc-day-grid-event 
+.fc-day-grid .fc-day-grid-event 
 {
-    background: transparent !important;
-    border: none;
-}
-
-.fc-day-grid-event .fc-title i
-{
-    display: none;
-}
-
-.fc-day-grid-event .fc-title
-{
-    display: block;
-    text-overflow: ellipsis;
-    word-wrap: break-word;
-    overflow: hidden;
-    max-height: 5em;
-    width: 100%;
-    height: 4em;
-    line-height: 1.8em;
-    padding: 0.5em;
-    font-weight: 500;
-    
-    background: #f0fdf4;
-    color: #374550;
-    border: 1px solid rgba(216, 227, 219, 0.3);
+    background-color: #e5f3f6 !important;
+    border: 1px solid rgba(37, 131, 167, 0.2) !important;
     border-radius: 0.5em;
+    padding: 0.6em;
+
+    color: #000;
 }
 
-.fc-day-grid-event .fc-title br
+.sgapp-event-avatar
 {
-    display: none;
+    display: inline-block;
+    border: 1px solid var(--primaryColor) !important;
+    margin-right: 0.5em;
+    width: 2em;
+    height: 2em;
+    border-radius: 2em;
 }
 
-.fc-day-grid-event .fc-title img
+.fc-day-grid .fc-day-grid-event .sgapp-event-title
 {
-    border-radius: 1em;
-    position: absolute;
-    left: 0.5em;
-    top: 2.5em;
+    color: #374550;
+    font-size: 1.35em;
+    font-weight: bold;
+    width: 100%;
+}
+
+.fc-day-grid .fc-day-grid-event .sgapp-event-cell-row:not(:first-child)
+{
+    margin-top: 0.25em;
+}
+
+.fc-day-grid .fc-day-grid-event .sgapp-event-cell-row:not(:last-child)
+{
+    margin-bottom: 0.25em;
+}
+
+.fc-day-grid .fc-day-grid-event .sgapp-event-staff-id
+{
+    color: #2583a7;
+    font-size: 1em;
+}
+
+.fc-day-grid .fc-day-grid-event .sgapp-event-time
+{
+    background: #fefefe;
+    color: #374550;
+    font-size: 1em;
+    font-weight: 500;
+    padding: 0.5em;
+    display: inline-block;
+    border-radius: 0.25em;
 }
 
 .sgapp-inline-block
 {
     display: inline-block;
+}
+
+.fc-day-grid .fc-state-highlight
+{
+    background: #36444f !important;
+}
+
+.fc-day-grid .fc-state-highlight *,
+.fc-day-grid .fc-state-highlight
+{
+    color: #fff !important;
+} 
+
+.nav-link
+{
+    color: var(--primaryColor);
+}
+
+.accordion-button,
+.accordion-button[data-bs-toggle="collapse"]
+{
+    background: rgba(191, 224, 233, 0.2);
+    color: var(--primaryColor);
 }
 
 @media only screen and (max-width: 768px)
@@ -778,7 +814,7 @@ a.sidebar-link:hover svg
 
     .fc .fc-month-view td
     {
-        border-color: #f9fafc;
+        border-color: #f1f4f9;
     }
 
     .fc .fc-month-view th:nth-child(odd)
@@ -826,6 +862,16 @@ a.sidebar-link:hover svg
     {
         font-size: 1.5em;
         display: inline-block;
+    }
+
+    .sgapp-support
+    {
+        min-height: 50vh !important;
+    }
+
+    .sgapp-support > header:first-child
+    {
+        margin-top: 7em;
     }
 }
 
@@ -883,7 +929,8 @@ body[data-theme="dark"] input[type="url"],
 body[data-theme="dark"] input[type="password"],
 body[data-theme="dark"] input[type="number"],
 body[data-theme="dark"] .dt-button-collection *,
-body[data-theme="dark"] select
+body[data-theme="dark"] select,
+body[data-theme="dark"] textarea
 {
     color: var(--darkTextColor) !important;
 }
@@ -895,7 +942,8 @@ body[data-theme="dark"] input[type="tel"]::placeholder,
 body[data-theme="dark"] input[type="url"]::placeholder,
 body[data-theme="dark"] input[type="password"]::placeholder,
 body[data-theme="dark"] input[type="number"]::placeholder,
-body[data-theme="dark"] select
+body[data-theme="dark"] select,
+body[data-theme="dark"] textarea
 {
     color: var(--darkAccentColor);
 }
@@ -946,7 +994,8 @@ body[data-theme="dark"] .select2 .selection .select2-selection,
 body[data-theme="dark"] .input-group-text,
 body[data-theme="dark"] .dt-button-collection,
 body[data-theme="dark"] .dropify-wrapper,
-body[data-theme="dark"] select
+body[data-theme="dark"] select,
+body[data-theme="dark"] textarea
 {
     background: var(--darkBackgroundColor) !important;
 }
@@ -1033,10 +1082,45 @@ body[data-theme="dark"] a.sidebar-link:hover svg
     stroke: var(--darkTextColor) !important;
 }
 
-body[data-theme="dark"] .fc-day-grid-event .fc-title
+body[data-theme="dark"] .fc-day-grid .fc-state-highlight,
+body[data-theme="dark"] .fc-day-grid .fc-state-highlight *
 {
-    background: var(--darkPrimaryColor);
+    color: var(--darkTextColor) !important;
+}
+
+body[data-theme="dark"] .fc-day-grid .fc-more
+{
     color: var(--darkTextColor);
+}
+
+body[data-theme="dark"] .fc-day-grid .fc-day-grid-event
+{
+    background-color: var(--darkPrimaryColor) !important;
+}
+
+body[data-theme="dark"] .fc-day-grid .fc-day-grid-event,
+body[data-theme="dark"] .fc-day-grid .sgapp-event-title,
+body[data-theme="dark"] .fc-day-grid .sgapp-event-staff-id,
+body[data-theme="dark"] .fc-day-grid .sgapp-event-time
+{
+    color: var(--darkPrimaryTextColor) !important;
+}
+
+body[data-theme="dark"] .fc-day-grid .sgapp-event-time
+{
+    background-color: var(--sidePaneSelection);
+}
+
+body[data-theme="dark"] .accordion-button,
+body[data-theme="dark"] .accordion-button[data-bs-toggle="collapse"]
+{
+    background: var(--darkBackgroundColorAlt);
+    color: var(--primaryColor);
+}
+
+body[data-theme="dark"] .accordion-body
+{
+    background: var(--sidePaneSelection);
 }
 
 @media print {

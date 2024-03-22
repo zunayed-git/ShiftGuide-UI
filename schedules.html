@@ -154,7 +154,7 @@
                                     </div>
                                 </a>
                             </li>
-                            <li class="nav-item dropdown">
+                            <!-- <li class="nav-item dropdown">
                                 <a class="nav-icon dropdown-toggle" href="#" id="alertsDropdown" data-bs-toggle="dropdown">
                                     <div class="position-relative">
                                         <i class="align-middle" data-feather="bell"></i>
@@ -218,7 +218,7 @@
                                         <a href="#" class="text-muted">Show all notifications</a>
                                     </div>
                                 </div>
-                            </li>
+                            </li> -->
 
                             <li class="nav-item">
                                 <input id="main-search" type="search" class="form-control mt-1 mx-1" placeholder="Search">
@@ -234,13 +234,33 @@
                                     <span class="text-dark">Sadia Mim</span>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-end">
-                                    <a class="dropdown-item" href="pages-profile.html"><i class="align-middle me-1" data-feather="user"></i> Profile</a>
-                                    <a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="pie-chart"></i> Analytics</a>
+                                    <a class="dropdown-item" href="pages-profile.html">
+                                        <i class="align-middle me-1" data-feather="user"></i> Profile
+                                    </a>
+
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="index.html"><i class="align-middle me-1" data-feather="settings"></i> Settings & Privacy</a>
-                                    <a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="help-circle"></i> Help Center</a>
+
+                                    <a class="dropdown-item" href="./settings.html">
+                                        <i class="align-middle me-1" data-feather="settings"></i> Settings
+                                    </a>
+
+                                    <a class="dropdown-item" href="./faq.html">
+                                        <i class="align-middle me-1" data-feather="help-circle"></i> FAQ
+                                    </a>
+
+                                    <a class="dropdown-item" href="./support.html">
+                                        <i class="align-middle me-1" data-feather="life-buoy"></i> Support
+                                    </a>
+
+                                    <a class="dropdown-item" href="#">
+                                        <i class="align-middle me-1" data-feather="info"></i> About
+                                    </a>
+
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="./index.html">Log out</a>
+
+                                    <a class="dropdown-item" href="./index.html">
+                                        <i class="align-middle me-1" data-feather="log-out"></i> Sign Out
+                                    </a>
                                 </div>
                             </li>
                         </ul>
@@ -272,12 +292,18 @@
                                             </div>
                                             
                                             <div class="col-auto">
-                                                <div class="col-auto">
-                                                    <select class="sgapp-select2 form-select" name="staffSelect">
-                                                        <option selected>Select Staff</option>
-                                                        <option value="AL">Alabama</option>
-                                                        <option value="WY">Wyoming</option>
-                                                    </select>
+                                                <select class="sgapp-select2 form-select" name="staffSelect">
+                                                    <option selected>Select Staff</option>
+                                                    <option value="AL">Alabama</option>
+                                                    <option value="WY">Wyoming</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-auto">
+                                                <div class="input-group">
+                                                    <span class="input-group-text">
+                                                        <i class="align-middle" data-feather="search"></i>
+                                                    </span>
+                                                    <input type="search" class="form-control" placeholder="Search">
                                                 </div>
                                             </div>
                                             <div class="col-auto">
