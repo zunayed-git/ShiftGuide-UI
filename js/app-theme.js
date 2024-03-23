@@ -78,7 +78,7 @@ function applyBrandLogoToDarkTheme()
     
     if (brandLogoImg !== null)
     {
-        brandLogoImg.setAttribute("src", "./img/logo-dark.png");
+        brandLogoImg.setAttribute("src", "/backend/setting/img/logo-dark.png");
     }
 }
 
@@ -88,7 +88,7 @@ function applyBrandLogoToLightTheme()
     
     if (brandLogoImg !== null)
     {
-        brandLogoImg.setAttribute("src", "./img/logo.png");
+        brandLogoImg.setAttribute("src", "/backend/setting/img/logo.png");
     }
 }
 
