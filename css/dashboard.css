@@ -602,6 +602,26 @@ a.sidebar-link:hover svg
     color: var(--primaryColor);
 }
 
+.sgapp-text-center
+{
+    text-align: center !important;
+}
+
+.dropify-message span p
+{
+    font-size: 0.5em !important;
+}
+
+.note-editable 
+{
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
+    box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
+}
+
 @media only screen and (max-width: 768px)
 {    
     body
