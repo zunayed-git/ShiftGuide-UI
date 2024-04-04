@@ -627,6 +627,11 @@ a.sidebar-link:hover svg
     box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
 }
 
+input[type="text"].form-control
+{
+    outline: 1px solid gray;
+}
+
 @media only screen and (max-width: 768px)
 {    
     body
