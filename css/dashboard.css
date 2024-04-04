@@ -431,6 +431,11 @@ a.sidebar-link:hover span
     border: none;
 }
 
+.sgapp-home .fc-header-toolbar
+{
+    position: relative;
+}
+
 #sgapp-main-calendar .fc-header-toolbar,
 #sgapp-main-calendar .fc-view-container
 {
@@ -629,7 +634,8 @@ a.sidebar-link:hover svg
 
 input[type="text"].form-control
 {
-    outline: 1px solid gray;
+    outline: 1px solid #dad4ce;
+    height: 2.5em;
 }
 
 @media only screen and (max-width: 768px)
