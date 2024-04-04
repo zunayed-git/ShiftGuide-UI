@@ -612,6 +612,11 @@ a.sidebar-link:hover svg
     font-size: 0.5em !important;
 }
 
+.note-editor.panel
+{
+    background-color: #fff;
+}
+
 .note-editable 
 {
     margin-bottom: 20px;

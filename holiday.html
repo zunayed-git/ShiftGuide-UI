@@ -467,7 +467,44 @@
                 const table = new DataTable('#my-table', {
                     layout: {
                         topStart: {
-                            buttons: ['pageLength', 'copyHtml5', 'excelHtml5', 'csvHtml5', 'pdfHtml5']
+                            //buttons: ['pageLength', 'copyHtml5', 'excelHtml5', 'csvHtml5', 'pdfHtml5']
+                            buttons: [
+                                {
+                                    extend: 'pageLength'
+                                },
+                                {
+                                    extend: 'copyHtml5',
+                                    text: 'Copy',
+                                    className: 'btn btn-default',
+                                    exportOptions: {
+                                        columns: 'th:not(:last-child)'
+                                    }
+                                },
+                                {
+                                    extend: 'excel',
+                                    text: 'Excel',
+                                    className: 'btn btn-default',
+                                    exportOptions: {
+                                        columns: 'th:not(:last-child)'
+                                    }
+                                },
+                                {
+                                    extend: 'csvHtml5',
+                                    text: 'CSV',
+                                    className: 'btn btn-default',
+                                    exportOptions: {
+                                        columns: 'th:not(:last-child)'
+                                    }
+                                },
+                                {
+                                    extend: 'pdfHtml5',
+                                    text: 'PDF',
+                                    className: 'btn btn-default',
+                                    exportOptions: {
+                                        columns: 'th:not(:last-child)'
+                                    }
+                                },
+                            ]
                         }
                     },
                     responsive: true
