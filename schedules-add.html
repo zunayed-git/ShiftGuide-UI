@@ -289,85 +289,79 @@
                         </div>
 
                         <div class="row">
-                            <div class="col-12">
+                            <div class="col-sm-12 col-md-6">
                                 <div class="card">
                                     <div class="card-body">
-                                        <ul class="nav nav-tabs" id="myTab" role="tablist">
-                                            <li class="nav-item" role="presentation">
-                                                <button class="nav-link active" id="schedule-add-tab" data-bs-toggle="tab" data-bs-target="#add-new" type="button" role="tab" aria-controls="home" aria-selected="true">Schedule Form</button>
-                                            </li>
-                                            <li class="nav-item" role="presentation">
-                                                <button class="nav-link" id="nav-calendar-tab" data-bs-toggle="tab" data-bs-target="#calendar-tab-content" type="button" role="tab" aria-controls="profile" aria-selected="false">Calendar</button>
-                                            </li>
-                                        </ul>
-                                        <div class="tab-content" id="myTabContent">
-                                            <div class="tab-pane fade show active" id="add-new" role="tabpanel" aria-labelledby="schedule-add-tab">
-                                                <div class="container-fluid">
-                                                    <div class="row p-3">
+
+                                        <div class="container-fluid">
+                                            <div class="row p-3">
+                                                
+                                                <div class="col-sm-12 col-md-6">
+                                                    <div class="mb-3">
+                                                        <label for="staffNameSelect" class="form-label">Staff Name</label>
                                                         
-                                                        <div class="col-sm-12 col-md-6">
-                                                            <div class="mb-3">
-                                                                <label for="staffNameSelect" class="form-label">Staff Name</label>
-                                                                
-                                                                <select id="staffNameSelect" class="sgapp-select2 form-select sgapp-select2-full" name="staffNameSelect">
-                                                                    <option value="AL">Alabama</option>
-                                                                    <option value="WY">Wyoming</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                        
-                                                        <div class="col-sm-12 col-md-6">
-                                                            <div class="mb-3">
-                                                                <label for="orgSelect" class="form-label">Organizations</label>
-                                                                
-                                                                <select id="orgSelect" class="sgapp-select2 form-select sgapp-select2-full" name="orgSelect">
-                                                                    <option value="AL">Alabama</option>
-                                                                    <option value="WY">Wyoming</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                        
+                                                        <select id="staffNameSelect" class="sgapp-select2 form-select sgapp-select2-full" name="staffNameSelect">
+                                                            <option value="AL">Alabama</option>
+                                                            <option value="WY">Wyoming</option>
+                                                        </select>
                                                     </div>
-                                                    
-                                                    <div class="row">
-                                                        <div class="col-sm-12 col-md-4">    
-                                                            <div class="mb-3">
-                                                                <label for="workDateInput" class="form-label">Work Date</label>
-                                                                <input type="date" class="form-control" id="workDateInput">
-                                                            </div>
-                                                        </div>
+                                                </div>
+                                                
+                                                <div class="col-sm-12 col-md-6">
+                                                    <div class="mb-3">
+                                                        <label for="orgSelect" class="form-label">Organizations</label>
                                                         
-                                                        <div class="col-sm-12 col-md-4">    
-                                                            <div class="mb-3">
-                                                                <label for="startTimeInput" class="form-label">Start Time</label>
-                                                                <div class="input-group mb-3 clockpicker">
-                                                                    <span class="input-group-text">
-                                                                        <i data-feather="clock"></i>
-                                                                    </span>
-                                                                    <input id="startTimeInput" type="text" class="form-control">
-                                                                </div>
-                                                            </div>
+                                                        <select id="orgSelect" class="sgapp-select2 form-select sgapp-select2-full" name="orgSelect">
+                                                            <option value="AL">Alabama</option>
+                                                            <option value="WY">Wyoming</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                            
+                                            <div class="row">
+                                                <div class="col-sm-12 col-md-4">    
+                                                    <div class="mb-3">
+                                                        <label for="workDateInput" class="form-label">Work Date</label>
+                                                        <input type="date" class="form-control" id="workDateInput">
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="col-sm-12 col-md-4">    
+                                                    <div class="mb-3">
+                                                        <label for="startTimeInput" class="form-label">Start Time</label>
+                                                        <div class="input-group mb-3 clockpicker">
+                                                            <span class="input-group-text">
+                                                                <i data-feather="clock"></i>
+                                                            </span>
+                                                            <input id="startTimeInput" type="text" class="form-control">
                                                         </div>
-                                                        
-                                                        <div class="col-sm-12 col-md-4">    
-                                                            <div class="mb-3">
-                                                                <label for="endTimeInput" class="form-label">End Time</label>
-                                                                <div class="input-group mb-3 clockpicker">
-                                                                    <span class="input-group-text">
-                                                                        <i data-feather="clock"></i>
-                                                                    </span>
-                                                                    <input id="endTimeInput" type="text" class="form-control">
-                                                                </div>
-                                                            </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="col-sm-12 col-md-4">    
+                                                    <div class="mb-3">
+                                                        <label for="endTimeInput" class="form-label">End Time</label>
+                                                        <div class="input-group mb-3 clockpicker">
+                                                            <span class="input-group-text">
+                                                                <i data-feather="clock"></i>
+                                                            </span>
+                                                            <input id="endTimeInput" type="text" class="form-control">
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="tab-pane fade p-3" id="calendar-tab-content" role="tabpanel" aria-labelledby="profile-tab">
-                                                <div id='calendar'></div>
-                                            </div>
                                         </div>
 
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12 col-md-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div id='calendar'></div>
                                     </div>
                                 </div>
                             </div>
@@ -442,7 +436,7 @@
                         header:{
                             left: 'title',
                             center: 'month,agendaWeek,agendaDay',
-                            right: 'prev,today,next addEventButton'
+                            right: 'prev,today,next'
                         },
                         events: datas,
                         firstDay: 1,
@@ -508,13 +502,9 @@
                             $(this).addClass('hover');
                             //console.log(view)
                             $(this).tooltip({
-                                title: '<i class="fa-solid fa-user"></i> Staff Name: '+event.title+'<br>'
-                                    + '<i class="fa-solid fa-user"></i> Staff ID: '+event.staff_number+'<br>'
-                                    + '<i class="fa-regular fa-clock"></i> Start Time: '+moment(event.start).format('HH:mm')+'<br>'
-                                    + '<i class="fa-regular fa-clock"></i> End Time: '+moment(event.end).format('HH:mm')+'<br>'
-                                    + '<i class="fa-solid fa-industry"></i> Organization Name: '+event.organization_name+'<br>'
-                                    + '<i class="fa-solid fa-location-pin"></i> Address: '+event.address+'<br>'
-
+                                title: '<i class="fa-solid fa-user"></i> '+event.title+'<br>'
+                                    + '<i class="fa-regular fa-clock"></i> '+moment(event.start).format('HH:mm')+'<br>'
+                                    + '<i class="fa-regular fa-clock"></i> '+moment(event.end).format('HH:mm')
                                 ,
                                 html: true,
                                 container: 'body',
@@ -532,32 +522,8 @@
                         {
                             let url="schedules/edit/" + event.id;
                             window.location.href = url;
-                        },
-                        customButtons: {
-                            addEventButton: {
-                                text: 'Add',
-                                click: function() {
-                                    console.log('add event button clicked!');
-                                }
-                            }
                         }
                     });
-                });
-
-                // Add this line
-                const calendarTab = document.querySelector("#nav-calendar-tab");
-                
-                function refreshCalendarView()
-                {
-                    const monthViewButton = document.querySelector(".fc-month-button");
-                    const weekViewButton = document.querySelector(".fc-agendaWeek-button");
-                    
-                    weekViewButton.click();
-                    monthViewButton.click();
-                }
-                
-                calendarTab.addEventListener("click", event => {
-                    refreshCalendarView();
                 });
             });
         </script>
