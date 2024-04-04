@@ -425,7 +425,7 @@ a.sidebar-link:hover span
     /*border-radius: 0.25em;*/
 }
 
-.select2-selection.select2-selection--single
+.sgapp-home .select2-selection.select2-selection--single
 {
     /*padding: 0.2em;*/
     border: none;
