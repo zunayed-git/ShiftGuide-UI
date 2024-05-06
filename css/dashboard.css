@@ -457,9 +457,15 @@ a.sidebar-link:hover span
     border-radius: 1em !important;
 }
 
-#sgapp-main-calendar .fc-month-view .fc-time
+.fc-month-view .fc-time,
+.fc-time-grid-event .fc-time
 {
     display: none;
+}
+
+.fc-time-grid-event
+{
+    width: 100% !important;
 }
 
 .dt-button.buttons-html5,
