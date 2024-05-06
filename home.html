@@ -580,6 +580,14 @@
                 ];
                 
                 const currentMonth = months[new Date().getMonth()];
+
+                // --------------
+                // Update
+                const calendarNextMonthButton = document.querySelector(".fc-next-button");
+                const calendarPreviousMonthButton = document.querySelector(".fc-prev-button");
+                const calendarTodayButton = document.querySelector(".fc-today-button");
+
+                // --------------
                 
                 let optionHtml = "";
                 
@@ -600,7 +608,11 @@
                         defaultSelection = "selected";
                     }
                     
-                    optionHtml += `<option ${defaultSelection} value="${currentYear}-${monthIndex}-01">${month}, ${currentYear}</option>`;
+                    // --------------
+                    // Update
+                    //optionHtml += `<option ${defaultSelection} value="${currentYear}-${monthIndex}-01">${month}, ${currentYear}</option>`;
+                    optionHtml += getMonthSelectOptionTemplate(currentYear, monthIndex, month, defaultSelection);
+                    // --------------
                 }
                 
                 dropdownWrapper.innerHTML = `
@@ -611,13 +623,118 @@
         
                 const calendarMonthSelect = document.querySelector("#sgapp-fc-month-select");
                 
-                calendarMonthSelect.addEventListener("change", event => {
+                // calendarMonthSelect.addEventListener("change", event => {
                     
-                    console.log(calendarMonthSelect.value);
+                //     $('#calendar').fullCalendar('gotoDate', calendarMonthSelect.value);
                     
-                    $('#calendar').fullCalendar('gotoDate', calendarMonthSelect.value);
+                // });
+
+                // --------------
+                // Update
+
+                refreshCalendarMonthSelectEvent();
+
+                function getMonthSelectOptionTemplate(year, monthIndex, month, defaultSelection)
+                {
+                    if (defaultSelection === null)
+                    {
+                        defaultSelection = "";
+                    }
+
+                    return `<option ${defaultSelection} value="${year}-${monthIndex}-01">${month}, ${year}</option>`;
+                }
+
+                function refreshCalendarMonthSelectEvent()
+                {
+                    calendarMonthSelect.addEventListener("change", event => {
                     
+                        $('#calendar').fullCalendar('gotoDate', calendarMonthSelect.value);
+                        
+                    });
+                }
+
+                function getCalendarCurrentDate()
+                {
+                    let date = new Date($('#calendar').fullCalendar('getDate'));
+
+                    return date;
+                }
+
+                function getCalendarMonthAsIndex()
+                {
+                    let date = getCalendarCurrentDate();
+                    let monthIndex = date.getMonth();
+
+                    return monthIndex;
+                }
+
+                function refreshCalendarMonthSelect()
+                {
+                    setTimeout(() => {
+                        let date = getCalendarCurrentDate();
+
+                        let monthIndex = date.getMonth() + 1;
+
+                        if (monthIndex <= 9)
+                        {
+                            monthIndex = `0${monthIndex}`;
+                        }
+
+                        let value = `${date.getFullYear()}-${monthIndex}-01`;
+
+                        let options = calendarMonthSelect.querySelectorAll("option");
+
+                        let isMonthFoundInTheSelector = false;
+
+                        if ((options != null) && (options.length > 0))
+                        {
+                            for (let i = 0; i < options.length; i++)
+                            {
+                                let option = options[i];
+                                
+                                if (option.value === value)
+                                {
+                                    isMonthFoundInTheSelector = true;
+                                    break;
+                                }
+                            }
+                        }
+
+                        if (isMonthFoundInTheSelector)
+                        {
+                            calendarMonthSelect.value = value;
+                        }
+                        else
+                        {
+                            let innerHTML = calendarMonthSelect.innerHTML;
+
+                            innerHTML += getMonthSelectOptionTemplate(date.getFullYear(), date.getMonth(), months[date.getMonth()], null);
+
+                            calendarMonthSelect.innerHTML = innerHTML;
+
+                            refreshCalendarMonthSelectEvent();
+
+                            setTimeout(() => {
+                                calendarMonthSelect.value = value;
+                            }, 200);
+                        }
+
+                    }, 100);
+                }
+
+                calendarNextMonthButton.addEventListener("click", event => {
+                    refreshCalendarMonthSelect();
                 });
+
+                calendarPreviousMonthButton.addEventListener("click", event => {
+                    refreshCalendarMonthSelect();
+                });
+
+                calendarTodayButton.addEventListener("click", event => {
+                    refreshCalendarMonthSelect();
+                });
+
+                // --------------
                 
             }, 500);
         </script>
