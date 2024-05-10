@@ -682,7 +682,8 @@
                 
                 const deleteRowButton = document.querySelector(`#surchargeDeleteRowButton${index}`);
                 initializeSurchargeInfoRowsDeleteEvent(deleteRowButton);
-                
+
+                setTimeValidation(`caoSurchargeInfoStartInput${index}`, `caoSurchargeInfoEndTimeInput${index}`);
             });
             
             refreshTimePickers();
@@ -695,7 +696,84 @@
                 return new bootstrap.Tooltip(tooltipTriggerEl)
             });
              
-            
+            // Time validation
+            function timeValidation(startTime, endTime, startTimeInputId, endTimeInputId)
+            {
+                if ((startTime.trim().length > 0) && (endTime.trim().length > 0) && startTime.includes(":") && endTime.includes(":"))
+                {
+                    try
+                    {
+                        let start = getTimeAsDecimal(startTime);
+                        let end = getTimeAsDecimal(endTime);
+
+                        if (startTime < endTime)
+                        {
+                            onTimeValidationSuccess(startTimeInputId, endTimeInputId);
+                        }
+                        else
+                        {
+                            onTimeValidationFailure(startTimeInputId, endTimeInputId);
+                        }
+                    }
+                    catch (error)
+                    {
+                        onTimeValidationFailure(startTimeInputId, endTimeInputId);
+                    }
+                }
+                else
+                {
+                    onTimeValidationFailure(startTimeInputId, endTimeInputId);
+                }
+            }
+
+            function onTimeValidationSuccess(startTimeInputId, endTimeInputId)
+            {
+                console.log("Time format correct");
+            }
+
+            function onTimeValidationFailure(startTimeInputId, endTimeInputId)
+            {
+                console.log("Time format incorrect");
+            }
+
+            function getTimeAsDecimal(time)
+            {
+                let timeParts = time.split(":");
+
+                let output = parseInt(timeParts[0]) + "." + timeParts[1];
+
+                return parseFloat(output);
+            }
+
+            function setTimeValidation(startTimeInputId, endTimeInputId)
+            {
+                const startTimeInput = document.querySelector(`#${startTimeInputId}`);
+                const endTimeInput = document.querySelector(`#${endTimeInputId}`);
+
+                startTimeInput.addEventListener("change", event => {
+                    timeValidation(startTimeInput.value, endTimeInput.value, startTimeInputId, endTimeInputId);
+                });
+
+                startTimeInput.addEventListener("input", event => {
+                    timeValidation(startTimeInput.value, endTimeInput.value, startTimeInputId, endTimeInputId);
+                });
+
+                startTimeInput.addEventListener("click", event => {
+                    timeValidation(startTimeInput.value, endTimeInput.value, startTimeInputId, endTimeInputId);
+                });
+
+                endTimeInput.addEventListener("change", event => {
+                    timeValidation(startTimeInput.value, endTimeInput.value, startTimeInputId, endTimeInputId);
+                });
+
+                endTimeInput.addEventListener("input", event => {
+                    timeValidation(startTimeInput.value, endTimeInput.value, startTimeInputId, endTimeInputId);
+                });
+
+                endTimeInput.addEventListener("click", event => {
+                    timeValidation(startTimeInput.value, endTimeInput.value, startTimeInputId, endTimeInputId);
+                });
+            }
         </script>
 
     </body>
