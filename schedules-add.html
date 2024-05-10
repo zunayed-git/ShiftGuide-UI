@@ -540,35 +540,35 @@
             });
 
             // Calendar event type
-            setTimeout(() => {
-                const calendarButtons = document.querySelectorAll(".fc-button");
+            function setCalendarEventColor(eventElement, bgColor, borderColor)
+            {
+                const dayGridEvents = document.querySelectorAll(".fc-day-grid-event");
 
-                function setCalendarEventColor(eventElement, bgColor, borderColor)
+                if ((dayGridEvents !== null) && (dayGridEvents.length > 0))
                 {
-                    const dayGridEvents = document.querySelectorAll(".fc-day-grid-event");
-
-                    if ((dayGridEvents !== null) && (dayGridEvents.length > 0))
+                    for (let i = 0; i < dayGridEvents.length; i++)
                     {
-                        for (let i = 0; i < dayGridEvents.length; i++)
+                        let dayGridEvent = dayGridEvents[i];
+
+                        const currentEventElement = dayGridEvent.querySelector(".sgapp-event-cell-wrapper");
+                        const currentEventType = currentEventElement.getAttribute("data-event-type");
+                        const eventType = eventElement.getAttribute("data-event-type");
+
+                        if (currentEventType === eventType)
                         {
-                            let dayGridEvent = dayGridEvents[i];
-
-                            const currentEventElement = dayGridEvent.querySelector(".sgapp-event-cell-wrapper");
-                            const currentEventType = currentEventElement.getAttribute("data-event-type");
-                            const eventType = eventElement.getAttribute("data-event-type");
-
-                            if (currentEventType === eventType)
+                            dayGridEvent.style.backgroundColor = `${bgColor}`;
+                            
+                            if (borderColor !== null)
                             {
-                                dayGridEvent.style.backgroundColor = `${bgColor}`;
-                                
-                                if (borderColor !== null)
-                                {
-                                    dayGridEvent.style.border = `1px solid ${borderColor}`;
-                                }
+                                dayGridEvent.style.border = `1px solid ${borderColor}`;
                             }
                         }
                     }
                 }
+            }
+
+            setTimeout(() => {
+                const calendarButtons = document.querySelectorAll(".fc-button");
 
                 function onCalendarDateChanged()
                 {
@@ -593,7 +593,7 @@
                                 }
                             });
                         }
-                    }, 500);
+                    }, 50);
                 }
 
                 calendarButtons.forEach(calendarButton => {

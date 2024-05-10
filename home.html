@@ -649,6 +649,7 @@
                     calendarMonthSelect.addEventListener("change", event => {
                     
                         $('#calendar').fullCalendar('gotoDate', calendarMonthSelect.value);
+                        onCalendarDateChanged();
                         
                     });
                 }
@@ -739,6 +740,32 @@
             }, 500);
 
             // Calendar event type
+            function onCalendarDateChanged()
+            {
+                console.log("Date changed");
+
+                setTimeout(() => {
+                    const eventElements = document.querySelectorAll(".sgapp-event-cell-wrapper");
+
+                    if ((eventElements !== null) && (eventElements.length > 0))
+                    {
+                        eventElements.forEach(eventElement => {
+                            setCalendarEventColor(eventElement, "#e5f3f6", "rgba(37, 131, 167, 0.2)");
+                        });
+
+                        eventElements.forEach(eventElement => {
+                            const eventType = eventElement.getAttribute("data-event-type");
+
+                            // Check event condition
+                            if (eventType == "Accepted")
+                            {
+                                setCalendarEventColor(eventElement, "#ff0000"); // color
+                            }
+                        });
+                    }
+                }, 100);
+            }
+
             setTimeout(() => {
                 const calendarButtons = document.querySelectorAll(".fc-button");
 
@@ -792,7 +819,7 @@
                                 }
                             });
                         }
-                    }, 500);
+                    }, 50);
                 }
 
                 calendarButtons.forEach(calendarButton => {
