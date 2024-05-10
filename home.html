@@ -495,7 +495,7 @@
                         let avatar = (event.avatar === null) ? defaultAvatar : `https://schedule.bangladeshbajar.com/backend/staff/${event.avatar}`;
 
                         let eventHtml = `
-                            <div class="sgapp-event-cell-wrapper">
+                            <div class="sgapp-event-cell-wrapper" data-event-type="${event.type}">
                                 <div class="sgapp-event-cell-row">
                                     <span class="sgapp-event-cell-column">
                                         <img class="sgapp-event-avatar" src="${avatar}" alt="Staff image">
@@ -736,6 +736,75 @@
 
                 // --------------
                 
+            }, 500);
+
+            // Calendar event type
+            setTimeout(() => {
+                const calendarButtons = document.querySelectorAll(".fc-button");
+
+                function setCalendarEventColor(eventElement, bgColor, borderColor)
+                {
+                    const dayGridEvents = document.querySelectorAll(".fc-day-grid-event");
+
+                    if ((dayGridEvents !== null) && (dayGridEvents.length > 0))
+                    {
+                        for (let i = 0; i < dayGridEvents.length; i++)
+                        {
+                            let dayGridEvent = dayGridEvents[i];
+
+                            const currentEventElement = dayGridEvent.querySelector(".sgapp-event-cell-wrapper");
+                            const currentEventType = currentEventElement.getAttribute("data-event-type");
+                            const eventType = eventElement.getAttribute("data-event-type");
+
+                            if (currentEventType === eventType)
+                            {
+                                dayGridEvent.style.backgroundColor = `${bgColor}`;
+                                
+                                if (borderColor !== null)
+                                {
+                                    dayGridEvent.style.border = `1px solid ${borderColor}`;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                function onCalendarDateChanged()
+                {
+                    console.log("Date changed");
+
+                    setTimeout(() => {
+                        const eventElements = document.querySelectorAll(".sgapp-event-cell-wrapper");
+
+                        if ((eventElements !== null) && (eventElements.length > 0))
+                        {
+                            eventElements.forEach(eventElement => {
+                                setCalendarEventColor(eventElement, "#e5f3f6", "rgba(37, 131, 167, 0.2)");
+                            });
+
+                            eventElements.forEach(eventElement => {
+                                const eventType = eventElement.getAttribute("data-event-type");
+
+                                // Check event condition
+                                if (eventType == "Accepted")
+                                {
+                                    setCalendarEventColor(eventElement, "#ff0000"); // color
+                                }
+                            });
+                        }
+                    }, 500);
+                }
+
+                calendarButtons.forEach(calendarButton => {
+                    if (calendarButton !== null)
+                    {
+                        calendarButton.addEventListener("click", event => {
+                            onCalendarDateChanged();
+                        });
+                    }
+                });
+
+                onCalendarDateChanged();
             }, 500);
         </script>
 

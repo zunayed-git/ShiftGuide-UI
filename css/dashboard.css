@@ -532,8 +532,8 @@ a.sidebar-link:hover svg
 
 .fc-day-grid .fc-day-grid-event 
 {
-    background-color: #e5f3f6 !important;
-    border: 1px solid rgba(37, 131, 167, 0.2) !important;
+    /* background-color: #e5f3f6 !important;
+    border: 1px solid rgba(37, 131, 167, 0.2) !important; */
     border-radius: 0.5em;
     padding: 0.6em;
 
