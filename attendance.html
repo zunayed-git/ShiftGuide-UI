@@ -541,9 +541,9 @@
                                                     <section class="col-12 text-center">
                                                         <span class="fw-bold">Legenda:</span>
                                                         
-                                                        <span class="badge rounded-pill text-bg-success text-light p-2 mx-2 my-2">Accepted</span>
-                                                        <span class="badge rounded-pill text-bg-warning text-light p-2 mx-2 my-2">Pending</span>
-                                                        <span class="badge rounded-pill text-bg-danger text-light p-2 mx-2 my-2">Rejected</span>
+                                                        <span class="badge rounded-pill text-light p-2 mx-2 my-2 sga-legenda" data-legenda-color="#2ecc71">Accepted</span>
+                                                        <span class="badge rounded-pill text-light p-2 mx-2 my-2 sga-legenda" data-legenda-color="#e67e22">Pending</span>
+                                                        <span class="badge rounded-pill text-light p-2 mx-2 my-2 sga-legenda" data-legenda-color="#e74c3c">Rejected</span>
                                                     </section>
                                                 </div>
 
@@ -795,6 +795,19 @@
             calendarTab.addEventListener("click", event => {
                 refreshCalendarView();
             });
+
+            // Legenda
+            const legendaItems = document.querySelectorAll(".sga-legenda");
+
+            if ((legendaItems !== null) && (legendaItems.length > 0))
+            {
+                legendaItems.forEach((legendaItem) => {
+
+                    const color = legendaItem.getAttribute("data-legenda-color");
+                    legendaItem.style.background = color;
+
+                });
+            }
         </script>
 
     </body>
