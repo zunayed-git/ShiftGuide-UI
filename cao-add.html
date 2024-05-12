@@ -697,8 +697,14 @@
             });
              
             // Time validation
-            function timeValidation(startTime, endTime, startTimeInputId, endTimeInputId)
+            function timeValidation(startTimeInputId, endTimeInputId)
             {
+                const startTimeInput = document.querySelector(`#${startTimeInputId}`);
+                const endTimeInput = document.querySelector(`#${endTimeInputId}`);
+
+                let startTime = startTimeInput.value;
+                let endTime = endTimeInput.value;
+
                 if ((startTime.trim().length > 0) && (endTime.trim().length > 0) && startTime.includes(":") && endTime.includes(":"))
                 {
                     try
@@ -745,33 +751,46 @@
                 return parseFloat(output);
             }
 
-            function setTimeValidation(startTimeInputId, endTimeInputId)
+            function setTimeValidation(startTimeInputId, endTimeInputId, calendarInputId)
             {
                 const startTimeInput = document.querySelector(`#${startTimeInputId}`);
                 const endTimeInput = document.querySelector(`#${endTimeInputId}`);
+                const calendarInput = document.querySelector(`#${calendarInputId}`);
 
                 startTimeInput.addEventListener("change", event => {
-                    timeValidation(startTimeInput.value, endTimeInput.value, startTimeInputId, endTimeInputId);
+                    timeValidation(startTimeInputId, endTimeInputId);
                 });
 
                 startTimeInput.addEventListener("input", event => {
-                    timeValidation(startTimeInput.value, endTimeInput.value, startTimeInputId, endTimeInputId);
+                    timeValidation(startTimeInputId, endTimeInputId);
                 });
 
                 startTimeInput.addEventListener("click", event => {
-                    timeValidation(startTimeInput.value, endTimeInput.value, startTimeInputId, endTimeInputId);
+                    timeValidation(startTimeInputId, endTimeInputId);
                 });
 
                 endTimeInput.addEventListener("change", event => {
-                    timeValidation(startTimeInput.value, endTimeInput.value, startTimeInputId, endTimeInputId);
+                    timeValidation(startTimeInputId, endTimeInputId);
                 });
 
                 endTimeInput.addEventListener("input", event => {
-                    timeValidation(startTimeInput.value, endTimeInput.value, startTimeInputId, endTimeInputId);
+                    timeValidation(startTimeInputId, endTimeInputId);
                 });
 
                 endTimeInput.addEventListener("click", event => {
-                    timeValidation(startTimeInput.value, endTimeInput.value, startTimeInputId, endTimeInputId);
+                    timeValidation(startTimeInputId, endTimeInputId);
+                });
+
+                calendarInput.addEventListener("change", event => {
+                    timeValidation(startTimeInputId, endTimeInputId);
+                });
+
+                calendarInput.addEventListener("input", event => {
+                    timeValidation(startTimeInputId, endTimeInputId);
+                });
+
+                calendarInput.addEventListener("click", event => {
+                    timeValidation(startTimeInputId, endTimeInputId);
                 });
             }
         </script>
