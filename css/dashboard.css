@@ -644,6 +644,19 @@ input[type="text"].form-control
     height: 2.5em;
 }
 
+.sga-legenda 
+{
+    width: 4em;
+    height: 2em;
+    display: inline-block;
+    margin-bottom: -0.5em;
+}
+
+.sgapp-event-cell-wrapper-sm
+{
+    font-size: 0.7em;
+}
+
 @media only screen and (max-width: 768px)
 {    
     body

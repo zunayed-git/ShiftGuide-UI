@@ -361,19 +361,17 @@
                             <div class="col-sm-12 col-md-6">
                                 <div class="card">
                                     <div class="card-body">
-                                        <div class="row mt-3 mb-4">
-                                            <section class="col-12 text-center">
-                                                <span class="fw-bold">Legend:</span>
-                                                
-                                                <span class="badge rounded-pill text-bg-success text-light p-2 mx-2 my-2">Accepted</span>
-                                                <span class="badge rounded-pill text-bg-warning text-light p-2 mx-2 my-2">Pending</span>
-                                                <span class="badge rounded-pill text-bg-danger text-light p-2 mx-2 my-2">Rejected</span>
-                                            </section>
-                                        </div>
-
-                                        <h2 class="text-center mb-2">Availability</h2>
+                                        <!-- <h2 class="text-center mb-2">Availability</h2> -->
 
                                         <div id='calendar'></div>
+
+                                        <div class="row mt-3 mb-4">
+                                            <section class="col-12 text-center">
+                                                Accepted <span class="rounded mx-2 sga-legenda" data-legenda-color="#2ecc71"></span>
+                                                Pending  <span class="rounded mx-2 sga-legenda" data-legenda-color="#e67e22"></span>
+                                                Rejected <span class="rounded mx-2 sga-legenda" data-legenda-color="#e74c3c"></span>
+                                            </section>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -455,6 +453,8 @@
                         
                         allDaySlot: false,
                         slotLabelFormat:"HH:mm",
+
+                        weekNumbers: true,
                         
                         views: {
                             month: {
@@ -487,12 +487,9 @@
                             let avatar = (event.avatar === null) ? defaultAvatar : `https://schedule.bangladeshbajar.com/backend/staff/${event.avatar}`;
 
                             let eventHtml = `
-                                <div class="sgapp-event-cell-wrapper" data-event-type="${event.type}">
+                                <div class="sgapp-event-cell-wrapper sgapp-event-cell-wrapper-sm" data-event-type="${event.type}">
                                     <div class="sgapp-event-cell-row">
                                         <span class="sgapp-event-cell-column">
-                                            <img class="sgapp-event-avatar" src="${avatar}" alt="Staff image">
-                                        </span>
-                                        <span class="sgapp-event-cell-column sgapp-event-title">
                                             ${event.title}
                                         </span>
                                     </div>
@@ -502,7 +499,7 @@
                                     </div>
 
                                     <div class="sgapp-event-cell-row sgapp-event-time">
-                                        <i class="fa-regular fa-clock"></i> ${moment(event.start).format('HH:mm')} ${((moment(event.end).format('HH:mm') !== "Invalid date") ? "- " + moment(event.end).format('HH:mm') : "")}
+                                        <i class="fa-regular fa-clock"></i> ${moment(event.start).format('HH:mm')} ${((moment(event.end).format('HH:mm') !== "Invalid date") ? "- <br />" + moment(event.end).format('HH:mm') : "")}
                                     </div>
                                 </div>
                             `;
@@ -538,6 +535,19 @@
                     });
                 });
             });
+
+            // Legenda
+            const legendaItems = document.querySelectorAll(".sga-legenda");
+
+            if ((legendaItems !== null) && (legendaItems.length > 0))
+            {
+                legendaItems.forEach((legendaItem) => {
+
+                    const color = legendaItem.getAttribute("data-legenda-color");
+                    legendaItem.style.background = color;
+
+                });
+            }
 
             // Calendar event type
             function setCalendarEventColor(eventElement, bgColor, borderColor)
