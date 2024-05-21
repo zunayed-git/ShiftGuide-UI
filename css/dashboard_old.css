@@ -356,26 +356,24 @@ a.sidebar-link:hover span
 
 .fc-button
 {
-    background: none !important;
-    border: none !important;
-    box-shadow: none !important;
-    font-weight: 500 !important;
-    color: #333 !important;
+    background: none;
+    border: none;
+    box-shadow: none;
+    font-weight: 500;
 }
 
-.fc-button.fc-state-active,
-.fc-button.fc-button-active
+.fc-button.fc-state-active
 {
-    background: var(--primaryColorAlt) !important;
-    color: var(--primaryColor) !important;
-    border-radius: 0.25em !important;
+    background: var(--primaryColorAlt);
+    color: var(--primaryColor);
+    border-radius: 0.25em;
 }
 
 .fc-addEventButton-button
 {
-    background: var(--primaryColor) !important;
-    color: var(--primaryTextColor) !important;
-    font-weight: normal !important;
+    background: var(--primaryColor);
+    color: var(--primaryTextColor);
+    font-weight: normal;
 }
 
 .sgapp-select2-full
@@ -439,8 +437,7 @@ a.sidebar-link:hover span
 }
 
 #sgapp-main-calendar .fc-header-toolbar,
-#sgapp-main-calendar .fc-view-container,
-.fc-view-harness
+#sgapp-main-calendar .fc-view-container
 {
     background: #fff;
     border-radius: 0.5em;
@@ -468,7 +465,7 @@ a.sidebar-link:hover span
 
 .fc-time-grid-event
 {
-    /* width: 100% !important; */
+    width: 100% !important;
 }
 
 .dt-button.buttons-html5,
@@ -593,16 +590,13 @@ a.sidebar-link:hover svg
     display: inline-block;
 }
 
-.fc-day-grid .fc-state-highlight,
-.fc-dayGridMonth-view .fc-day-today
+.fc-day-grid .fc-state-highlight
 {
     background: #2583A7 !important;
 }
 
 .fc-day-grid .fc-state-highlight *,
-.fc-day-grid .fc-state-highlight,
-.fc-dayGridMonth-view .fc-day-today,
-.fc-dayGridMonth-view .fc-day-today *
+.fc-day-grid .fc-state-highlight
 {
     color: #fff !important;
 } 
@@ -797,12 +791,6 @@ input[type="text"].form-control
     {
         height: 12em;
     }
-
-    .fc-dayGridMonth-view .fc-col-header-cell-cushion,
-    .fc-dayGridMonth-view .fc-daygrid-day-number
-    {
-        color: #374550;
-    }
 }
 
 @media only screen and (max-width: 1266px)
@@ -874,21 +862,17 @@ input[type="text"].form-control
 @media only screen and (min-width: 768px)
 {
     .fc .fc-month-view th,
-    .fc td,
-    .fc-dayGridMonth-view th a,
-    .fc-dayGridMonth-view td a
+    .fc td
     {
         color: #374550;
     }
 
-    .fc .fc-month-view td,
-    .fc-dayGridMonth-view td
+    .fc .fc-month-view td
     {
         border-color: #f1f4f9;
     }
 
-    .fc .fc-month-view th:nth-child(odd),
-    .fc-dayGridMonth-view .fc-col-header-cell:nth-child(odd)
+    .fc .fc-month-view th:nth-child(odd)
     {
         background: #f9fafc !important;
     }
@@ -899,8 +883,7 @@ input[type="text"].form-control
         color: var(--primaryColor);
     }
 
-    .fc-month-view .fc-day-number,
-    .fc-dayGridMonth-view .fc-daygrid-day-number
+    .fc-month-view .fc-day-number
     {
         color: var(--sidePaneSelection);
     }
@@ -912,14 +895,12 @@ input[type="text"].form-control
         border-radius: 1em !important;
     }
     
-    .fc-month-view .fc-day-header,
-    .fc-dayGridMonth-view .fc-col-header-cell
+    .fc-month-view .fc-day-header
     {
         padding: 1em !important;
     }
 
-    .fc .fc-month-view th,
-    .fc-dayGridMonth-view .fc-col-header-cell
+    .fc .fc-month-view th
     {
         padding: 1.5em 1em !important;
         border-width: 0px;
@@ -927,14 +908,12 @@ input[type="text"].form-control
         font-weight: 500;
     }
     
-    .fc .fc-month-view td,
-    .fc-dayGridMonth-view td
+    .fc .fc-month-view td
     {
         border-width: 2px;
     }
 
-    .fc-month-view .fc-day-number,
-    .fc-dayGridMonth-view .fc-daygrid-day-number
+    .fc-month-view .fc-day-number
     {
         font-size: 1.5em;
         display: inline-block;
@@ -995,8 +974,6 @@ body[data-theme="dark"] a.sidebar-link span,
 body[data-theme="dark"] #sgapp-main-calendar .fc-header-toolbar h2,
 body[data-theme="dark"] .fc-button,
 body[data-theme="dark"] #sgapp-main-calendar,
-body[data-theme="dark"] .fc-dayGridMonth-view,
-body[data-theme="dark"] .fc-dayGridMonth-view a,
 body[data-theme="dark"] footer p,
 body[data-theme="dark"] footer a,
 body[data-theme="dark"] input[type="search"],
@@ -1038,8 +1015,7 @@ body[data-theme="dark"] #sgapp-main
 }
 
 body[data-theme="dark"] #sgapp-main-calendar .fc-header-toolbar,
-body[data-theme="dark"] #sgapp-main-calendar .fc-view-container,
-body[data-theme="dark"] .fc-view-harness
+body[data-theme="dark"] #sgapp-main-calendar .fc-view-container
 {
     background: var(--darkBackgroundColorAlt) !important;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.01), 0 6px 20px 0 rgba(0, 0, 0, 0.02);
@@ -1122,28 +1098,19 @@ body[data-theme="dark"] .dt-paging-button a:hover
 }
 
 body[data-theme="dark"] .fc th,
-body[data-theme="dark"] .fc td,
-body[data-theme="dark"] .fc-dayGridMonth-view th,
-body[data-theme="dark"] .fc-dayGridMonth-view td
+body[data-theme="dark"] .fc td
 {
     color: var(--darkTextColor);
 }
 
-body[data-theme="dark"] .fc td,
-body[data-theme="dark"] .fc-dayGridMonth-view td
+body[data-theme="dark"] .fc td
 {
     border-color: var(--darkBackgroundColor);
 }
 
-body[data-theme="dark"] .fc th:nth-child(odd),
-body[data-theme="dark"] .fc-dayGridMonth-view .fc-col-header-cell:nth-child(odd)
+body[data-theme="dark"] .fc th:nth-child(odd)
 {
     background: var(--darkBackgroundColorAlt) !important;
-}
-
-body[data-theme="dark"] .fc-dayGridMonth-view .fc-col-header-cell
-{
-    border: 2px solid var(--sidePaneSelection);
 }
 
 body[data-theme="dark"] .fc-more,
