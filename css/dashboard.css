@@ -471,6 +471,8 @@ a.sidebar-link:hover span
     /* width: 100% !important; */
 }
 
+.sgapp-event
+
 .dt-button.buttons-html5,
 .dt-button.buttons-page-length
 {
@@ -561,23 +563,27 @@ a.sidebar-link:hover svg
     width: 100%;
 }
 
-.fc-day-grid .fc-day-grid-event .sgapp-event-cell-row:not(:first-child)
+.fc-day-grid .fc-day-grid-event .sgapp-event-cell-row:not(:first-child),
+.fc-dayGridMonth-view .sgapp-event-cell-row:not(:first-child)
 {
     margin-top: 0.25em;
 }
 
-.fc-day-grid .fc-day-grid-event .sgapp-event-cell-row:not(:last-child)
+.fc-day-grid .fc-day-grid-event .sgapp-event-cell-row:not(:last-child),
+.fc-dayGridMonth-view .sgapp-event-cell-row:not(:last-child)
 {
     margin-bottom: 0.25em;
 }
 
-.fc-day-grid .fc-day-grid-event .sgapp-event-staff-id
+.fc-day-grid .fc-day-grid-event .sgapp-event-staff-id,
+.fc-dayGridMonth-view .sgapp-event-staff-id
 {
     color: #2583a7;
     font-size: 1em;
 }
 
-.fc-day-grid .fc-day-grid-event .sgapp-event-time
+.fc-day-grid .fc-day-grid-event .sgapp-event-time,
+.fc-dayGridMonth-view .sgapp-event-time
 {
     background: #fefefe;
     color: #374550;
@@ -661,6 +667,17 @@ input[type="text"].form-control
 .sgapp-event-cell-wrapper-sm
 {
     font-size: 0.7em;
+}
+
+.fc-dayGridMonth-view .fc-event
+{
+    background: #e5f3f6 !important;
+}
+
+.fc-dayGridMonth-view .fc-event .sgapp-event-cell-wrapper
+{
+    overflow: hidden !important;
+    padding: 0.25em;
 }
 
 @media only screen and (max-width: 768px)
