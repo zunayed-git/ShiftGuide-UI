@@ -529,6 +529,11 @@ a.sidebar-link:hover svg
     box-shadow: none !important;
 }
 
+.fc-timegrid-body,
+.fc-timegrid-body a
+{
+    color: #fff;
+}
 
 .fc-day-grid .fc-event-container
 {
@@ -555,7 +560,8 @@ a.sidebar-link:hover svg
     border-radius: 2em;
 }
 
-.fc-day-grid .fc-day-grid-event .sgapp-event-title
+.fc-day-grid .fc-day-grid-event .sgapp-event-title,
+.fc-popover-body .sgapp-event-title
 {
     color: #374550;
     font-size: 1.35em;
@@ -564,26 +570,30 @@ a.sidebar-link:hover svg
 }
 
 .fc-day-grid .fc-day-grid-event .sgapp-event-cell-row:not(:first-child),
-.fc-dayGridMonth-view .sgapp-event-cell-row:not(:first-child)
+.fc-dayGridMonth-view .sgapp-event-cell-row:not(:first-child),
+.fc-popover-body .sgapp-event-cell-row:not(:first-child)
 {
     margin-top: 0.25em;
 }
 
 .fc-day-grid .fc-day-grid-event .sgapp-event-cell-row:not(:last-child),
-.fc-dayGridMonth-view .sgapp-event-cell-row:not(:last-child)
+.fc-dayGridMonth-view .sgapp-event-cell-row:not(:last-child),
+.fc-popover-body .sgapp-event-cell-row:not(:last-child)
 {
     margin-bottom: 0.25em;
 }
 
 .fc-day-grid .fc-day-grid-event .sgapp-event-staff-id,
-.fc-dayGridMonth-view .sgapp-event-staff-id
+.fc-dayGridMonth-view .sgapp-event-staff-id,
+.fc-popover-body .sgapp-event-staff-id
 {
     color: #2583a7;
     font-size: 1em;
 }
 
 .fc-day-grid .fc-day-grid-event .sgapp-event-time,
-.fc-dayGridMonth-view .sgapp-event-time
+.fc-dayGridMonth-view .sgapp-event-time,
+.fc-popover-body .sgapp-event-time
 {
     background: #fefefe;
     color: #374550;
@@ -669,15 +679,25 @@ input[type="text"].form-control
     font-size: 0.7em;
 }
 
-.fc-dayGridMonth-view .fc-event
+.fc-dayGridMonth-view .fc-event,
+.fc-popover-body .fc-event
 {
     background: #e5f3f6 !important;
+    border: 1px solid #bfdee6 !important;
 }
 
-.fc-dayGridMonth-view .fc-event .sgapp-event-cell-wrapper
+.fc-dayGridMonth-view .fc-event .sgapp-event-cell-wrapper,
+.fc-popover-body .fc-event .sgapp-event-cell-wrapper
 {
     overflow: hidden !important;
-    padding: 0.25em;
+    padding: 0.5em;
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+}
+
+a.fc-col-header-cell-cushion
+{
+    color: #374550;
 }
 
 @media only screen and (max-width: 768px)
@@ -1226,6 +1246,27 @@ body[data-theme="dark"] .accordion-button[data-bs-toggle="collapse"]
 body[data-theme="dark"] .accordion-body
 {
     background: var(--sidePaneSelection);
+}
+
+body[data-theme="dark"] a.fc-col-header-cell-cushion
+{
+    color: #fff;
+}
+
+body[data-theme="dark"] .fc-dayGridMonth-view .fc-event
+{
+    background: #526d82 !important;
+    border: 1px solid #fff !important;
+}
+
+body[data-theme="dark"] .fc-dayGridMonth-view .fc-event .sgapp-event-staff-id
+{
+    color: #fff !important;
+}
+
+body[data-theme="dark"] .fc-button.fc-button-active
+{
+    color: var(--primaryColor) !important;
 }
 
 @media print {
