@@ -695,6 +695,13 @@ input[type="text"].form-control
     margin-bottom: 0.25em;
 }
 
+.fc-daygrid-day-events .fc-daygrid-event-dot,
+.fc-daygrid-day-events .fc-event-time,
+.fc-daygrid-day-events .fc-event-title
+{
+    display: none;
+}
+
 a.fc-col-header-cell-cushion
 {
     color: #374550;
