@@ -15,7 +15,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link href="css/app.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.css" /> -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
         <link href="https://cdn.datatables.net/buttons/3.0.0/css/buttons.dataTables.css" rel="stylesheet"  />
         <link href="https://cdn.datatables.net/2.0.1/css/dataTables.bootstrap5.css" rel="stylesheet" />
@@ -537,9 +537,7 @@
 
                                             </div>
                                             <div class="tab-pane fade" id="nav-calendar" role="tabpanel" aria-labelledby="nav-calendar-tab">
-                                                <div id="sgapp-main-calendar" class="col-12">
-                                                    <div id='calendar'></div>
-                                                </div>
+                                                <div id='calendar'></div>
 
                                                 <div class="row mt-3 mb-4">
                                                     <section class="col-12 text-center">
@@ -623,9 +621,7 @@
         <script type="text/javascript" src="https://cdn.datatables.net/responsive/3.0.0/js/dataTables.responsive.js"></script>
         <script type="text/javascript" src="https://cdn.datatables.net/responsive/3.0.0/js/responsive.bootstrap5.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
-        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.js"></script> -->
-        <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js'></script>
-
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
         <script type="text/javascript" src="./js/app-theme.js"></script>
         
@@ -695,60 +691,41 @@
             });
             
             // Full calendar
-            let datas = [{"id":2,"title":"Ira Glenn","staff_number":"IG230508","first_ame":null,"last_number":null,"email":"wuxap@mailinator.com","color":"#171c0d","start":"1973-05-10 08:19:59","end":"1973-05-10 16:46:31","organization_name":"Jewel Medhurst III","city":"Ross Collins","address":"Rem earum sit ut. Deserunt sunt aut pariatur saepe aut ut sint. Omnis sequi recusandae exercitationem voluptas animi et quo.","zip_code":"901496","country":"Mr. Faustino O\u0027Conner","province":"Myron Osinski IV","kvk_number":"65358","vat_number":"98638","contact_number":"48802523","help_line":"29503635","fax_number":"33368562","telephone":"91075943","phone_number":null},{"id":3,"title":"Prof. Jolie Ziemann Miss Brionna Koch","staff_number":"AC104549","first_ame":null,"last_number":null,"email":"dena79@schaden.com","color":"#be17c2","start":"2024-02-09 00:06:14","end":"2024-02-04 17:56:22","organization_name":"Autumn Connelly","city":"Baylee Collier I","address":"Aliquid cum fugit nobis. Dolorum voluptatem sunt qui voluptas fugiat consectetur. Dolorum sapiente unde est distinctio dolores odit officia. Quaerat minus et aspernatur ea ut.","zip_code":"630050","country":"Dr. Pierce Schuppe V","province":"Prof. Gay Collier","kvk_number":"99686","vat_number":"29272","contact_number":"76658768","help_line":"65108344","fax_number":"16275253","telephone":"38057434","phone_number":null},{"id":4,"title":"Rasel Rana","staff_number":"RR1000486","first_ame":null,"last_number":null,"email":"raselrana@gmail.com","color":"#307e3d","start":"2024-02-06 09:11:14","end":"2024-02-07 10:12:19","organization_name":"Georgiana Terry II","city":"Bennie Hill IV","address":"Ratione cum voluptatem rerum. Quaerat et minus rerum. Eaque qui numquam sit quae maxime amet debitis. Modi ullam cumque et temporibus dolor in. Harum magnam libero est. Dolore quia eum dolores natus.","zip_code":"849493","country":"Ms. Verla Schaden","province":"Nicolette Raynor","kvk_number":"19861","vat_number":"89382","contact_number":"74521749","help_line":"86319857","fax_number":"42569401","telephone":"89396489","phone_number":null},{"id":5,"title":"Rasel Rana","staff_number":"RR1000486","first_ame":null,"last_number":null,"email":"raselrana@gmail.com","color":"#307e3d","start":"2024-02-12 10:38:09","end":"2024-02-06 19:16:13","organization_name":"Mrs. Pearline Orn MD","city":"Norris Keeling","address":"Eum rerum nesciunt iure dolorum numquam dolores. Officia impedit fugiat odit. Consequuntur nulla est atque. Alias odio voluptatem magnam eum.","zip_code":"668890","country":"Gunner Pollich","province":"Dr. Brennon Shanahan","kvk_number":"74458","vat_number":"94902","contact_number":"94933627","help_line":"89830385","fax_number":"56445200","telephone":"17623739","phone_number":null},{"id":6,"title":"Bertram Howell Weldon Hagenes","staff_number":"AC806272","first_ame":null,"last_number":null,"email":"daphne.kuphal@yahoo.com","color":"#f3645e","start":"2024-02-11 11:28:19","end":"2024-02-17 19:59:15","organization_name":"Lula Bernier","city":"Keenan Schaefer IV","address":"Est nesciunt et qui mollitia ut qui exercitationem. Unde consequuntur sed eos vero sit placeat repellendus est. Placeat praesentium rerum cum ipsum similique optio ullam est.","zip_code":"291820","country":"Jettie Bins","province":"Brain Haley","kvk_number":"74499","vat_number":"26531","contact_number":"43759154","help_line":"48431925","fax_number":"90041151","telephone":"78943273","phone_number":null},{"id":7,"title":"Prof. Jolie Ziemann Miss Brionna Koch","staff_number":"AC104549","first_ame":null,"last_number":null,"email":"dena79@schaden.com","color":"#be17c2","start":"2024-02-05 05:54:24","end":"2024-02-02 20:11:20","organization_name":"Ida Emmerich DDS","city":"Mrs. Effie Abshire","address":"Doloremque blanditiis soluta sit molestiae. Aperiam voluptates et quasi dolorum distinctio officia repellendus.","zip_code":"756148","country":"Pietro Roberts","province":"Anissa Beier III","kvk_number":"53357","vat_number":"92261","contact_number":"33676488","help_line":"15836688","fax_number":"64670110","telephone":"67136115","phone_number":null},{"id":8,"title":"Mrs. Alanna Medhurst Miss Kara Bartoletti","staff_number":"AC667480","first_ame":null,"last_number":null,"email":"vidal.abshire@bahringer.com","color":"#166acc","start":"2024-02-21 11:17:54","end":"2024-02-09 22:54:18","organization_name":"Mrs. Pearline Orn MD","city":"Norris Keeling","address":"Eum rerum nesciunt iure dolorum numquam dolores. Officia impedit fugiat odit. Consequuntur nulla est atque. Alias odio voluptatem magnam eum.","zip_code":"668890","country":"Gunner Pollich","province":"Dr. Brennon Shanahan","kvk_number":"74458","vat_number":"94902","contact_number":"94933627","help_line":"89830385","fax_number":"56445200","telephone":"17623739","phone_number":null},{"id":9,"title":"Dr. Gwendolyn Raynor Titus Graham IV","staff_number":"AC475951","first_ame":null,"last_number":null,"email":"ikassulke@sawayn.com","color":"#25b960","start":"2024-02-16 01:47:01","end":"2024-02-20 12:49:33","organization_name":"Tre Senger","city":"Marisa Pagac","address":"Nesciunt quo ut eaque deserunt. Quibusdam necessitatibus consectetur adipisci eos. Voluptatem architecto id eum impedit delectus culpa quia debitis. Hic rerum ex est molestias facere.","zip_code":"672139","country":"Margarette Ruecker Jr.","province":"Eliza Wolff Jr.","kvk_number":"83245","vat_number":"46668","contact_number":"70413654","help_line":"49089602","fax_number":"61706976","telephone":"56380220","phone_number":null},{"id":10,"title":"Prof. Jolie Ziemann Miss Brionna Koch","staff_number":"AC104549","first_ame":null,"last_number":null,"email":"dena79@schaden.com","color":"#be17c2","start":"2024-02-20 14:46:13","end":"2024-02-14 11:39:18","organization_name":"Tressie Hamill III","city":"Suzanne Klocko","address":"Cupiditate ad quas cupiditate repellat eum ipsa. Aliquid odio et itaque magni sunt eum fugiat. Labore corrupti consequatur quod et. Aut et aut et voluptatem suscipit provident iusto.","zip_code":"90304","country":"Mr. Zachery Thiel","province":"Fae Lakin Sr.","kvk_number":"60872","vat_number":"27782","contact_number":"51067050","help_line":"11598403","fax_number":"35355725","telephone":"96065859","phone_number":null},{"id":11,"title":"Dr. Gwendolyn Raynor Titus Graham IV","staff_number":"AC475951","first_ame":null,"last_number":null,"email":"ikassulke@sawayn.com","color":"#25b960","start":"2024-02-28 14:00:00","end":"2024-02-28 17:00:00","organization_name":"Ida Emmerich DDS","city":"Mrs. Effie Abshire","address":"Doloremque blanditiis soluta sit molestiae. Aperiam voluptates et quasi dolorum distinctio officia repellendus.","zip_code":"756148","country":"Pietro Roberts","province":"Anissa Beier III","kvk_number":"53357","vat_number":"92261","contact_number":"33676488","help_line":"15836688","fax_number":"64670110","telephone":"67136115","phone_number":null},{"id":12,"title":"Malel Mia","staff_number":"MM687773","first_ame":null,"last_number":null,"email":"malik@gmail.com","color":"#000000","start":"2024-03-07 13:15:00","end":"2024-03-07 16:20:00","organization_name":"Mrs. Pearline Orn MD","city":"Norris Keeling","address":"Eum rerum nesciunt iure dolorum numquam dolores. Officia impedit fugiat odit. Consequuntur nulla est atque. Alias odio voluptatem magnam eum.","zip_code":"668890","country":"Gunner Pollich","province":"Dr. Brennon Shanahan","kvk_number":"74458","vat_number":"94902","contact_number":"94933627","help_line":"89830385","fax_number":"56445200","telephone":"17623739","phone_number":null},{"id":13,"title":"Vanna Russo","staff_number":"VR923173","first_ame":null,"last_number":null,"email":"vysywaqoga@mailinator.com","color":"#220cc6","start":"2024-03-14 06:30:00","end":"2024-03-14 14:30:00","organization_name":"Georgiana Terry II","city":"Bennie Hill IV","address":"Ratione cum voluptatem rerum. Quaerat et minus rerum. Eaque qui numquam sit quae maxime amet debitis. Modi ullam cumque et temporibus dolor in. Harum magnam libero est. Dolore quia eum dolores natus.","zip_code":"849493","country":"Ms. Verla Schaden","province":"Nicolette Raynor","kvk_number":"19861","vat_number":"89382","contact_number":"74521749","help_line":"86319857","fax_number":"42569401","telephone":"89396489","phone_number":null},{"id":14,"title":"Rasel Rana","staff_number":"RR1000486","first_ame":null,"last_number":null,"email":"raselrana@gmail.com","color":"#307e3d","start":"1970-01-01 13:00:00","end":"1970-01-01 15:00:00","organization_name":"Mrs. Pearline Orn MD","city":"Norris Keeling","address":"Eum rerum nesciunt iure dolorum numquam dolores. Officia impedit fugiat odit. Consequuntur nulla est atque. Alias odio voluptatem magnam eum.","zip_code":"668890","country":"Gunner Pollich","province":"Dr. Brennon Shanahan","kvk_number":"74458","vat_number":"94902","contact_number":"94933627","help_line":"89830385","fax_number":"56445200","telephone":"17623739","phone_number":null},{"id":15,"title":"Bertram Howell Weldon Hagenes","staff_number":"AC806272","first_ame":null,"last_number":null,"email":"daphne.kuphal@yahoo.com","color":"#f3645e","start":"2024-02-29 16:00:00","end":"2024-02-29 19:00:00","organization_name":"Mrs. Pearline Orn MD","city":"Norris Keeling","address":"Eum rerum nesciunt iure dolorum numquam dolores. Officia impedit fugiat odit. Consequuntur nulla est atque. Alias odio voluptatem magnam eum.","zip_code":"668890","country":"Gunner Pollich","province":"Dr. Brennon Shanahan","kvk_number":"74458","vat_number":"94902","contact_number":"94933627","help_line":"89830385","fax_number":"56445200","telephone":"17623739","phone_number":null},{"id":16,"title":"Dax Klocko Dr. Steve Johns IV","staff_number":"AC589860","first_ame":null,"last_number":null,"email":"qlubowitz@ankunding.com","color":"#7d4cee","start":"2024-02-02 07:44:20","end":"2024-02-02 01:45:03","organization_name":"Charlene Kuvalis","city":"Prof. Vena Blick","address":"Nesciunt non qui libero rerum voluptatem enim. Laudantium ea maxime aut vitae. Expedita quas est praesentium rerum magnam quae. Quia placeat occaecati id.","zip_code":"241389","country":"Darian Bechtelar","province":"Tyreek McCullough","kvk_number":"43490","vat_number":"70725","contact_number":"59796774","help_line":"80412972","fax_number":"52047007","telephone":"95335281","phone_number":null},{"id":17,"title":"Mira Terrell","staff_number":"MT656891","first_ame":null,"last_number":null,"email":"vajakolog@mailinator.com","color":"#304917","start":"2024-03-06 15:15:00","end":"2024-03-06 16:20:00","organization_name":"Tressie Hamill III","city":"Suzanne Klocko","address":"Cupiditate ad quas cupiditate repellat eum ipsa. Aliquid odio et itaque magni sunt eum fugiat. Labore corrupti consequatur quod et. Aut et aut et voluptatem suscipit provident iusto.","zip_code":"90304","country":"Mr. Zachery Thiel","province":"Fae Lakin Sr.","kvk_number":"60872","vat_number":"27782","contact_number":"51067050","help_line":"11598403","fax_number":"35355725","telephone":"96065859","phone_number":null},{"id":18,"title":"Malel Mia","staff_number":"MM687773","first_ame":null,"last_number":null,"email":"malik@gmail.com","color":"#000000","start":"2024-03-07 13:05:00","end":"2024-03-07 15:15:00","organization_name":"Mrs. Pearline Orn MD","city":"Norris Keeling","address":"Eum rerum nesciunt iure dolorum numquam dolores. Officia impedit fugiat odit. Consequuntur nulla est atque. Alias odio voluptatem magnam eum.","zip_code":"668890","country":"Gunner Pollich","province":"Dr. Brennon Shanahan","kvk_number":"74458","vat_number":"94902","contact_number":"94933627","help_line":"89830385","fax_number":"56445200","telephone":"17623739","phone_number":null},{"id":19,"title":"Vanna Russo","staff_number":"VR923173","first_ame":null,"last_number":null,"email":"vysywaqoga@mailinator.com","color":"#220cc6","start":"2024-03-06 13:05:00","end":"2024-03-06 14:10:00","organization_name":"Tressie Hamill III","city":"Suzanne Klocko","address":"Cupiditate ad quas cupiditate repellat eum ipsa. Aliquid odio et itaque magni sunt eum fugiat. Labore corrupti consequatur quod et. Aut et aut et voluptatem suscipit provident iusto.","zip_code":"90304","country":"Mr. Zachery Thiel","province":"Fae Lakin Sr.","kvk_number":"60872","vat_number":"27782","contact_number":"51067050","help_line":"11598403","fax_number":"35355725","telephone":"96065859","phone_number":null},{"id":20,"title":"Ira Glenn","staff_number":"IG230508","first_ame":null,"last_number":null,"email":"wuxap@mailinator.com","color":"#171c0d","start":"2024-03-14 14:20:00","end":"2024-03-14 03:12:00","organization_name":"Mrs. Pearline Orn MD","city":"Norris Keeling","address":"Eum rerum nesciunt iure dolorum numquam dolores. Officia impedit fugiat odit. Consequuntur nulla est atque. Alias odio voluptatem magnam eum.","zip_code":"668890","country":"Gunner Pollich","province":"Dr. Brennon Shanahan","kvk_number":"74458","vat_number":"94902","contact_number":"94933627","help_line":"89830385","fax_number":"56445200","telephone":"17623739","phone_number":null},{"id":21,"title":"Sloane Velez","staff_number":"SV414914","first_ame":null,"last_number":null,"email":"hiqacelubu@mailinator.com","color":"#2bcb63","start":"2024-03-14 14:12:00","end":"2024-03-14 14:17:00","organization_name":"Autumn Connelly","city":"Baylee Collier I","address":"Aliquid cum fugit nobis. Dolorum voluptatem sunt qui voluptas fugiat consectetur. Dolorum sapiente unde est distinctio dolores odit officia. Quaerat minus et aspernatur ea ut.","zip_code":"630050","country":"Dr. Pierce Schuppe V","province":"Prof. Gay Collier","kvk_number":"99686","vat_number":"29272","contact_number":"76658768","help_line":"65108344","fax_number":"16275253","telephone":"38057434","phone_number":null},{"id":22,"title":"Ira Glenn","staff_number":"IG230508","first_ame":null,"last_number":null,"email":"wuxap@mailinator.com","color":"#171c0d","start":"2024-03-14 13:05:00","end":"2024-03-14 02:17:00","organization_name":"Autumn Connelly","city":"Baylee Collier I","address":"Aliquid cum fugit nobis. Dolorum voluptatem sunt qui voluptas fugiat consectetur. Dolorum sapiente unde est distinctio dolores odit officia. Quaerat minus et aspernatur ea ut.","zip_code":"630050","country":"Dr. Pierce Schuppe V","province":"Prof. Gay Collier","kvk_number":"99686","vat_number":"29272","contact_number":"76658768","help_line":"65108344","fax_number":"16275253","telephone":"38057434","phone_number":null},{"id":23,"title":"Malel Mia","staff_number":"MM687773","first_ame":null,"last_number":null,"email":"malik@gmail.com","color":"#000000","start":"2024-03-14 01:10:00","end":"2024-03-14 15:20:00","organization_name":"Dr. Victor Emard","city":"Ms. Palma Marquardt DVM","address":"Dolores ea et odio. Eum molestiae provident aut aut et sapiente fugit. Libero maxime aut labore perferendis magnam blanditiis praesentium. Repudiandae similique at quia dolores sapiente atque qui.","zip_code":"86888","country":"Keaton Quigley MD","province":"Rhoda Ruecker","kvk_number":"81040","vat_number":"20307","contact_number":"90904044","help_line":"45800119","fax_number":"60144907","telephone":"23485615","phone_number":null}];
+            $(document).ready(function() {
+                let datas = [{"id":2,"title":"Ira Glenn","staff_number":"IG230508","first_ame":null,"last_number":null,"email":"wuxap@mailinator.com","color":"#171c0d","start":"1973-05-10 08:19:59","end":"1973-05-10 16:46:31","organization_name":"Jewel Medhurst III","city":"Ross Collins","address":"Rem earum sit ut. Deserunt sunt aut pariatur saepe aut ut sint. Omnis sequi recusandae exercitationem voluptas animi et quo.","zip_code":"901496","country":"Mr. Faustino O\u0027Conner","province":"Myron Osinski IV","kvk_number":"65358","vat_number":"98638","contact_number":"48802523","help_line":"29503635","fax_number":"33368562","telephone":"91075943","phone_number":null},{"id":3,"title":"Prof. Jolie Ziemann Miss Brionna Koch","staff_number":"AC104549","first_ame":null,"last_number":null,"email":"dena79@schaden.com","color":"#be17c2","start":"2024-02-09 00:06:14","end":"2024-02-04 17:56:22","organization_name":"Autumn Connelly","city":"Baylee Collier I","address":"Aliquid cum fugit nobis. Dolorum voluptatem sunt qui voluptas fugiat consectetur. Dolorum sapiente unde est distinctio dolores odit officia. Quaerat minus et aspernatur ea ut.","zip_code":"630050","country":"Dr. Pierce Schuppe V","province":"Prof. Gay Collier","kvk_number":"99686","vat_number":"29272","contact_number":"76658768","help_line":"65108344","fax_number":"16275253","telephone":"38057434","phone_number":null},{"id":4,"title":"Rasel Rana","staff_number":"RR1000486","first_ame":null,"last_number":null,"email":"raselrana@gmail.com","color":"#307e3d","start":"2024-02-06 09:11:14","end":"2024-02-07 10:12:19","organization_name":"Georgiana Terry II","city":"Bennie Hill IV","address":"Ratione cum voluptatem rerum. Quaerat et minus rerum. Eaque qui numquam sit quae maxime amet debitis. Modi ullam cumque et temporibus dolor in. Harum magnam libero est. Dolore quia eum dolores natus.","zip_code":"849493","country":"Ms. Verla Schaden","province":"Nicolette Raynor","kvk_number":"19861","vat_number":"89382","contact_number":"74521749","help_line":"86319857","fax_number":"42569401","telephone":"89396489","phone_number":null},{"id":5,"title":"Rasel Rana","staff_number":"RR1000486","first_ame":null,"last_number":null,"email":"raselrana@gmail.com","color":"#307e3d","start":"2024-02-12 10:38:09","end":"2024-02-06 19:16:13","organization_name":"Mrs. Pearline Orn MD","city":"Norris Keeling","address":"Eum rerum nesciunt iure dolorum numquam dolores. Officia impedit fugiat odit. Consequuntur nulla est atque. Alias odio voluptatem magnam eum.","zip_code":"668890","country":"Gunner Pollich","province":"Dr. Brennon Shanahan","kvk_number":"74458","vat_number":"94902","contact_number":"94933627","help_line":"89830385","fax_number":"56445200","telephone":"17623739","phone_number":null},{"id":6,"title":"Bertram Howell Weldon Hagenes","staff_number":"AC806272","first_ame":null,"last_number":null,"email":"daphne.kuphal@yahoo.com","color":"#f3645e","start":"2024-02-11 11:28:19","end":"2024-02-17 19:59:15","organization_name":"Lula Bernier","city":"Keenan Schaefer IV","address":"Est nesciunt et qui mollitia ut qui exercitationem. Unde consequuntur sed eos vero sit placeat repellendus est. Placeat praesentium rerum cum ipsum similique optio ullam est.","zip_code":"291820","country":"Jettie Bins","province":"Brain Haley","kvk_number":"74499","vat_number":"26531","contact_number":"43759154","help_line":"48431925","fax_number":"90041151","telephone":"78943273","phone_number":null},{"id":7,"title":"Prof. Jolie Ziemann Miss Brionna Koch","staff_number":"AC104549","first_ame":null,"last_number":null,"email":"dena79@schaden.com","color":"#be17c2","start":"2024-02-05 05:54:24","end":"2024-02-02 20:11:20","organization_name":"Ida Emmerich DDS","city":"Mrs. Effie Abshire","address":"Doloremque blanditiis soluta sit molestiae. Aperiam voluptates et quasi dolorum distinctio officia repellendus.","zip_code":"756148","country":"Pietro Roberts","province":"Anissa Beier III","kvk_number":"53357","vat_number":"92261","contact_number":"33676488","help_line":"15836688","fax_number":"64670110","telephone":"67136115","phone_number":null},{"id":8,"title":"Mrs. Alanna Medhurst Miss Kara Bartoletti","staff_number":"AC667480","first_ame":null,"last_number":null,"email":"vidal.abshire@bahringer.com","color":"#166acc","start":"2024-02-21 11:17:54","end":"2024-02-09 22:54:18","organization_name":"Mrs. Pearline Orn MD","city":"Norris Keeling","address":"Eum rerum nesciunt iure dolorum numquam dolores. Officia impedit fugiat odit. Consequuntur nulla est atque. Alias odio voluptatem magnam eum.","zip_code":"668890","country":"Gunner Pollich","province":"Dr. Brennon Shanahan","kvk_number":"74458","vat_number":"94902","contact_number":"94933627","help_line":"89830385","fax_number":"56445200","telephone":"17623739","phone_number":null},{"id":9,"title":"Dr. Gwendolyn Raynor Titus Graham IV","staff_number":"AC475951","first_ame":null,"last_number":null,"email":"ikassulke@sawayn.com","color":"#25b960","start":"2024-02-16 01:47:01","end":"2024-02-20 12:49:33","organization_name":"Tre Senger","city":"Marisa Pagac","address":"Nesciunt quo ut eaque deserunt. Quibusdam necessitatibus consectetur adipisci eos. Voluptatem architecto id eum impedit delectus culpa quia debitis. Hic rerum ex est molestias facere.","zip_code":"672139","country":"Margarette Ruecker Jr.","province":"Eliza Wolff Jr.","kvk_number":"83245","vat_number":"46668","contact_number":"70413654","help_line":"49089602","fax_number":"61706976","telephone":"56380220","phone_number":null},{"id":10,"title":"Prof. Jolie Ziemann Miss Brionna Koch","staff_number":"AC104549","first_ame":null,"last_number":null,"email":"dena79@schaden.com","color":"#be17c2","start":"2024-02-20 14:46:13","end":"2024-02-14 11:39:18","organization_name":"Tressie Hamill III","city":"Suzanne Klocko","address":"Cupiditate ad quas cupiditate repellat eum ipsa. Aliquid odio et itaque magni sunt eum fugiat. Labore corrupti consequatur quod et. Aut et aut et voluptatem suscipit provident iusto.","zip_code":"90304","country":"Mr. Zachery Thiel","province":"Fae Lakin Sr.","kvk_number":"60872","vat_number":"27782","contact_number":"51067050","help_line":"11598403","fax_number":"35355725","telephone":"96065859","phone_number":null},{"id":11,"title":"Dr. Gwendolyn Raynor Titus Graham IV","staff_number":"AC475951","first_ame":null,"last_number":null,"email":"ikassulke@sawayn.com","color":"#25b960","start":"2024-02-28 14:00:00","end":"2024-02-28 17:00:00","organization_name":"Ida Emmerich DDS","city":"Mrs. Effie Abshire","address":"Doloremque blanditiis soluta sit molestiae. Aperiam voluptates et quasi dolorum distinctio officia repellendus.","zip_code":"756148","country":"Pietro Roberts","province":"Anissa Beier III","kvk_number":"53357","vat_number":"92261","contact_number":"33676488","help_line":"15836688","fax_number":"64670110","telephone":"67136115","phone_number":null},{"id":12,"title":"Malel Mia","staff_number":"MM687773","first_ame":null,"last_number":null,"email":"malik@gmail.com","color":"#000000","start":"2024-03-07 13:15:00","end":"2024-03-07 16:20:00","organization_name":"Mrs. Pearline Orn MD","city":"Norris Keeling","address":"Eum rerum nesciunt iure dolorum numquam dolores. Officia impedit fugiat odit. Consequuntur nulla est atque. Alias odio voluptatem magnam eum.","zip_code":"668890","country":"Gunner Pollich","province":"Dr. Brennon Shanahan","kvk_number":"74458","vat_number":"94902","contact_number":"94933627","help_line":"89830385","fax_number":"56445200","telephone":"17623739","phone_number":null},{"id":13,"title":"Vanna Russo","staff_number":"VR923173","first_ame":null,"last_number":null,"email":"vysywaqoga@mailinator.com","color":"#220cc6","start":"2024-03-14 06:30:00","end":"2024-03-14 14:30:00","organization_name":"Georgiana Terry II","city":"Bennie Hill IV","address":"Ratione cum voluptatem rerum. Quaerat et minus rerum. Eaque qui numquam sit quae maxime amet debitis. Modi ullam cumque et temporibus dolor in. Harum magnam libero est. Dolore quia eum dolores natus.","zip_code":"849493","country":"Ms. Verla Schaden","province":"Nicolette Raynor","kvk_number":"19861","vat_number":"89382","contact_number":"74521749","help_line":"86319857","fax_number":"42569401","telephone":"89396489","phone_number":null},{"id":14,"title":"Rasel Rana","staff_number":"RR1000486","first_ame":null,"last_number":null,"email":"raselrana@gmail.com","color":"#307e3d","start":"1970-01-01 13:00:00","end":"1970-01-01 15:00:00","organization_name":"Mrs. Pearline Orn MD","city":"Norris Keeling","address":"Eum rerum nesciunt iure dolorum numquam dolores. Officia impedit fugiat odit. Consequuntur nulla est atque. Alias odio voluptatem magnam eum.","zip_code":"668890","country":"Gunner Pollich","province":"Dr. Brennon Shanahan","kvk_number":"74458","vat_number":"94902","contact_number":"94933627","help_line":"89830385","fax_number":"56445200","telephone":"17623739","phone_number":null},{"id":15,"title":"Bertram Howell Weldon Hagenes","staff_number":"AC806272","first_ame":null,"last_number":null,"email":"daphne.kuphal@yahoo.com","color":"#f3645e","start":"2024-02-29 16:00:00","end":"2024-02-29 19:00:00","organization_name":"Mrs. Pearline Orn MD","city":"Norris Keeling","address":"Eum rerum nesciunt iure dolorum numquam dolores. Officia impedit fugiat odit. Consequuntur nulla est atque. Alias odio voluptatem magnam eum.","zip_code":"668890","country":"Gunner Pollich","province":"Dr. Brennon Shanahan","kvk_number":"74458","vat_number":"94902","contact_number":"94933627","help_line":"89830385","fax_number":"56445200","telephone":"17623739","phone_number":null},{"id":16,"title":"Dax Klocko Dr. Steve Johns IV","staff_number":"AC589860","first_ame":null,"last_number":null,"email":"qlubowitz@ankunding.com","color":"#7d4cee","start":"2024-02-02 07:44:20","end":"2024-02-02 01:45:03","organization_name":"Charlene Kuvalis","city":"Prof. Vena Blick","address":"Nesciunt non qui libero rerum voluptatem enim. Laudantium ea maxime aut vitae. Expedita quas est praesentium rerum magnam quae. Quia placeat occaecati id.","zip_code":"241389","country":"Darian Bechtelar","province":"Tyreek McCullough","kvk_number":"43490","vat_number":"70725","contact_number":"59796774","help_line":"80412972","fax_number":"52047007","telephone":"95335281","phone_number":null},{"id":17,"title":"Mira Terrell","staff_number":"MT656891","first_ame":null,"last_number":null,"email":"vajakolog@mailinator.com","color":"#304917","start":"2024-03-06 15:15:00","end":"2024-03-06 16:20:00","organization_name":"Tressie Hamill III","city":"Suzanne Klocko","address":"Cupiditate ad quas cupiditate repellat eum ipsa. Aliquid odio et itaque magni sunt eum fugiat. Labore corrupti consequatur quod et. Aut et aut et voluptatem suscipit provident iusto.","zip_code":"90304","country":"Mr. Zachery Thiel","province":"Fae Lakin Sr.","kvk_number":"60872","vat_number":"27782","contact_number":"51067050","help_line":"11598403","fax_number":"35355725","telephone":"96065859","phone_number":null},{"id":18,"title":"Malel Mia","staff_number":"MM687773","first_ame":null,"last_number":null,"email":"malik@gmail.com","color":"#000000","start":"2024-03-07 13:05:00","end":"2024-03-07 15:15:00","organization_name":"Mrs. Pearline Orn MD","city":"Norris Keeling","address":"Eum rerum nesciunt iure dolorum numquam dolores. Officia impedit fugiat odit. Consequuntur nulla est atque. Alias odio voluptatem magnam eum.","zip_code":"668890","country":"Gunner Pollich","province":"Dr. Brennon Shanahan","kvk_number":"74458","vat_number":"94902","contact_number":"94933627","help_line":"89830385","fax_number":"56445200","telephone":"17623739","phone_number":null},{"id":19,"title":"Vanna Russo","staff_number":"VR923173","first_ame":null,"last_number":null,"email":"vysywaqoga@mailinator.com","color":"#220cc6","start":"2024-03-06 13:05:00","end":"2024-03-06 14:10:00","organization_name":"Tressie Hamill III","city":"Suzanne Klocko","address":"Cupiditate ad quas cupiditate repellat eum ipsa. Aliquid odio et itaque magni sunt eum fugiat. Labore corrupti consequatur quod et. Aut et aut et voluptatem suscipit provident iusto.","zip_code":"90304","country":"Mr. Zachery Thiel","province":"Fae Lakin Sr.","kvk_number":"60872","vat_number":"27782","contact_number":"51067050","help_line":"11598403","fax_number":"35355725","telephone":"96065859","phone_number":null},{"id":20,"title":"Ira Glenn","staff_number":"IG230508","first_ame":null,"last_number":null,"email":"wuxap@mailinator.com","color":"#171c0d","start":"2024-03-14 14:20:00","end":"2024-03-14 03:12:00","organization_name":"Mrs. Pearline Orn MD","city":"Norris Keeling","address":"Eum rerum nesciunt iure dolorum numquam dolores. Officia impedit fugiat odit. Consequuntur nulla est atque. Alias odio voluptatem magnam eum.","zip_code":"668890","country":"Gunner Pollich","province":"Dr. Brennon Shanahan","kvk_number":"74458","vat_number":"94902","contact_number":"94933627","help_line":"89830385","fax_number":"56445200","telephone":"17623739","phone_number":null},{"id":21,"title":"Sloane Velez","staff_number":"SV414914","first_ame":null,"last_number":null,"email":"hiqacelubu@mailinator.com","color":"#2bcb63","start":"2024-03-14 14:12:00","end":"2024-03-14 14:17:00","organization_name":"Autumn Connelly","city":"Baylee Collier I","address":"Aliquid cum fugit nobis. Dolorum voluptatem sunt qui voluptas fugiat consectetur. Dolorum sapiente unde est distinctio dolores odit officia. Quaerat minus et aspernatur ea ut.","zip_code":"630050","country":"Dr. Pierce Schuppe V","province":"Prof. Gay Collier","kvk_number":"99686","vat_number":"29272","contact_number":"76658768","help_line":"65108344","fax_number":"16275253","telephone":"38057434","phone_number":null},{"id":22,"title":"Ira Glenn","staff_number":"IG230508","first_ame":null,"last_number":null,"email":"wuxap@mailinator.com","color":"#171c0d","start":"2024-03-14 13:05:00","end":"2024-03-14 02:17:00","organization_name":"Autumn Connelly","city":"Baylee Collier I","address":"Aliquid cum fugit nobis. Dolorum voluptatem sunt qui voluptas fugiat consectetur. Dolorum sapiente unde est distinctio dolores odit officia. Quaerat minus et aspernatur ea ut.","zip_code":"630050","country":"Dr. Pierce Schuppe V","province":"Prof. Gay Collier","kvk_number":"99686","vat_number":"29272","contact_number":"76658768","help_line":"65108344","fax_number":"16275253","telephone":"38057434","phone_number":null},{"id":23,"title":"Malel Mia","staff_number":"MM687773","first_ame":null,"last_number":null,"email":"malik@gmail.com","color":"#000000","start":"2024-03-14 01:10:00","end":"2024-03-14 15:20:00","organization_name":"Dr. Victor Emard","city":"Ms. Palma Marquardt DVM","address":"Dolores ea et odio. Eum molestiae provident aut aut et sapiente fugit. Libero maxime aut labore perferendis magnam blanditiis praesentium. Repudiandae similique at quia dolores sapiente atque qui.","zip_code":"86888","country":"Keaton Quigley MD","province":"Rhoda Ruecker","kvk_number":"81040","vat_number":"20307","contact_number":"90904044","help_line":"45800119","fax_number":"60144907","telephone":"23485615","phone_number":null}];
 
-            let calendar = null;
-
-            document.addEventListener('DOMContentLoaded', function() {
-                var calendarEl = document.getElementById('calendar');
-                calendar = new FullCalendar.Calendar(calendarEl, {
+                let calendar = $('#calendar').fullCalendar({
                     editable:false,
-                    initialView: 'dayGridMonth',
-                    headerToolbar: {
-                        left: '',   //'title'
-                        center: 'dayGridMonth,timeGridWeek,timeGridDay',
-                        right: 'prev,today,next'
-                    },
-                    customButtons: {
-                        
+                    header:{
+                        left: 'title',
+                        center: 'month,agendaWeek,agendaDay',
+                        right: 'prevYear,prev,today,next,nextYear'
                     },
                     events: datas,
                     firstDay: 1,
-                    eventTimeFormat: { // like '14:30:00'
-                        hour: '2-digit',
-                        minute: '2-digit',
-                        second: '2-digit',
-                        meridiem: false,
-                        hour12: false
-                    },
-                    slotLabelFormat: {
-                        hour: '2-digit',
-                        minute: '2-digit',
-                        hour12: false
-                    },
-                    weekNumbers: true,
-                    dayMaxEventRows: true, // for all non-TimeGrid views
-                    views: {
-                        dayGridMonth: {
-                            dayMaxEventRows: 2, // adjust to 6 only for timeGridWeek/timeGridDay
-                            eventLimit: 2
-                        }
-                    },
+                    eventLimit: true,
+                    
                     allDaySlot: false,
-                    eventDidMount: function(args) {
-                        //console.log(args.el);
-                        //console.log(args.event);
+                    slotLabelFormat:"HH:mm",
 
-                        let event = args.event;
-
+                    weekNumbers: true,
+                    
+                    views: {
+                        month: {
+                            editable: false
+                        },
+                        week: {
+                            columnFormat: 'ddd DD-MM' // set format for week here
+                        },
+                    },
+                    
+                    eventRender: function(event, element) {
                         const defaultAvatar = "img/avatar_default.png";
 
-                        let avatar = "";//(event.avatar === null) ? defaultAvatar : `https://schedule.bangladeshbajar.com/backend/staff/${event.extendedProps.avatar}`;
-
-                        avatar = "img/avatar_default.png";
+                        let avatar = (event.avatar === null) ? defaultAvatar : `https://schedule.bangladeshbajar.com/backend/staff/${event.avatar}`;
 
                         let eventHtml = `
-                            <div class="sgapp-event-cell-wrapper" data-event-type="${event.extendedProps.type}">
+                            <div class="sgapp-event-cell-wrapper" data-event-type="${event.type}">
                                 <div class="sgapp-event-cell-row">
                                     <span class="sgapp-event-cell-column">
                                         <img class="sgapp-event-avatar" src="${avatar}" alt="Staff image">
@@ -759,7 +736,7 @@
                                 </div>
 
                                 <div class="sgapp-event-cell-row sgapp-event-staff-id">
-                                    ${event.extendedProps.staff_number}
+                                    ${event.staff_number}
                                 </div>
 
                                 <div class="sgapp-event-cell-row sgapp-event-time">
@@ -768,27 +745,13 @@
                             </div>
                         `;
 
-                        args.el.innerHTML = eventHtml;
-
+                        element.find('.fc-title').html(eventHtml);
                     },
-                    eventClick: function(args) {
-                        // console.log('Event: ' + args.event.title);
-                        // console.log('Coordinates: ' + args.jsEvent.pageX + ',' + args.jsEvent.pageY);
-                        // console.log('View: ' + args.view.type);
 
-                        // change the border color just for fun
-                        //args.el.style.border = '1px solid red';
-
-                        // let url = `schedules/edit/${event.id}`;
-                        // window.location.href = url;
-                    },
-                    eventMouseEnter: function (args) {
-                        // console.log("Mouse enter");
-                        // console.log(args);
-
-                        $(args.el).addClass('hover');
+                    eventMouseover: function(event, jsEvent, view) {
+                        $(this).addClass('hover');
                         //console.log(view)
-                        $(args.el).tooltip({
+                        $(this).tooltip({
                             title: '<i class="fa-solid fa-user"></i> Staff Name: '+event.title+'<br>'
                                 + '<i class="fa-solid fa-user"></i> Staff ID: '+event.staff_number+'<br>'
                                 + '<i class="fa-regular fa-clock"></i> Start Time: '+moment(event.start).format('HH:mm')+'<br>'
@@ -803,270 +766,34 @@
                             template: '<div class="tooltip" role="tooltip"><div class="arrow"></div><div class="custom-tooltip tooltip-inner"></div></div>',
                         }).tooltip('show');
                     },
-                    eventMouseLeave: function (args) {
-                        // console.log("Mouse leave");
-                        // console.log(args);
-
+                    eventMouseout: function(event, jsEvent, view) {
                         // Remove the hover effect when the mouse leaves
-                        $(args.el).removeClass('hover');
-                        $(args.el).tooltip('hide');
+                        $(this).removeClass('hover');
+                        $(this).tooltip('hide');
+                    },
+                    timeFormat: 'H(:mm)',
+                    eventClick:function(event)
+                    {
+                        let url="schedules/edit/" + event.id;
+                        window.location.href = url;
                     }
                 });
-                calendar.render();
             });
-
-            //Add dropdown in the calendar
-            setTimeout(() => {
-                const dropdownWrapper = document.querySelector(".fc-toolbar-chunk");
-                
-                const currentYear = new Date().getFullYear();
-                
-                const months = [
-                    "January",
-                    "February",
-                    "March",
-                    "April",
-                    "May",
-                    "June",
-                    "July",
-                    "August",
-                    "September",
-                    "October",
-                    "November",
-                    "December"
-                ];
-                
-                const currentMonth = months[new Date().getMonth()];
-
-                const calendarNextMonthButton = document.querySelector(".fc-next-button");
-                const calendarPreviousMonthButton = document.querySelector(".fc-prev-button");
-                const calendarTodayButton = document.querySelector(".fc-today-button");
-                const calendarMonthButton = document.querySelector(".fc-dayGridMonth-button");
-                const calendarWeekButton = document.querySelector(".fc-timeGridWeek-button");
-                const calendarDayButton = document.querySelector(".fc-timeGridDay-button");
-                
-                let optionHtml = "";
-                
-                for (let i = 1; i <= months.length; i++)
-                {
-                    let month = months[i - 1];
-                    let monthIndex = i;
-                    
-                    if (monthIndex <= 9)
-                    {
-                        monthIndex = `0${i}`;
-                    }
-                    
-                    let defaultSelection = "";
-                    
-                    if (currentMonth === month)
-                    {
-                        defaultSelection = "selected";
-                    }
-                    
-                    optionHtml += getMonthSelectOptionTemplate(currentYear, monthIndex, month, defaultSelection);
-                }
-                
-                dropdownWrapper.innerHTML = `
-                    <select id="sgapp-fc-month-select" class="form-select">
-                        ${optionHtml}
-                    </select>
-                `;
-        
-                const calendarMonthSelect = document.querySelector("#sgapp-fc-month-select");
-
-                refreshCalendarMonthSelectEvent();
-
-                function getMonthSelectOptionTemplate(year, monthIndex, month, defaultSelection)
-                {
-                    if (defaultSelection === null)
-                    {
-                        defaultSelection = "";
-                    }
-
-                    return `<option ${defaultSelection} value="${year}-${monthIndex}-01">${month}, ${year}</option>`;
-                }
-
-                function refreshCalendarMonthSelectEvent()
-                {
-                    calendarMonthSelect.addEventListener("change", event => {
-                    
-                        //$('#calendar').fullCalendar('gotoDate', calendarMonthSelect.value);
-                        calendar.gotoDate(calendarMonthSelect.value);
-                        onCalendarDateChanged();
-                        
-                    });
-                }
-
-                function getCalendarCurrentDate()
-                {
-                    //let date = new Date($('#calendar').fullCalendar('getDate'));
-                    let date = new Date(calendar.getDate());
-
-                    return date;
-                }
-
-                function getCalendarMonthAsIndex()
-                {
-                    let date = getCalendarCurrentDate();
-                    let monthIndex = date.getMonth();
-
-                    return monthIndex;
-                }
-
-                function refreshCalendarMonthSelect()
-                {
-                    setTimeout(() => {
-                        let date = getCalendarCurrentDate();
-
-                        let monthIndex = date.getMonth() + 1;
-
-                        if (monthIndex <= 9)
-                        {
-                            monthIndex = `0${monthIndex}`;
-                        }
-
-                        let value = `${date.getFullYear()}-${monthIndex}-01`;
-
-                        let options = calendarMonthSelect.querySelectorAll("option");
-
-                        let isMonthFoundInTheSelector = false;
-
-                        if ((options != null) && (options.length > 0))
-                        {
-                            for (let i = 0; i < options.length; i++)
-                            {
-                                let option = options[i];
-                                
-                                if (option.value === value)
-                                {
-                                    isMonthFoundInTheSelector = true;
-                                    break;
-                                }
-                            }
-                        }
-
-                        if (isMonthFoundInTheSelector)
-                        {
-                            calendarMonthSelect.value = value;
-                        }
-                        else
-                        {
-                            let innerHTML = calendarMonthSelect.innerHTML;
-
-                            innerHTML += getMonthSelectOptionTemplate(date.getFullYear(), date.getMonth(), months[date.getMonth()], null);
-
-                            calendarMonthSelect.innerHTML = innerHTML;
-
-                            refreshCalendarMonthSelectEvent();
-
-                            setTimeout(() => {
-                                calendarMonthSelect.value = value;
-                            }, 500);
-                        }
-
-                    }, 500);
-
-                    onCalendarDateChanged();
-                }
-
-                calendarNextMonthButton.addEventListener("click", event => {
-                    refreshCalendarMonthSelect();
-                });
-
-                calendarPreviousMonthButton.addEventListener("click", event => {
-                    refreshCalendarMonthSelect();
-                });
-
-                calendarTodayButton.addEventListener("click", event => {
-                    refreshCalendarMonthSelect();
-                });
-
-                if (calendarMonthButton !== null)
-                {
-                    calendarMonthButton.addEventListener("click", event => {
-                        refreshCalendarMonthSelect();
-                    });
-                }
-
-                if (calendarWeekButton !== null)
-                {
-                    calendarWeekButton.addEventListener("click", event => {
-                        refreshCalendarMonthSelect();
-                    });
-                }
-
-                if (calendarDayButton !== null)
-                {
-                    calendarDayButton.addEventListener("click", event => {
-                        refreshCalendarMonthSelect();
-                    });
-                }
-                
-            }, 500);
-
-            
-            function onCalendarDateChanged()
-            {
-                console.log("Date changed");
-
-                setTimeout(() => {
-                    const eventElements = document.querySelectorAll(".sgapp-event-cell-wrapper");
-
-                    if ((eventElements !== null) && (eventElements.length > 0))
-                    {
-                        eventElements.forEach(eventElement => {
-                            setCalendarEventColor(eventElement, "#e5f3f6", "rgba(37, 131, 167, 0.2)");
-                        });
-
-                        eventElements.forEach(eventElement => {
-                            const eventType = eventElement.getAttribute("data-event-type");
-
-                            // Check event condition
-                            if (eventType == "Accepted")
-                            {
-                                setCalendarEventColor(eventElement, "#ff0000"); // color
-                            }
-                        });
-                    }
-                }, 500);
-            }
-
-            // Calendar event type
-            function setCalendarEventColor(eventElement, bgColor, borderColor)
-            {
-                const dayGridEvents = document.querySelectorAll(".fc-daygrid-event");
-
-                if ((dayGridEvents !== null) && (dayGridEvents.length > 0))
-                {
-                    for (let i = 0; i < dayGridEvents.length; i++)
-                    {
-                        let dayGridEvent = dayGridEvents[i];
-
-                        const currentEventElement = dayGridEvent.querySelector(".sgapp-event-cell-wrapper");
-                        const currentEventType = currentEventElement.getAttribute("data-event-type");
-                        const eventType = eventElement.getAttribute("data-event-type");
-
-                        if (currentEventType === eventType)
-                        {
-                            dayGridEvent.style.backgroundColor = `${bgColor}`;
-                            
-                            if (borderColor !== null)
-                            {
-                                dayGridEvent.style.border = `1px solid ${borderColor}`;
-                            }
-                        }
-                    }
-                }
-            }
-
-            onCalendarDateChanged();
             
             // Add this line
             const calendarTab = document.querySelector("#nav-calendar-tab");
             
+            function refreshCalendarView()
+            {
+                const monthViewButton = document.querySelector(".fc-month-button");
+                const weekViewButton = document.querySelector(".fc-agendaWeek-button");
+                
+                weekViewButton.click();
+                monthViewButton.click();
+            }
+            
             calendarTab.addEventListener("click", event => {
-                calendar.updateSize();
+                refreshCalendarView();
             });
 
             // Legenda
@@ -1134,8 +861,6 @@
                                 {
                                     setCalendarEventColor(eventElement, "#ff0000", "#00FF00"); // color
                                 }
-
-                                setCalendarEventColor(eventElement, "#ff0000", "#00FF00");
                             });
                         }
                     }, 500);
