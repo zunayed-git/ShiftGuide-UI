@@ -340,9 +340,11 @@
                                                 <div class="col-sm-12 col-md-4">    
                                                     <div class="mb-3">
                                                         <label for="holidaySelect" class="form-label">Holiday</label>
-                                                        <select id="holidaySelect" class="sgapp-select2 form-select sgapp-select2-full" name="state" data-bs-toggle="tooltip" title="Write a description here">
-                                                            <option value="AL">Alabama</option>
-                                                            <option value="WY">Wyoming</option>
+                                                        <select id="holidaySelect" multiple="multiple" class="form-select sgapp-select2-full" name="state" data-bs-toggle="tooltip" title="Write a description here">
+                                                            <option value="volvo">BMW</option>
+                                                            <option value="saab">Jaquar</option>
+                                                            <option value="mercedes">RR</option>
+                                                            <option value="audi">Audi</option>
                                                         </select>
                                                     </div>
                                                 </div>
@@ -518,6 +520,32 @@
                 $('.sgapp-select2').select2({
                     theme: 'bootstrap-5'
                 });
+
+                let isAlreadyAddEventButtonAdded = false;
+
+                $("#holidaySelect").select2({  
+                    theme: 'bootstrap-5',
+                    width: '100%',
+                    allowClear: true,
+                    closeOnSelect: false
+                            
+                    }).on('select2:open', function () {
+                            if (!isAlreadyAddEventButtonAdded)
+                            {
+                                isAlreadyAddEventButtonAdded = true;
+
+                                let a = $(this).data('select2');
+                                if (!$('.select2-link').length) {
+                                    a.$results.parents('.select2-results')
+                                        .append('<div class="select2-link2 select2-close"><button id="sga-add-button" class="sga-add-button">Add Event</button></div>')
+                                        .on('click', function (b) {
+                                            if (b.target.innerText == "Add Event") {
+                                                alert("aaa");
+                                            }
+                                        });
+                                }
+                            }
+                        });
             });
             
             // Time Picker

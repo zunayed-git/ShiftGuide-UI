@@ -708,6 +708,28 @@ a.fc-col-header-cell-cushion
     border-radius: 0.25em;
 }
 
+.sga-add-button {
+    background: var(--primaryColor);
+    border: none;
+    border-radius: 5px;
+    padding: 8px 14px;
+    font-size: 15px;
+    color: #fff;
+    width: 100%;
+}
+
+#sga-add-button.alt {
+    background: #0084ff;
+    color: #fff;
+    margin-top: 40px;
+    width: 200px;
+}
+
+#banner-message.alt button {
+    background: #fff;
+    color: #000;
+}
+
 @media only screen and (max-width: 768px)
 {    
     body
