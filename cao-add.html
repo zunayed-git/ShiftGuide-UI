@@ -521,9 +521,14 @@
                     theme: 'bootstrap-5'
                 });
 
+                initializeSelectWithAddEventFeature("holidaySelect");
+            });
+
+            function initializeSelectWithAddEventFeature(selectId)
+            {
                 let isAlreadyAddEventButtonAdded = false;
 
-                $("#holidaySelect").select2({  
+                $(`#${selectId}`).select2({  
                     theme: 'bootstrap-5',
                     width: '100%',
                     allowClear: true,
@@ -537,7 +542,7 @@
                                 let a = $(this).data('select2');
                                 if (!$('.select2-link').length) {
                                     a.$results.parents('.select2-results')
-                                        .append('<div class="select2-link2 select2-close"><button id="sga-add-button" class="sga-add-button">Add Event</button></div>')
+                                        .append('<div class="select2-link2 select2-close"><button class="sga-add-button">Add Event</button></div>')
                                         .on('click', function (b) {
                                             if (b.target.innerText == "Add Event") {
                                                 alert("aaa");
@@ -546,7 +551,7 @@
                                 }
                             }
                         });
-            });
+            }
             
             // Time Picker
             function refreshTimePickers()
